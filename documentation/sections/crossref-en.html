@@ -13,10 +13,6 @@ This section provides details for each class and property defined by Vehículos 
             title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
       </li>
       <li>
-         <a href="#ControlEquipment"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">Control equipment</a>
-      </li>
-      <li>
          <a href="#Dock"
             title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">Dock</a>
       </li>
@@ -103,10 +99,6 @@ This section provides details for each class and property defined by Vehículos 
          <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Time interval</a>
       </li>
       <li>
-         <a href="#TrafficMeasurementDevice"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">Traffic measuring device</a>
-      </li>
-      <li>
          <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">
             <span>unit</span>
          </a>
@@ -191,25 +183,6 @@ This section provides details for each class and property defined by Vehículos 
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ControlEquipment">
-      <h3>Control equipment<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment</p>
-      <div class="comment">
-         <span class="markdown">An equipment monitors that controls properties of a specific vehicle such as its speed or the access to certain city areas.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#DockSensor"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Dock sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Dock">
       <h3>Dock<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -270,7 +243,7 @@ This section provides details for each class and property defined by Vehículos 
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty</p>
       <div class="comment">
-         <span class="markdown">Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos.</span>
+         <span class="markdown">Observable properties of the dock that refer to its availability: free or occupied by a vehicle.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -304,14 +277,6 @@ This section provides details for each class and property defined by Vehículos 
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#ControlEquipment"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">Control equipment</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#TrafficMeasurementDevice"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">Traffic measuring device</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -958,25 +923,6 @@ This section provides details for each class and property defined by Vehículos 
          <dt>has sub-classes</dt>
          <dd>
             <a href="#http://www.w3.org/2006/time#ProperInterval" title="http://www.w3.org/2006/time#ProperInterval">Proper interval</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="TrafficMeasurementDevice">
-      <h3>Traffic measuring device<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice</p>
-      <div class="comment">
-         <span class="markdown">Type of traffic device which performs measurementsof properties such as service level, traffic intensity and traffic load.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#DockSensor"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Dock sensor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

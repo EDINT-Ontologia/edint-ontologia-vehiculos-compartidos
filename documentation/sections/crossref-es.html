@@ -16,10 +16,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
       </li>
       <li>
-         <a href="#TrafficMeasurementDevice"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">Dispositivo de medición de tráfico</a>
-      </li>
-      <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
             title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement">Elemento de la infraestructura</a>
       </li>
@@ -29,10 +25,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
             title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Equipamiento</a>
-      </li>
-      <li>
-         <a href="#ControlEquipment"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">Equipo de control</a>
       </li>
       <li>
          <a href="#DockSensor"
@@ -218,25 +210,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
       </dl>
    </div>
-   <div class="entity" id="TrafficMeasurementDevice">
-      <h3>Dispositivo de medición de tráfico<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice</p>
-      <div class="comment">
-         <span class="markdown">Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico.</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <a href="#DockSensor"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Equipo que permite detectar si un anclaje está libre u ocupado.</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement">
       <h3>Elemento de la infraestructura<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
@@ -311,25 +284,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ControlEquipment">
-      <h3>Equipo de control<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment</p>
-      <div class="comment">
-         <span class="markdown">Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad.</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <a href="#DockSensor"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Equipo que permite detectar si un anclaje está libre u ocupado.</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="DockSensor">
       <h3>Equipo que permite detectar si un anclaje está libre u ocupado.<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
@@ -344,14 +298,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-         <dt>tiene subclases</dt>
-         <dd>
-            <a href="#TrafficMeasurementDevice"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">Dispositivo de medición de tráfico</a>
-            <sup class="type-c" title="clase">c</sup>, <a href="#ControlEquipment"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">Equipo de control</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -799,7 +745,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty</p>
       <div class="comment">
-         <span class="markdown">Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos.</span>
+         <span class="markdown">Observable properties of the dock that refer to its availability: free or occupied by a vehicle.</span>
       </div>
       <dl class="description">
          <dt>tiene superclases</dt>

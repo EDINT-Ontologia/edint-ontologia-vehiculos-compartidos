@@ -590,15 +590,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                                                             "Vehículo"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment
-:ControlEquipment rdf:type owl:Class ;
-                  rdfs:subClassOf :DockSensor ;
-                  rdfs:comment "An equipment monitors that controls properties of a specific vehicle such as its speed or the access to certain city areas."@en ,
-                               "Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad."@es ;
-                  rdfs:label "Control equipment"@en ,
-                             "Equipo de control"@es .
-
-
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock
 :Dock rdf:type owl:Class ;
       rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
@@ -620,8 +611,8 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty
 :DockProperty rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
-              rdfs:comment "Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos."@es ,
-                           "Observable property of the dock that refers to its availability: free or occupied by a vehicle."@es ;
+              rdfs:comment "Observable properties of the dock that refer to its availability: free or occupied by a vehicle."@es ,
+                           "Propiedades que están relacionadas con la disponibilidad de los anclajes (vacíos u ocupados) en donde se enganchan los vehículos."@es ;
               rdfs:label "Dock property"@en ,
                          "Propiedad de anclaje"@es .
 
@@ -660,15 +651,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                    "Place where you can both leave and pick up a shared vehicles. It is composed of docks"@en ;
                       rdfs:label "Estación de vehículos compartidos"@es ,
                                  "Shared vehicle station"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice
-:TrafficMeasurementDevice rdf:type owl:Class ;
-                          rdfs:subClassOf :DockSensor ;
-                          rdfs:comment "Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico."@es ,
-                                       "Type of traffic device which performs measurementsof properties such as service level, traffic intensity and traffic load."@en ;
-                          rdfs:label "Dispositivo de medición de tráfico"@es ,
-                                     "Traffic measuring device"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint

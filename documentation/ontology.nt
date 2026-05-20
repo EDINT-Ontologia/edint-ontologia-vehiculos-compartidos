@@ -554,14 +554,6 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehículo"@es .
 # 
-# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "An equipment monitors that controls properties of a specific vehicle such as its speed or the access to certain city areas."@en .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Control equipment"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipo de control"@es .
-# 
 # http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
@@ -581,8 +573,8 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Observable property of the dock that refers to its availability: free or occupied by a vehicle."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Observable properties of the dock that refer to its availability: free or occupied by a vehicle."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Propiedades que están relacionadas con la disponibilidad de los anclajes (vacíos u ocupados) en donde se enganchan los vehículos."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Dock property"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Propiedad de anclaje"@es .
 # 
@@ -617,14 +609,6 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Place where you can both leave and pick up a shared vehicles. It is composed of docks"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#label> "Estación de vehículos compartidos"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#label> "Shared vehicle station"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of traffic device which performs measurementsof properties such as service level, traffic intensity and traffic load."@en .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Dispositivo de medición de tráfico"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic measuring device"@en .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

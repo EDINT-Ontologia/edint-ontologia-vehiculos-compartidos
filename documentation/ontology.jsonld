@@ -405,26 +405,6 @@
     "@value" : "0.1.0"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An equipment monitors that controls properties of a specific vehicle such as its speed or the access to certain city areas."
-  }, {
-    "@language" : "es",
-    "@value" : "Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Control equipment"
-  }, {
-    "@language" : "es",
-    "@value" : "Equipo de control"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor"
-  } ]
-}, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -469,10 +449,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos."
+    "@value" : "Observable properties of the dock that refer to its availability: free or occupied by a vehicle."
   }, {
     "@language" : "es",
-    "@value" : "Observable property of the dock that refers to its availability: free or occupied by a vehicle."
+    "@value" : "Propiedades que están relacionadas con la disponibilidad de los anclajes (vacíos u ocupados) en donde se enganchan los vehículos."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -562,26 +542,6 @@
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
   }, {
     "@id" : "http://w3.org/ns/sosa/Platform"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico."
-  }, {
-    "@language" : "en",
-    "@value" : "Type of traffic device which performs measurementsof properties such as service level, traffic intensity and traffic load."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Dispositivo de medición de tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "Traffic measuring device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint",

@@ -844,18 +844,6 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor"/>
-        <rdfs:comment xml:lang="en">An equipment monitors that controls properties of a specific vehicle such as its speed or the access to certain city areas.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad.</rdfs:comment>
-        <rdfs:label xml:lang="en">Control equipment</rdfs:label>
-        <rdfs:label xml:lang="es">Equipo de control</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">
@@ -884,8 +872,8 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:comment xml:lang="es">Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Observable property of the dock that refers to its availability: free or occupied by a vehicle.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Observable properties of the dock that refer to its availability: free or occupied by a vehicle.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedades que están relacionadas con la disponibilidad de los anclajes (vacíos u ocupados) en donde se enganchan los vehículos.</rdfs:comment>
         <rdfs:label xml:lang="en">Dock property</rdfs:label>
         <rdfs:label xml:lang="es">Propiedad de anclaje</rdfs:label>
     </owl:Class>
@@ -936,18 +924,6 @@ In addition, data on the journeys made by these vehicles, including their origin
         <rdfs:comment xml:lang="en">Place where you can both leave and pick up a shared vehicles. It is composed of docks</rdfs:comment>
         <rdfs:label xml:lang="es">Estación de vehículos compartidos</rdfs:label>
         <rdfs:label xml:lang="en">Shared vehicle station</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor"/>
-        <rdfs:comment xml:lang="es">Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Type of traffic device which performs measurementsof properties such as service level, traffic intensity and traffic load.</rdfs:comment>
-        <rdfs:label xml:lang="es">Dispositivo de medición de tráfico</rdfs:label>
-        <rdfs:label xml:lang="en">Traffic measuring device</rdfs:label>
     </owl:Class>
     
 
