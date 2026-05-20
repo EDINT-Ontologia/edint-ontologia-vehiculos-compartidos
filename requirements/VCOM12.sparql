@@ -1,0 +1,15 @@
+
+
+# VCOM12: ¿Dónde están los puntos de paso (coordenadas)?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+SELECT ?waypoint ?lat ?long
+WHERE {
+  ?waypoint a edintvehcom:Waypoint ;
+            geosparql:hasGeometry ?geom .
+  ?geom geo:lat ?lat ;
+        geo:long ?long .
+}

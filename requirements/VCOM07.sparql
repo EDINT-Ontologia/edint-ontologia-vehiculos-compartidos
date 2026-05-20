@@ -1,0 +1,15 @@
+
+# VCOM07: ¿Qué vehículos han pasado por determinados puntos de paso y en qué trayectos?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+
+SELECT ?vehicle ?route ?waypoint
+WHERE {
+  ?route a edintvehcom:Route ;
+         edintvehcom:madeByVehicle ?vehicle ;
+         edintvehcom:hasWaypoint ?waypoint .
+  
+  FILTER (?waypoint IN (<URI_WP1>, <URI_WP2>, <URI_WP3>))
+}
+
+ORDER BY ?vehicle ?route

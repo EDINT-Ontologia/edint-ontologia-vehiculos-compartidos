@@ -1,0 +1,11 @@
+
+# VCOM13: ¿Qué anclajes son objeto de observación?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX sosa: <http://w3.org/ns/sosa/>
+
+SELECT DISTINCT ?dock
+WHERE {
+  ?obs a edintvehcom:DockObservation ;
+       sosa:hasFeatureOfInterest ?dock .
+}

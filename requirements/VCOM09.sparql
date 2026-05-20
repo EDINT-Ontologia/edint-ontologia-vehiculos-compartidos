@@ -1,0 +1,16 @@
+
+# VCOM09: ¿Cuáles son los vehículos con estado X, propulsión Y y tipo Z?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT ?vehicle
+WHERE {
+  ?vehicle a edintvehcom:SharedVehicle ;
+  # X, Y, Z deben ser URIs de conceptos SKOS, no literales
+           edintvehcom:vehicleState <URI_ESTADO_X> ;
+           edintvehcom:propulsionSystemType <URI_PROPULSION_Y> ;
+           edintveh:vehicleType <URI_TIPO_Z> .
+}
+
+

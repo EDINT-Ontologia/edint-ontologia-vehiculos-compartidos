@@ -1,0 +1,10 @@
+
+#VCOM04: ¿Qué puntos de paso tiene cada trayecto?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+
+SELECT ?route ?waypoint
+WHERE {
+  ?route a edintvehcom:Route ;
+         edintvehcom:hasWaypoint ?waypoint .
+}

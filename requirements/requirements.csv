@@ -1,0 +1,18 @@
+Identifier,Responsible partner,"Version (optional)
+","Competency Question /
+ Natural language sentence (fact)",Answer (For Competency Questions),"Status (Proposed, Accepted, Rejected, Deprecated)",Comments (optional),Extracted from (provenance),"Priority 
+(High, Medium, Low) (optional)",Relation with other requirements (optional),Associated ontology elements,Relation to ontology elements in other domains
+VCOM01,UPM,v0.1.0,¿Qué vehículos compartidos han realizado trayectos?,,Proposed,,,,,,
+VCOM02,UPM,v0.1.0,¿Qué trayectos ha realizado un vehículo concreto?,,Proposed,,,,,,
+VCOM03,UPM,v0.1.0,¿Cuál es el origen y destino de cada trayecto?,,Proposed,,,,,,
+VCOM04,UPM,v0.1.0,¿Qué puntos de paso tiene cada trayecto?,,Proposed,,,,,,
+VCOM05,UPM,v0.1.0,"¿Qué estaciones existen, quién las opera  y en que estado están?",,Proposed,,,,,,
+VCOM06,UPM,v0.1.0,¿Qué estaciones están operadas por una organización concreta?,,Proposed,,,,,,
+VCOM07,UPM,v0.1.0,¿Qué vehículos han pasado por determinados puntos de paso y en qué trayectos?,,Proposed,,,,,,
+VCOM08,UPM,v0.1.0,¿En qué estado están los vehiculos compartidos registrados?,,Proposed,,,,,,
+VCOM09,UPM,v0.1.0,"¿Cuáles son los vehículos con estado X, propulsión Y y tipo Z?",,Proposed,,,,,,
+VCOM10,UPM,v0.1.0,¿Qué estaciones tienen anclajes disponibles?,,Proposed,,,,,,
+VCOM11,UPM,v0.1.0,¿Qué estaciones tienen más anclajes?,,Proposed,,,,,,
+VCOM12,UPM,v0.1.0,¿Dónde están los puntos de paso (coordenadas)?,,Proposed,,,,,,
+VCOM13,UPM,v0.1.0,¿Qué anclajes son objeto de observación?,,Proposed,,,,,,
+VCOM14,UPM,v0.1.0,¿Qué sensor realizó cada observación de anclaje?,,Proposed,,,,,,

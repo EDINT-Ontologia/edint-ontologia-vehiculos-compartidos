@@ -1,0 +1,10 @@
+
+#VCOM01: ¿Qué vehículos compartidos han realizado trayectos?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+
+SELECT DISTINCT ?vehicle
+WHERE {
+  ?route a edintvehcom:Route ;
+         edintvehcom:madeByVehicle ?vehicle .
+}

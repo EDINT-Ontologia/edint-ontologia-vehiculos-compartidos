@@ -1,0 +1,39 @@
+
+# VCOM03: ¿Cuál es el origen y destino de cada trayecto?
+# Pueden ser anclajes o plazas de aparcamiento
+
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+
+SELECT ?route 
+       (COALESCE(?originDock, ?originSpot) AS ?origin)
+       (COALESCE(?destinationDock, ?destinationSpot) AS ?destination)
+WHERE {
+  ?route a edintvehcom:Route .
+  
+  OPTIONAL { ?route edintvehcom:originDock ?originDock . }
+  OPTIONAL { ?route edintvehcom:originSpot ?originSpot . }
+  
+  OPTIONAL { ?route edintvehcom:destinationDock ?destinationDock . }
+  OPTIONAL { ?route edintvehcom:destinationSpot ?destinationSpot . }
+}
+
+# Variante indicando el vehículo
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+
+SELECT ?route ?vehicle
+       (COALESCE(?originDock, ?originSpot) AS ?origin)
+       (COALESCE(?destinationDock, ?destinationSpot) AS ?destination)
+WHERE {
+  ?route a edintvehcom:Route ;
+         edintvehcom:madeByVehicle ?vehicle .
+  
+  OPTIONAL { ?route edintvehcom:originDock ?originDock . }
+  OPTIONAL { ?route edintvehcom:originSpot ?originSpot . }
+  
+  OPTIONAL { ?route edintvehcom:destinationDock ?destinationDock . }
+  OPTIONAL { ?route edintvehcom:destinationSpot ?destinationSpot . }
+}
+
+ORDER BY ?vehicle ?route

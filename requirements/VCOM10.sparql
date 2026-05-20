@@ -1,0 +1,33 @@
+
+# VCOM10: ¿Qué estaciones tienen anclajes disponibles?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?station ?dock
+WHERE {
+  ?station a edintvehcom:SharedVehicleStation ;
+           edintvehcom:hasDock ?dock .
+  
+  ?dock edintvehcom:dockState <URI_ESTADO_DISPONIBLE> .
+  
+}
+
+# Variante usando las observaciones
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT DISTINCT ?station
+WHERE {
+  ?station a edintvehcom:SharedVehicleStation ;
+           edintvehcom:hasDock ?dock .
+  
+  ?obs a edintvehcom:DockObservation ;
+       sosa:hasFeatureOfInterest ?dock ;
+       sosa:hasSimpleResult ?result .
+       
+  # El valor empleado para filtrar depende de cómo sea el resultado
+  FILTER (lcase(str(?result)) = "free")
+}

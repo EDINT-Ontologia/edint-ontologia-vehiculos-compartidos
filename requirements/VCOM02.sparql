@@ -1,0 +1,10 @@
+
+# VCOM02: ¿Qué trayectos ha realizado un vehículo concreto?
+
+PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+
+SELECT ?route
+WHERE {
+  ?route a edintvehcom:Route ;
+         edintvehcom:madeByVehicle <URI_DEL_VEHICULO> .
+}
