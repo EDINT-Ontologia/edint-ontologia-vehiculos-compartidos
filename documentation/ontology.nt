@@ -1,0 +1,845 @@
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://www.w3.org/2002/07/owl#versionIRI> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos/0.1.0> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/elements/1.1/creator> "Daniel Doña" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/elements/1.1/creator> "Edna Ruckhaus" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/elements/1.1/creator> "Lucía Sánchez" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/elements/1.1/creator> "Socorro Bernardos" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/elements/1.1/title> "Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/elements/1.1/title> "Vocabulary for the representation of data on shared vehicle systems in cities"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/terms/created> "2026-05-18" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintvehcom" .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://www.w3.org/2000/01/rdf-schema#comment> "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. \nAdemás, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://www.w3.org/2000/01/rdf-schema#comment> "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.\nIn addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/elements/1.1/date> .
+# 
+# http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#issued-003> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of formal issuance (e.g., publication) of the resource."@en .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms/"@en .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#label> "Date Issued"@en .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://qudt.org/schema/qudt/informativeReference
+<http://qudt.org/schema/qudt/informativeReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/LatexString
+<http://qudt.org/schema/qudt/LatexString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#gYearMonth
+<http://www.w3.org/2001/XMLSchema#gYearMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/hasUnit
+<http://qudt.org/schema/qudt/hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://qudt.org/schema/qudt/hasUnit> <http://www.w3.org/2002/07/owl#inverseOf> <http://qudt.org/schema/qudt/unitFor> .
+<http://qudt.org/schema/qudt/hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+# 
+# http://qudt.org/schema/qudt/unitFor
+<http://qudt.org/schema/qudt/unitFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://schema.org/manufacturer
+<http://schema.org/manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
+<http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "The manufacturer of the product."@en .
+<http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturer"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de vehículo"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle type"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock> <http://www.w3.org/2000/01/rdf-schema#comment> "El anclaje de una estación a donde finaliza una ruta de un vehículo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock> <http://www.w3.org/2000/01/rdf-schema#comment> "The dock in a station where a vehicle's route ends."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock> <http://www.w3.org/2000/01/rdf-schema#label> "destination dock"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock> <http://www.w3.org/2000/01/rdf-schema#label> "tiene anclaje destino"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot> <http://www.w3.org/2000/01/rdf-schema#comment> "Parking spot where a vehicle's route ends."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot> <http://www.w3.org/2000/01/rdf-schema#comment> "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot> <http://www.w3.org/2000/01/rdf-schema#label> "destination parking spot"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot> <http://www.w3.org/2000/01/rdf-schema#label> "plaza de aparcamiento estino"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState> <http://www.w3.org/2000/01/rdf-schema#label> "dock state"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState> <http://www.w3.org/2000/01/rdf-schema#label> "estado del anclaje"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a shared vehicle siation and the docks that belong to it."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock> <http://www.w3.org/2000/01/rdf-schema#label> "has dock"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock> <http://www.w3.org/2000/01/rdf-schema#label> "tiene anclaje"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint> <http://www.w3.org/2000/01/rdf-schema#label> "has waypoint"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint> <http://www.w3.org/2000/01/rdf-schema#label> "tiene punto de paso"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle> <http://purl.org/vocab/vann/preferredNamespaceUri> "Relación entre un trayecto y el vehículo que lo realiza."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle> <http://purl.org/vocab/vann/preferredNamespaceUri> "Relationship between a route and the vehicle that makes it."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "made by vehicle"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "realizado por vehículo"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una estación de vehículos compartidos y la organización que la opera."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a vehicle-sharing station and the organization that operates it."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "operado por"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "operated by"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock> <http://www.w3.org/2000/01/rdf-schema#comment> "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock> <http://www.w3.org/2000/01/rdf-schema#comment> "The dock in a station from where the vehicle departed on a certain route."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock> <http://www.w3.org/2000/01/rdf-schema#label> "origin dock"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock> <http://www.w3.org/2000/01/rdf-schema#label> "tiene anclaje origen"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot> <http://www.w3.org/2000/01/rdf-schema#comment> "Plaza de aparcamiento desde donde sale la ruta del vehículo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot> <http://www.w3.org/2000/01/rdf-schema#comment> "Parking spot from where the vehicle route starts." .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot> <http://www.w3.org/2000/01/rdf-schema#label> "origin parking spot"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot> <http://www.w3.org/2000/01/rdf-schema#label> "plaza de aparcamiento origen"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#label> "propulsion system type"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de sistema de propulsión"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState> <http://www.w3.org/2000/01/rdf-schema#label> "estado de la estación"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState> <http://www.w3.org/2000/01/rdf-schema#label> "station state"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState> <http://www.w3.org/2000/01/rdf-schema#label> "estado del vehículo"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle state"@en .
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial representation for a given feature."@en .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Una representación espacial para una característica determinada."@es .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "tiene geometría"@es .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#label> "está en el esquema"@es .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#label> "is in scheme"@en .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2004/02/skos/core#definition> "Relaciona un recurso (por ejemplo un concepto) con un esquema de conceptos en el que está incluido."@en .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource (for example a concept) to a concept scheme in which it is included."@en .
+# 
+# http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#ProperInterval> .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#comment> "Beginning of a temporal entity"@en .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#comment> "Comienzo de una entidad temporal."@es .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#label> "Has Beginning"@en .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#label> "Tiene principio"@es .
+# 
+# http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#ProperInterval> .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "End of a temporal entity"@en .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Final de una entidad temporal."@es .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#label> "Has End"@en .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#label> "Tiene final"@es .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an Observation and the entity whose quality was observed."@en .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Una relación entre una Observación y la entidad para la que se ha observado."@es .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "tiene característica de interés"@es .
+# 
+# http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isResultOf> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra."@es .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/common/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "tiene resultado"@es .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en .
+# 
+# http://www.w3.org/ns/sosa/isHostedBy
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sensor> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3.org/ns/sosa/Platform> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Sensor, or Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by"@en .
+# 
+# http://www.w3.org/ns/sosa/isResultOf
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una Observación y un Sensor que realiza la Observación."@en .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Observation and the Sensor which made the Observation."@es .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "made by sensor"@en .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "realizada por sensor"@es .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación que enlaza la propiedad que se observa."@es .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "observed property"@en .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "propiedad observada"@es .
+# 
+# http://www.w3.org/ns/sosa/observes
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones."@es .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#label> "observa"@es .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#label> "observes"@en .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#ProperInterval> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta propiedad establece el intervalo de tiempo de la observación."@es .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "This property sets the interval of time of the observation"@en .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "intervalo de tiempo"@es .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "time interval"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/endDate
+<http://schema.org/endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "La fecha y hora de finalización de\n\tuna incidencia (en formato fecha ISO 8601)"@es .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The end date and time of an incidence (in ISO 8601 date format)."@en .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#label> "end date"@en .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de fin"@es .
+# 
+# http://schema.org/startDate
+<http://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601)."@es .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The start date and time of an incidence (in ISO 8601 date format)."@en .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#label> "(expected) start date"@en .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de inicio (prevista)"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the station ceases operation."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha en la cual la estación cesa sus operaciones."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate> <http://www.w3.org/2000/01/rdf-schema#label> "closure date"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de baja"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha en que la estación es certificada y puesta en servicio oficialmente."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the station is officially tested, certified, and put into active service." .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate> <http://www.w3.org/2000/01/rdf-schema#label> "comissionning date"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de alta"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order> <http://www.w3.org/2000/01/rdf-schema#comment> "El número de orden un un punto de paso."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order> <http://www.w3.org/2000/01/rdf-schema#comment> "The order number of a waypoint."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order> <http://www.w3.org/2000/01/rdf-schema#label> "orden"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order> <http://www.w3.org/2000/01/rdf-schema#label> "order"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time when the vehicle passed through the waypoint in a route."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha y hora en que el vehículo pasó por el punto en la ruta."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "fecha y hora punto de paso"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "passing date and time"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/sf#Point> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "Latitud en WGS84"@es .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "Latitude in WGS84"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/sf#Point> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitud en WGS84"@es .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitude in WGS84"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude" .
+# 
+# http://www.w3.org/2006/time#inXSDgYearMonth
+<http://www.w3.org/2006/time#inXSDgYearMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/time#inXSDgYearMonth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#Instant> .
+<http://www.w3.org/2006/time#inXSDgYearMonth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYearMonth> .
+<http://www.w3.org/2006/time#inXSDgYearMonth> <http://www.w3.org/2000/01/rdf-schema#comment> "Posición de un instante, expresado utilizando xsd:gYearMonth."@es .
+<http://www.w3.org/2006/time#inXSDgYearMonth> <http://www.w3.org/2000/01/rdf-schema#comment> "Position of an instant, expressed using xsd:gYearMonth."@en .
+<http://www.w3.org/2006/time#inXSDgYearMonth> <http://www.w3.org/2000/01/rdf-schema#label> "en año-mes gregoriano XSD"@es .
+<http://www.w3.org/2006/time#inXSDgYearMonth> <http://www.w3.org/2000/01/rdf-schema#label> "in XSD g-YearMonth"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/Concept
+<http://qudt.org/schema/qudt/Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://qudt.org/schema/qudt/Quantifiable
+<http://qudt.org/schema/qudt/Quantifiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://qudt.org/schema/qudt/QuantityValue
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Concept> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Quantifiable> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/hasUnit> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to \"http://physics.nist.gov/Pubs/SP811/sec07.html\", NIST SP 811, section 7 for more on quantity values." .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity value" .
+# 
+# http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Concept> .
+# 
+# http://schema.org/Organization
+<http://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa un conjunto de personas organizadas en una comunidad u otra estructura social, comercial o política."@es .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a collection of people organized together into a community or other social, commercial or political structure."@en .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organización"@es .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot
+<http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> <http://www.w3.org/2000/01/rdf-schema#comment> "Individual parking space on-street or off-street."@en .
+<http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> <http://www.w3.org/2000/01/rdf-schema#comment> "Plaza individual de estacionamiento dentro o fuera de la vía pública."@es .
+<http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> <http://www.w3.org/2000/01/rdf-schema#label> "Parking spot"@en .
+<http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> <http://www.w3.org/2000/01/rdf-schema#label> "Plaza de aparcamiento"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehículo"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "An equipment monitors that controls properties of a specific vehicle such as its speed or the access to certain city areas."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Control equipment"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipo de control"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar de la estación donde se fijan las bicicletas"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/2000/01/rdf-schema#comment> "Place in the station where the vehicles are secured."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/2000/01/rdf-schema#label> "Anclaje"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock> <http://www.w3.org/2000/01/rdf-schema#label> "Dock"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Observation by a dock sensor that detects the dock's availability to park a vehicle (free), or occupied by a vehicle."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Dock observation"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Observación de anclaje"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Observable property of the dock that refers to its availability: free or occupied by a vehicle."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Dock property"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Propiedad de anclaje"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment that allows you to detect if an anchor is free or occupied."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Dock sensor"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Equipo que permite detectar si un anclaje está libre u ocupado."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor de anclaje"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> <http://www.w3.org/2000/01/rdf-schema#comment> "Espacio que se recorre para llegar desde un origen hasta un destino."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> <http://www.w3.org/2000/01/rdf-schema#comment> "The path traveled to get from an origin to a destination"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> <http://www.w3.org/2000/01/rdf-schema#label> "Route"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route> <http://www.w3.org/2000/01/rdf-schema#label> "Trayecto"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Shared vehicle"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehículo compartido"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3.org/ns/sosa/Platform> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Place where you can both leave and pick up a shared vehicles. It is composed of docks"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#label> "Estación de vehículos compartidos"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#label> "Shared vehicle station"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of traffic device which performs measurementsof properties such as service level, traffic intensity and traffic load."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Dispositivo de medición de tráfico"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic measuring device"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of a route defined by coordinates and a date and time"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Parte de un trayecto definido por unas coordenadas y una fecha y hora."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> <http://www.w3.org/2000/01/rdf-schema#label> "Punto de paso"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint> <http://www.w3.org/2000/01/rdf-schema#label> "Waypoint"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Equipamiento"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Facility"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> <http://www.w3.org/2000/01/rdf-schema#label> "Elemento de la infraestructura"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure element"@en .
+# 
+# http://w3.org/ns/sosa/Platform
+<http://w3.org/ns/sosa/Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en .
+<http://w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "Una plataforma es una entidad que alberga otras entidades, en particular sensores, actuadores, muestreadores y otras plataformas."@es .
+<http://w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Plataforma"@es .
+<http://w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en .
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase representa una característica de alto nivel, equivalente a GFI_Feature definida en ISP 19156 y es una supercale para todos los tipos de características espaciales."@en .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the top-level feature type. This\n\tclass is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of\n\tall feature types."@en .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Característica geográfica"@es .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature"@en .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase representa el tipo de geometría de alto nivel. Es equivalente a GFI_Geometry definida en ISO 19156 y es superclase de todos los tipos geométricos."@es .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the top-level geometry type. This class is equivalent to GFI_Geometry defined in ISO 19156, and it is superclass of all geometry types."@en .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometría"@es .
+# 
+# http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase representa un tipo de objeto espacial de alto nivel. Es equivalente a GFI SpatialObject difinido en ISO 19156 y es una superclase de todos los tipos de objetos espaciales."@es .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the top-level spatial object\n\ttype. This class is equivalent to GFI_SpatialObject defined in ISO 19156, and it\n\tis superclass of all spatial object types."@en .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "Objeto Espacial"@es .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialObject"@en .
+# 
+# http://www.opengis.net/ont/sf#Point
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Se representa un tipo de punto de alto nivel. Esta clase es equivalente a GFI_Point definida en ISO 19156 y es superclase de todos los tipos de puntos."@es .
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the top-level point type. This \tclass is equivalent to GFI_Point defined in ISO 19156, and it is superclass of all point types."@en .
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Geographic Point"@en .
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Punto geográfico"@es .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/dc/terms/issued> "2004-02-xx" .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept"@en .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concepto"@es .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2004/02/skos/core#definition> "An abstract idea or notion; a unit of thought."@en .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2004/02/skos/core#definition> "Una idea o noción abstracta; una unidad de pensamiento."@es .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept scheme may be defined to include concepts from different sources."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes.  Concept schemes are also embedded in glossaries and terminologies."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Concept Scheme"@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Esquema de conceptos"@es .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with zero extent or duration."@en .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "Una entidad temporal con extensión o duración de cero."@es .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instante de tiempo"@es .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Time instant"@en .
+# 
+# http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with an extent or duration."@en .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "Una entidad temporal con extensión o duración"@es .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "Time interval"@en .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "intervalo"@es .
+# 
+# http://www.w3.org/2006/time#ProperInterval
+<http://www.w3.org/2006/time#ProperInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#ProperInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#Interval> .
+<http://www.w3.org/2006/time#ProperInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different."@en .
+<http://www.w3.org/2006/time#ProperInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes"@es .
+<http://www.w3.org/2006/time#ProperInterval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
+<http://www.w3.org/2006/time#ProperInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Proper interval"@en .
+<http://www.w3.org/2006/time#ProperInterval> <http://www.w3.org/2000/01/rdf-schema#label> "intervalo preciso"@es .
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal interval or instant."@en .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Un intervalo temporal o un instante."@es .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Entidad temporal"@es .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Entity"@en .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature Of Interest"@en .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2004/02/skos/core#definition> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2004/02/skos/core#example> "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observable Property"@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2004/02/skos/core#definition> "An observable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with"@en .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2004/02/skos/core#definition> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2004/02/skos/core#example> "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2004/02/skos/core#definition> "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2004/02/skos/core#example> "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the dock is free or occupied."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability> <http://www.w3.org/2000/01/rdf-schema#comment> "Número total de anclajes ocupados con vehículos, en una estación."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability> <http://www.w3.org/2000/01/rdf-schema#label> "disponibilidad del anclaje"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability> <http://www.w3.org/2000/01/rdf-schema#label> "dock availability"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks> <http://www.w3.org/2000/01/rdf-schema#comment> "Número total de anclajes vacíos en la estación, es decir, disponibles para aparcar un vehículo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of empty docks at the station, i.e., available to park a vehicle."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks> <http://www.w3.org/2000/01/rdf-schema#label> "number of empty docks"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks> <http://www.w3.org/2000/01/rdf-schema#label> "número de anclajes vacíos"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks> <http://www.w3.org/2000/01/rdf-schema#comment> "Número total de anclajes ocupados por vehículos."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of docks that are occupied by vehicles."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks> <http://www.w3.org/2000/01/rdf-schema#label> "number occupied docks"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks> <http://www.w3.org/2000/01/rdf-schema#label> "número de anclajes ocupados"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState> <http://www.w3.org/2000/01/rdf-schema#label> "dock state"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState> <http://www.w3.org/2000/01/rdf-schema#label> "estado del anclaje"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#label> "propulsion system type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de sistema de propulsión"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState> <http://www.w3.org/2000/01/rdf-schema#label> "estado de la estación"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState> <http://www.w3.org/2000/01/rdf-schema#label> "station state"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState> <http://www.w3.org/2000/01/rdf-schema#label> "estado del vehículo"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle state"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de vehículo"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle type"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

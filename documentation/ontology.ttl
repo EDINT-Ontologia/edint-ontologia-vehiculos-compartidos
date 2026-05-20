@@ -1,0 +1,915 @@
+@prefix : <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> .
+
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> rdf:type owl:Ontology ;
+                                                                                 owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos/0.1.0> ;
+                                                                                 <http://purl.org/dc/elements/1.1/creator> "Daniel Doña" ,
+                                                                                                                           "Edna Ruckhaus" ,
+                                                                                                                           "Lucía Sánchez" ,
+                                                                                                                           "Oscar Corcho" ,
+                                                                                                                           "Socorro Bernardos" ;
+                                                                                 <http://purl.org/dc/elements/1.1/title> "Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades"@es ,
+                                                                                                                         "Vocabulary for the representation of data on shared vehicle systems in cities"@en ;
+                                                                                 <http://purl.org/dc/terms/created> "2026-05-18" ;
+                                                                                 <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                                                                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintvehcom" ;
+                                                                                 <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                                                                                 rdfs:comment """La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
+Además, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino."""@es ,
+                                                                                              """The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
+In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."""@en ;
+                                                                                 owl:versionInfo "0.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
+                                   rdfs:domain <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
+                                  <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#issued-003> ;
+                                  rdfs:comment "Date of formal issuance (e.g., publication) of the resource."@en ;
+                                  rdfs:isDefinedBy "http://purl.org/dc/terms/"@en ;
+                                  rdfs:label "Date Issued"@en ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qudt/informativeReference
+<http://qudt.org/schema/qudt/informativeReference> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://qudt.org/schema/qudt/LatexString
+<http://qudt.org/schema/qudt/LatexString> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML
+rdf:HTML rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYearMonth
+xsd:gYearMonth rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/hasUnit
+<http://qudt.org/schema/qudt/hasUnit> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <http://qudt.org/schema/qudt/unitFor> ;
+                                      rdfs:range <http://qudt.org/schema/qudt/Unit> .
+
+
+###  http://qudt.org/schema/qudt/unitFor
+<http://qudt.org/schema/qudt/unitFor> rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/manufacturer
+<http://schema.org/manufacturer> rdf:type owl:ObjectProperty ;
+                                 rdfs:range <http://schema.org/Organization> ;
+                                 rdfs:comment "The manufacturer of the product."@en ;
+                                 rdfs:label "manufacturer"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                         owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType>
+                                                                                                                       ]
+                                                                                                                     ) ;
+                                                                                                  rdf:type owl:Class
+                                                                                                ] ;
+                                                                                     rdfs:comment "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."@es ,
+                                                                                                  "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."@en ;
+                                                                                     rdfs:label "tipo de vehículo"@es ,
+                                                                                                "vehicle type"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock
+:destinationDock rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Route ;
+                 rdfs:range :Dock ;
+                 rdfs:comment "El anclaje de una estación a donde finaliza una ruta de un vehículo."@es ,
+                              "The dock in a station where a vehicle's route ends."@en ;
+                 rdfs:label "destination dock"@en ,
+                            "tiene anclaje destino"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot
+:destinationSpot rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Route ;
+                 rdfs:range <http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> ;
+                 rdfs:comment "Parking spot where a vehicle's route ends."@en ,
+                              "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."@es ;
+                 rdfs:label "destination parking spot"@en ,
+                            "plaza de aparcamiento estino"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState
+:dockState rdf:type owl:ObjectProperty ;
+           rdfs:domain :Dock ;
+           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                               owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState>
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ;
+           rdfs:comment "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."@es ,
+                        "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."@en ;
+           rdfs:label "dock state"@en ,
+                      "estado del anclaje"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock
+:hasDock rdf:type owl:ObjectProperty ;
+         rdfs:domain :SharedVehicleStation ;
+         rdfs:range :Dock ;
+         rdfs:comment "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."@es ,
+                      "Relationship between a shared vehicle siation and the docks that belong to it."@en ;
+         rdfs:label "has dock"@en ,
+                    "tiene anclaje"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint
+:hasWaypoint rdf:type owl:ObjectProperty ;
+             rdfs:domain :Route ;
+             rdfs:range :Waypoint ;
+             rdfs:comment "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."@es ,
+                          "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."@en ;
+             rdfs:label "has waypoint"@en ,
+                        "tiene punto de paso"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle
+:madeByVehicle rdf:type owl:ObjectProperty ;
+               rdfs:domain :Route ;
+               rdfs:range :SharedVehicle ;
+               <http://purl.org/vocab/vann/preferredNamespaceUri> "Relación entre un trayecto y el vehículo que lo realiza."@es ,
+                                                                  "Relationship between a route and the vehicle that makes it."@en ;
+               rdfs:label "made by vehicle"@en ,
+                          "realizado por vehículo"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy
+:operatedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :SharedVehicleStation ;
+            rdfs:range <http://schema.org/Organization> ;
+            rdfs:comment "Relación entre una estación de vehículos compartidos y la organización que la opera."@es ,
+                         "Relationship between a vehicle-sharing station and the organization that operates it."@en ;
+            rdfs:label "operado por"@es ,
+                       "operated by"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock
+:originDock rdf:type owl:ObjectProperty ;
+            rdfs:domain :Route ;
+            rdfs:range :Dock ;
+            rdfs:comment "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."@es ,
+                         "The dock in a station from where the vehicle departed on a certain route."@en ;
+            rdfs:label "origin dock"@en ,
+                       "tiene anclaje origen"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot
+:originSpot rdf:type owl:ObjectProperty ;
+            rdfs:domain :Route ;
+            rdfs:range <http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> ;
+            rdfs:comment "Plaza de aparcamiento desde donde sale la ruta del vehículo."@es ,
+                         "Parking spot from where the vehicle route starts." ;
+            rdfs:label "origin parking spot"@en ,
+                       "plaza de aparcamiento origen"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType
+:propulsionSystemType rdf:type owl:ObjectProperty ;
+                      rdfs:domain :SharedVehicle ;
+                      rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                          owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType>
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                      rdfs:comment "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."@es ,
+                                   "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."@en ;
+                      rdfs:label "propulsion system type"@en ,
+                                 "tipo de sistema de propulsión"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState
+:stationState rdf:type owl:ObjectProperty ;
+              rdfs:domain :SharedVehicleStation ;
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+              rdfs:comment "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."@es ,
+                           "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."@en ;
+              rdfs:label "estado de la estación"@es ,
+                         "station state"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState
+:vehicleState rdf:type owl:ObjectProperty ;
+              rdfs:domain :SharedVehicle ;
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+              rdfs:comment "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."@es ,
+                           "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."@en ;
+              rdfs:label "estado del vehículo"@es ,
+                         "vehicle state"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   rdfs:comment "A spatial representation for a given feature."@en ,
+                                                                "Una representación espacial para una característica determinada."@es ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                   rdfs:label "has geometry"@en ,
+                                                              "tiene geometría"@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
+                                               rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "está en el esquema"@es ,
+                                                          "is in scheme"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Relaciona un recurso (por ejemplo un concepto) con un esquema de conceptos en el que está incluido."@en ,
+                                                                                                "Relates a resource (for example a concept) to a concept scheme in which it is included."@en .
+
+
+###  http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.w3.org/2006/time#ProperInterval> ;
+                                           rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                                           rdfs:comment "Beginning of a temporal entity"@en ,
+                                                        "Comienzo de una entidad temporal."@es ;
+                                           rdfs:label "Has Beginning"@en ,
+                                                      "Tiene principio"@es .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/2006/time#ProperInterval> ;
+                                     rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                                     rdfs:comment "End of a temporal entity"@en ,
+                                                  "Final de una entidad temporal."@es ;
+                                     rdfs:label "Has End"@en ,
+                                                "Tiene final"@es .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                                 rdfs:comment "A relation between an Observation and the entity whose quality was observed."@en ,
+                                                              "Una relación entre una Observación y la entidad para la que se ha observado."@es ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                                 rdfs:label "has feature of interest"@en ,
+                                                            "tiene característica de interés"@es .
+
+
+###  http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <http://www.w3.org/ns/sosa/isResultOf> ;
+                                      rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                      <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> ,
+                                                                         <http://www.w3.org/ns/sosa/Observation> ,
+                                                                         <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                         <http://www.w3.org/ns/sosa/Sampling> ;
+                                      <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result> ,
+                                                                        <http://www.w3.org/ns/sosa/Sample> ;
+                                      rdfs:comment "Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra."@es ,
+                                                   "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ,
+                                                       <http://www.w3.org/ns/sosa/common/> ;
+                                      rdfs:label "has result"@en ,
+                                                 "tiene resultado"@es ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en .
+
+
+###  http://www.w3.org/ns/sosa/isHostedBy
+<http://www.w3.org/ns/sosa/isHostedBy> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://www.w3.org/ns/sosa/Sensor> ;
+                                       rdfs:range <http://w3.org/ns/sosa/Platform> ;
+                                       rdfs:comment "Relation between a Sensor, or Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en ;
+                                       rdfs:label "is hosted by"@en .
+
+
+###  http://www.w3.org/ns/sosa/isResultOf
+<http://www.w3.org/ns/sosa/isResultOf> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> rdf:type owl:ObjectProperty ;
+                                         rdfs:comment "Relación entre una Observación y un Sensor que realiza la Observación."@en ,
+                                                      "Relation between an Observation and the Sensor which made the Observation."@es ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                         rdfs:label "made by sensor"@en ,
+                                                    "realizada por sensor"@es .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty ;
+                                             rdfs:comment "Relación que enlaza la propiedad que se observa."@es ,
+                                                          "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                             rdfs:label "observed property"@en ,
+                                                        "propiedad observada"@es .
+
+
+###  http://www.w3.org/ns/sosa/observes
+<http://www.w3.org/ns/sosa/observes> rdf:type owl:ObjectProperty ;
+                                     rdfs:comment "Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones."@es ,
+                                                  "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                     rdfs:label "observa"@es ,
+                                                "observes"@en .
+
+
+###  http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                           rdfs:range <http://www.w3.org/2006/time#ProperInterval> ;
+                                           rdfs:comment "Esta propiedad establece el intervalo de tiempo de la observación."@es ,
+                                                        "This property sets the interval of time of the observation"@en ;
+                                           rdfs:label "intervalo de tiempo"@es ,
+                                                      "time interval"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/endDate
+<http://schema.org/endDate> rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:dateTime ;
+                            rdfs:comment """La fecha y hora de finalización de
+	una incidencia (en formato fecha ISO 8601)"""@es ,
+                                         "The end date and time of an incidence (in ISO 8601 date format)."@en ;
+                            rdfs:isDefinedBy <https://schema.org/> ;
+                            rdfs:label "end date"@en ,
+                                       "fecha de fin"@es .
+
+
+###  http://schema.org/startDate
+<http://schema.org/startDate> rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:dateTime ;
+                              rdfs:comment "La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601)."@es ,
+                                           "The start date and time of an incidence (in ISO 8601 date format)."@en ;
+                              rdfs:isDefinedBy <https://schema.org/> ;
+                              rdfs:label "(expected) start date"@en ,
+                                         "fecha de inicio (prevista)"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate
+:closureDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :SharedVehicleStation ;
+             rdfs:range xsd:date ;
+             rdfs:comment "Date when the station ceases operation."@en ,
+                          "Fecha en la cual la estación cesa sus operaciones."@es ;
+             rdfs:label "closure date"@en ,
+                        "fecha de baja"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate
+:comissioningDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :SharedVehicleStation ;
+                  rdfs:range xsd:date ;
+                  rdfs:comment "Fecha en que la estación es certificada y puesta en servicio oficialmente."@es ,
+                               "Date when the station is officially tested, certified, and put into active service." ;
+                  rdfs:label "comissionning date"@en ,
+                             "fecha de alta"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order
+:order rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Waypoint ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "El número de orden un un punto de paso."@es ,
+                    "The order number of a waypoint."@en ;
+       rdfs:label "orden"@es ,
+                  "order"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime
+:passingDateTime rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Waypoint ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment ""@en ,
+                              "Date and time when the vehicle passed through the waypoint in a route."@en ,
+                              "Fecha y hora en que el vehículo pasó por el punto en la ruta."@es ;
+                 rdfs:label "fecha y hora punto de paso"@es ,
+                            "passing date and time"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.opengis.net/ont/sf#Point> ;
+                                              rdfs:range xsd:float ;
+                                              rdfs:comment "Latitud en WGS84"@es ,
+                                                           "Latitude in WGS84"@en ;
+                                              rdfs:label "latitude" .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.opengis.net/ont/sf#Point> ;
+                                               rdfs:range xsd:float ;
+                                               rdfs:comment "Longitud en WGS84"@es ,
+                                                            "Longitude in WGS84"@en ;
+                                               rdfs:label "longitude" .
+
+
+###  http://www.w3.org/2006/time#inXSDgYearMonth
+<http://www.w3.org/2006/time#inXSDgYearMonth> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.w3.org/2006/time#Instant> ;
+                                              rdfs:range xsd:gYearMonth ;
+                                              rdfs:comment "Posición de un instante, expresado utilizando xsd:gYearMonth."@es ,
+                                                           "Position of an instant, expressed using xsd:gYearMonth."@en ;
+                                              rdfs:label "en año-mes gregoriano XSD"@es ,
+                                                         "in XSD g-YearMonth"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/Concept
+<http://qudt.org/schema/qudt/Concept> rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt/Quantifiable
+<http://qudt.org/schema/qudt/Quantifiable> rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt/QuantityValue
+<http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://qudt.org/schema/qudt/Concept> ,
+                                                            <http://qudt.org/schema/qudt/Quantifiable> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://qudt.org/schema/qudt/hasUnit> ;
+                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                            rdfs:comment "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to \"http://physics.nist.gov/Pubs/SP811/sec07.html\", NIST SP 811, section 7 for more on quantity values." ;
+                                            rdfs:isDefinedBy <http://qudt.org/schema/qudt> ;
+                                            rdfs:label "Quantity value" .
+
+
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://qudt.org/schema/qudt/Concept> .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class ;
+                                 rdfs:comment "Representa un conjunto de personas organizadas en una comunidad u otra estructura social, comercial o política."@es ,
+                                              "Represents a collection of people organized together into a community or other social, commercial or political structure."@en ;
+                                 rdfs:label "Organización"@es ,
+                                            "Organization"@en .
+
+
+###  http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot
+<http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> rdf:type owl:Class ;
+                                                                                           rdfs:comment "Individual parking space on-street or off-street."@en ,
+                                                                                                        "Plaza individual de estacionamiento dentro o fuera de la vía pública."@es ;
+                                                                                           rdfs:label "Parking spot"@en ,
+                                                                                                      "Plaza de aparcamiento"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle
+<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> rdf:type owl:Class ;
+                                                                                 rdfs:comment "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."@es ,
+                                                                                              "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@en ;
+                                                                                 rdfs:label "Vehicle"@en ,
+                                                                                            "Vehículo"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment
+:ControlEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf :DockSensor ;
+                  rdfs:comment "An equipment monitors that controls properties of a specific vehicle such as its speed or the access to certain city areas."@en ,
+                               "Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad."@es ;
+                  rdfs:label "Control equipment"@en ,
+                             "Equipo de control"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock
+:Dock rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+      rdfs:comment "Lugar de la estación donde se fijan las bicicletas"@es ,
+                   "Place in the station where the vehicles are secured."@en ;
+      rdfs:label "Anclaje"@es ,
+                 "Dock"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation
+:DockObservation rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
+                 rdfs:comment "Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo."@es ,
+                              "Observation by a dock sensor that detects the dock's availability to park a vehicle (free), or occupied by a vehicle."@en ;
+                 rdfs:label "Dock observation"@en ,
+                            "Observación de anclaje"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty
+:DockProperty rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+              rdfs:comment "Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos."@es ,
+                           "Observable property of the dock that refers to its availability: free or occupied by a vehicle."@es ;
+              rdfs:label "Dock property"@en ,
+                         "Propiedad de anclaje"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor
+:DockSensor rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+            rdfs:comment "Equipment that allows you to detect if an anchor is free or occupied."@en ;
+            rdfs:label "Dock sensor"@en ,
+                       "Equipo que permite detectar si un anclaje está libre u ocupado."@es ,
+                       "Sensor de anclaje"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route
+:Route rdf:type owl:Class ;
+       rdfs:comment "Espacio que se recorre para llegar desde un origen hasta un destino."@es ,
+                    "The path traveled to get from an origin to a destination"@en ;
+       rdfs:label "Route"@en ,
+                  "Trayecto"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle
+:SharedVehicle rdf:type owl:Class ;
+               rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> ;
+               rdfs:comment "Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda."@es ,
+                            "Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access."@en ;
+               rdfs:label "Shared vehicle"@en ,
+                          "Vehículo compartido"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation
+:SharedVehicleStation rdf:type owl:Class ;
+                      rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> ,
+                                      <http://w3.org/ns/sosa/Platform> ;
+                      rdfs:comment "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."@es ,
+                                   "Place where you can both leave and pick up a shared vehicles. It is composed of docks"@en ;
+                      rdfs:label "Estación de vehículos compartidos"@es ,
+                                 "Shared vehicle station"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice
+:TrafficMeasurementDevice rdf:type owl:Class ;
+                          rdfs:subClassOf :DockSensor ;
+                          rdfs:comment "Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico."@es ,
+                                       "Type of traffic device which performs measurementsof properties such as service level, traffic intensity and traffic load."@en ;
+                          rdfs:label "Dispositivo de medición de tráfico"@es ,
+                                     "Traffic measuring device"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint
+:Waypoint rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+          rdfs:comment "Part of a route defined by coordinates and a date and time"@en ,
+                       "Parte de un trayecto definido por unas coordenadas y una fecha y hora."@es ;
+          rdfs:label "Punto de paso"@es ,
+                     "Waypoint"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> ;
+                                                                                                   rdfs:comment "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es ,
+                                                                                                                "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en ;
+                                                                                                   rdfs:label "Equipamiento"@es ,
+                                                                                                              "Facility"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> rdf:type owl:Class ;
+                                                                                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                                                                rdfs:comment "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."@es ,
+                                                                                                                             "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."@en ;
+                                                                                                                rdfs:label "Elemento de la infraestructura"@es ,
+                                                                                                                           "Infrastructure element"@en .
+
+
+###  http://w3.org/ns/sosa/Platform
+<http://w3.org/ns/sosa/Platform> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                 rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en ,
+                                              "Una plataforma es una entidad que alberga otras entidades, en particular sensores, actuadores, muestreadores y otras plataformas."@es ;
+                                 rdfs:label "Plataforma"@es ,
+                                            "Platform"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                               rdfs:comment "Esta clase representa una característica de alto nivel, equivalente a GFI_Feature definida en ISP 19156 y es una supercale para todos los tipos de características espaciales."@en ,
+                                                            """This class represents the top-level feature type. This
+	class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of
+	all feature types."""@en ;
+                                               rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                               rdfs:label "Característica geográfica"@es ,
+                                                          "Feature"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                rdfs:comment "Esta clase representa el tipo de geometría de alto nivel. Es equivalente a GFI_Geometry definida en ISO 19156 y es superclase de todos los tipos geométricos."@es ,
+                                                             "This class represents the top-level geometry type. This class is equivalent to GFI_Geometry defined in ISO 19156, and it is superclass of all geometry types."@en ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                                rdfs:label "Geometry"@en ,
+                                                           "Geometría"@es .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                     rdfs:comment "Esta clase representa un tipo de objeto espacial de alto nivel. Es equivalente a GFI SpatialObject difinido en ISO 19156 y es una superclase de todos los tipos de objetos espaciales."@es ,
+                                                                  """This class represents the top-level spatial object
+	type. This class is equivalent to GFI_SpatialObject defined in ISO 19156, and it
+	is superclass of all spatial object types."""@en ;
+                                                     rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                                     rdfs:label "Objeto Espacial"@es ,
+                                                                "SpatialObject"@en .
+
+
+###  http://www.opengis.net/ont/sf#Point
+<http://www.opengis.net/ont/sf#Point> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                      rdfs:comment "Se representa un tipo de punto de alto nivel. Esta clase es equivalente a GFI_Point definida en ISO 19156 y es superclase de todos los tipos de puntos."@es ,
+                                                   "This class represents the top-level point type. This 	class is equivalent to GFI_Point defined in ISO 19156, and it is superclass of all point types."@en ;
+                                      rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                      rdfs:label "Geographic Point"@en ,
+                                                 "Punto geográfico"@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              owl:disjointWith <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                              <http://purl.org/dc/terms/issued> "2004-02-xx" ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                              rdfs:label "Concept"@en ,
+                                                         "Concepto"@es ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "An abstract idea or notion; a unit of thought."@en ,
+                                                                                               "Una idea o noción abstracta; una unidad de pensamiento."@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    rdfs:comment "A concept scheme may be defined to include concepts from different sources."@en ,
+                                                                 "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes.  Concept schemes are also embedded in glossaries and terminologies."@en ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                                    rdfs:label "Concept Scheme"@en ,
+                                                               "Esquema de conceptos"@es ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                      rdfs:comment "A temporal entity with zero extent or duration."@en ,
+                                                   "Una entidad temporal con extensión o duración de cero."@es ;
+                                      rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                      rdfs:label "Instante de tiempo"@es ,
+                                                 "Time instant"@en .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                       rdfs:comment "A temporal entity with an extent or duration."@en ,
+                                                    "Una entidad temporal con extensión o duración"@es ;
+                                       rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                       rdfs:label "Time interval"@en ,
+                                                  "intervalo"@es .
+
+
+###  http://www.w3.org/2006/time#ProperInterval
+<http://www.w3.org/2006/time#ProperInterval> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.w3.org/2006/time#Interval> ;
+                                             rdfs:comment "A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different."@en ,
+                                                          "Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes"@es ;
+                                             rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                             rdfs:label "Proper interval"@en ,
+                                                        "intervalo preciso"@es .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
+                                             rdfs:comment "A temporal interval or instant."@en ,
+                                                          "Un intervalo temporal o un instante."@es ;
+                                             rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                             rdfs:label "Entidad temporal"@es ,
+                                                        "Temporal Entity"@en .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class ;
+                                              rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                              rdfs:label "Feature Of Interest"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#example> "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
+                                               rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                               rdfs:label "Observable Property"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class ;
+                                        rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with"@en ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                        rdfs:label "Observation"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#example> "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
+
+
+###  http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class ;
+                                   rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                   rdfs:label "Sensor"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#example> "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability
+:dockAvailability rdf:type owl:NamedIndividual ,
+                           :DockProperty ;
+                  rdfs:comment "Indicates whether the dock is free or occupied."@en ,
+                               "Número total de anclajes ocupados con vehículos, en una estación."@es ;
+                  rdfs:label "disponibilidad del anclaje"@es ,
+                             "dock availability"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks
+:numberEmptyDocks rdf:type owl:NamedIndividual ,
+                           :DockProperty ;
+                  rdfs:comment "Número total de anclajes vacíos en la estación, es decir, disponibles para aparcar un vehículo."@es ,
+                               "Total number of empty docks at the station, i.e., available to park a vehicle."@en ;
+                  rdfs:label "number of empty docks"@en ,
+                             "número de anclajes vacíos"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks
+:numberOccupiedDocks rdf:type owl:NamedIndividual ,
+                              :DockProperty ;
+                     rdfs:comment "Número total de anclajes ocupados por vehículos."@es ,
+                                  "Total number of docks that are occupied by vehicles."@en ;
+                     rdfs:label "number occupied docks"@en ,
+                                "número de anclajes ocupados"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                               rdfs:label "dock state"@en ,
+                                                                          "estado del anclaje"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                          rdfs:label "propulsion system type"@en ,
+                                                                                     "tipo de sistema de propulsión"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                  rdfs:label "estado de la estación"@es ,
+                                                                             "station state"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                  rdfs:label "estado del vehículo"@es ,
+                                                                             "vehicle state"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                 rdfs:label "tipo de vehículo"@es ,
+                                                                            "vehicle type"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

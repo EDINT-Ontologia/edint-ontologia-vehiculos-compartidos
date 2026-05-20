@@ -1,0 +1,81 @@
+<html> 
+<h2 id="desc" class="list">Ontología para la representación de datos sobre sistemas de vehículos compartidos: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">La Figura 1 muestra las clases y propiedades de la ontología de vehículos compartidos. El principal objetivo de esta porción de la ontología es permitir la representación de los trayectos realizados por los vehhículos de un sistema.</span>
+<center><img src="images/diagrama-conceptual-vehiculos.png"><figcaption>Figura 1. - Diagrama conceptual de vehículos y trayectos</figcaption></center>
+<span class="markdown">
+<p>Para representar un trayecto se tiene el concepto [Trayecto](#Route) que debe tener asociado un [Vehículo compartido](#SharedVehicle) y, a su vez, tanto un [anclaje de origen](#originDock)  como un [anclaje de destino](#destinationDock) en caso de que el modelo del sistema esté basado en estaciones. En caso de que el modelo sea "Libre", entonces el trayecto tendrá tanto una [plaza de aparcamiento de origen](#originSpot) como una [plaza de aparcamiento de destino](#destinationSpot).
+Un trayecto puede tener una serie de [puntos de paso](#Waypoint).Adicionalmente, en esta ontología se han utilizado varios esquemas de conceptos SKOS para representar el estado de un vehículo (activo, en reparación, abandonado), el tipo de propulsión (eléctrico, gasolina, etc.) y el tipo de vehículo (coche, bicicleta, patinete, etc.).</p>
+
+<p>Con la finalidad de representar los posibles puntos de paso de los trayectos, expresados en términos de su longitud y latitud, se han reutilizado las clases [geosparql:Feature](http://www.opengis.net/doc/IS/geosparql/1.0#Feature), [geosparql:SpatialObject](http://www.opengis.net/doc/IS/geosparql/1.0#SpatialObject), [geosparql:Geometry](http://www.opengis.net/doc/IS/geosparql/1.0#Geometry) y [geosparql:Point](http://www.opengis.net/doc/IS/geosparql/1.0#Point) del vocabulario [geosparql](http://www.opengis.net/doc/IS/geosparql/1.0) siguiendo el "Patrón de localización" de la Figura 1.</p>
+
+<p>Asimismo, se representan todas las observaciones acerca de la disponibilidad de los anclajes de las estaciones, tal como se puede ver en la Figura 2. Se reutiliza el patrón de diseño de la [Ontología de sensores semánticos](https://www.w3.org/TR/vocab-ssn/).</p>
+</span>
+<center><img src="images/diagrama-conceptual-estaciones.png"><figcaption>Figura 2. - Diagrama conceptual de estaciones y anclajes</figcaption></center>
+
+<span class="markdown">
+<p>El concepto principal es el de [Anclaje](#Dock) para el cual se reutilizan las clases [sosa:Sensor](http://www.w3.org/ns/sosa/Sensor), [sosa:Observation](http://www.w3.org/ns/sosa/Observation), [sosa:ObservableProperty](http://www.w3.org/ns/sosa/ObservableProperty), [sosa:Platform](http://www.w3.org/ns/sosa/Platform) y [sosa:FeatureOfInterest](http://www.w3.org/ns/sosa/FeatureOfInterest) de la ontología [sosa](http://www.w3.org/ns/sosa/). Concretamente, se va a observar la disponibilidad de un anclaje que a su vez es la característica de interés. La propiedad que se va a observar y para la que se va a obtener el resultado de la observación es la [disponibilidad de un anclaje](#dockAvailability). Esta propiedad de la estación permite representar el [número de anclajes vacíos (libres)](#numberEmptyDocks), y el [número de anclajes ocupados](numberOccupiedDocks).</p>
+</span>
+
+</span>
+<h3>3.1 Ejemplos de uso<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
+<span class="markdown">
+  Con la finalidad de facilitar la comprensión del uso de algunas clases y propiedades de esta ontología se proporcionarán a continuación algunos ejemplos.
+
+  En primer lugar para la representación de una estación de bicicleta se crea una instancia de la clase [esbici:EstacionBicicleta](#EstacionBicicleta) con las propiedades [dct:identifier](http://purl.org/dc/terms/identifier) (identificador de la estación), [schema:name](https://schema.org/name) (nombre de la estación), [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (fecha de alta de la estación), [esequip:fechaBaja](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja) (fecha de baja de la estación) y [schema:address](https://schema.org/address) (dirección de la estación). Asimismo, se enlaza mediante la propiedad [esbici:estadoEstacion](#estadoEstacion) la estación con el concepto correspondiente de la taxonomía de estado de la estación, que para el caso del ejemplo se trata de una estación [esbici-kos:operativa](http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-estacion/operativa). Finalmente, la estación se asocia a través de la propiedad [esbici:tieneAsociadoAnclaje](#tieneAsociadoAnclaje) con una instancia de [esbici:Anclaje](#Anclaje) que corresponde a uno e los anclajes de la estación y que tiene un [dct:identifier](http://purl.org/dc/terms/identifier) (identificador).
+</span>
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt; a esbici:EstacionBicicleta ;
+  dct:identifier "001A"@es ;
+  esequip:nombre "Puerta del Sol A"@es ;
+  esequip:fechaAlta "2014-06-23"^^xsd:date ;
+  schema:address "PUERTA DEL SOL, PLAZA, DE LA, 1 B"@es ;
+  esbici:estadoEstacion &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-estacion/operativa&gt; ;
+  esequipo:tipoEquipamiento &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/estacion-de-bicicletas&gt; ;
+  esbici:tieneAsociadoAnclaje &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; .
+</pre>
+<span class="markdown">
+  A continuación, se representa una instancia de [esbici:Anclaje](#Anclaje) para la que se ha especificado su identificador ([dct:identifier](http://purl.org/dc/terms/identifier)) y el estado en el que se encuentra. Para expresar su estado se utiliza la propiedad [esbici:estadoAnclaje](#estadoAnclaje) para enlazar el Anclaje con el concepto correspondiente del SKOS de [tipo-estado-anclaje](http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-anclaje), que para el caso del ejemplo es libre.
+</span>
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; a esbici:Anclaje ;
+  dct:identifier "11AN"@es ;
+  esbici:estadoAnclaje &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-anclaje/libre&gt; .
+</pre>
+
+<span class="markdown">
+Para representar un trayecto se ha creado una instancia de la clase [esbici:Trayecto](#Trayecto) con las propiedades [dct:identifier](http://purl.org/dc/terms/identifier) (identificador del trayecto), [schema:startDate](https://schema.org/startDate) (fecha y hora de comienzo del trayecto), y las relaciones con las propiedades [esbici:tieneAsociadoBicicleta](#tieneAsociadoBicicleta), que indica la bicicleta asociada a ese trayecto, [esbici:tieneEstacionOrigen](#tieneEstacionOrigen) que indica la estación de origen del trayecto y [esbici:tieneAnclajeOrigen](#tieneAnclajeOrigen) que indica el anclaje exacto de la estación de origen. Como se puede ver a continuación, en la instancia de la clase [esbici:Bicicleta](#Bicicleta) en su estado ocupada, el trayecto no ha concluido por lo que aún no se dispone de anclaje ni estación de destino. Para el caso en que el trayecto haya sido finalizado bastaría con agregar a este ejemplo la [schema:endDate](https://schema.org/endDate) (fecha y hora de fin del trayecto), [esbici:tieneEstacionDestino](#tieneEstacionDestino) para indicar la estación de destino, y [esbici:tieneAnclajeDestino](#tieneAnclajeDestino) para indicar el anclaje en el que se dejó la Bicicleta.
+</span>
+
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Trayecto/4f0b79985d77717ea2232760a2de2d36&gt; a esbici:Trayecto ;
+  dct:identifier "T201912100041"@es ;
+  schema:startDate "2019-12-10T11:30:00"^^xsd:dateTime ;
+  esbici:tieneAsociadoBicicleta &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Bicicleta/7c2a90085d77717ea2232760a2de2d36&gt; ;
+  esbici:tieneEstacionOrigen &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt; ;
+  esbici:tieneAnclajeOrigen &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; ;
+</pre>
+
+<span class="markdown">
+Finalmente, se representa una instancia de [esbici:Bicicleta](#Bicicleta) para la que se ha especificado su identificador ([dct:identifier](http://purl.org/dc/terms/identifier)), su número de matrícula [esbici:matricula](#matricula) y el estado en el que se encuentra. Para expresar su estado se utiliza la propiedad [esbici:estadoBicicleta](#estadoBicicleta) para enlazar la Bicicleta con el concepto correspondiente del SKOS de [tipo-estado-bicicleta](http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-bicicleta), que para el caso del ejemplo es ocupada.
+</span>
+
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Bicicleta/7c2a90085d77717ea2232760a2de2d36&gt; a esbici:Bicicleta ;
+  dct:identifier "B13425"@es ;
+  esbici:matricula "MAD13425"@es ;
+  esbici:estadoBicicleta &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-bicicleta/ocupada&gt; .
+</pre>
+
+
+<span class="markdown">
+Para representar una observación en una estación se ha creado una instancia de la clase [esbici:ObservacionEstacion](#ObservacionEstacion) de la cual se ha obtenido el resultado de dicha observación ([sosa:hasSimpleResult](http://www.w3.org/ns/sosa/hasSimpleResult)), la hora de dicha observación [sosa:resultTime](http://www.w3.org/ns/sosa/resultTime), el sensor que realizó dicha observación [sosa:madeBySensor](http://www.w3.org/ns/sosa/madeBySensor) y la propiedad que se ha observado [sosa:sosa:observedProperty](http://www.w3.org/ns/sosa/sosa:observedProperty), en este caso, los anclajes ocupados de una estación.
+</span>
+
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/ObservacionEstacion/7g0l23012d77717ea2232760a2de2d36&gt; a sosa:Observation, esbici:ObservacionEstacion ;
+  sosa:hasSimpleResult “12” ;
+  sosa:resultTime "2019-12-10T13:00:00"^^xsd:dateTime ;
+  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt;
+  sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#anclajesOcupados&gt .
+</pre>
+</html>

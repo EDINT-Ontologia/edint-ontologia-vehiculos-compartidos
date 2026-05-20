@@ -1,0 +1,2311 @@
+<h2 id="crossreference" class="list">T&eacute;rminos de Vehículos Compartidos para clases, propiedades de objeto y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por Vehículos Compartidos.
+<div xmlns:era="http://data.europa.eu/949/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Clases</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Dock"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">Anclaje</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Característica geográfica</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
+      </li>
+      <li>
+         <a href="#TrafficMeasurementDevice"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">Dispositivo de medición de tráfico</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
+            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement">Elemento de la infraestructura</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Entidad temporal</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
+            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Equipamiento</a>
+      </li>
+      <li>
+         <a href="#ControlEquipment"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">Equipo de control</a>
+      </li>
+      <li>
+         <a href="#DockSensor"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Equipo que permite detectar si un anclaje está libre u ocupado.</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+      </li>
+      <li>
+         <a href="#SharedVehicleStation"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometría</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instante de tiempo</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">intervalo</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#ProperInterval" title="http://www.w3.org/2006/time#ProperInterval">intervalo preciso</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+            title="http://www.opengis.net/ont/geosparql#SpatialObject">Objeto Espacial</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a>
+      </li>
+      <li>
+         <a href="#DockObservation"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation">Observación de anclaje</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Organization" title="http://schema.org/Organization">Organización</a>
+      </li>
+      <li>
+         <a href="#http://w3.org/ns/sosa/Platform" title="http://w3.org/ns/sosa/Platform">Plataforma</a>
+      </li>
+      <li>
+         <a href="#http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot"
+            title="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot">Plaza de aparcamiento</a>
+      </li>
+      <li>
+         <a href="#DockProperty"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty">Propiedad de anclaje</a>
+      </li>
+      <li>
+         <a href="#Waypoint"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint">Punto de paso</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/sf#Point" title="http://www.opengis.net/ont/sf#Point">Punto geográfico</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/QuantityValue" title="http://qudt.org/schema/qudt/QuantityValue">Quantity value</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
+      </li>
+      <li>
+         <a href="#Route"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">Trayecto</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">
+            <span>unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
+      </li>
+      <li>
+         <a href="#SharedVehicle"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle">Vehículo compartido</a>
+      </li>
+   </ul>
+   <div class="entity" id="Dock">
+      <h3>Anclaje<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock</p>
+      <div class="comment">
+         <span class="markdown">Lugar de la estación donde se fijan las bicicletas</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#dockState"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState">estado del anclaje</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#hasDock"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock">tiene anclaje</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#destinationDock"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock">tiene anclaje destino</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#originDock"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock">tiene anclaje origen</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
+      <h3>Característica geográfica<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Feature</p>
+      <div class="comment">
+         <span class="markdown">Esta clase representa una característica de alto nivel, equivalente a GFI_Feature definida en ISP 19156 y es una supercale para todos los tipos de características espaciales.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#">http://www.opengis.net/ont/geosparql#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">Objeto Espacial</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
+               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement">Elemento de la infraestructura</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#http://w3.org/ns/sosa/Platform" title="http://w3.org/ns/sosa/Platform">Plataforma</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#Waypoint"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint">Punto de paso</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">tiene geometría</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
+      <h3>Concepto<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
+      <div class="comment">
+         <span class="markdown">Una idea o noción abstracta; una unidad de pensamiento.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#">http://www.w3.org/2004/02/skos/core#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>disjunto a</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TrafficMeasurementDevice">
+      <h3>Dispositivo de medición de tráfico<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice</p>
+      <div class="comment">
+         <span class="markdown">Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#DockSensor"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Equipo que permite detectar si un anclaje está libre u ocupado.</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement">
+      <h3>Elemento de la infraestructura<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement</p>
+      <div class="comment">
+         <span class="markdown">Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Característica geográfica</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
+               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Equipamiento</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#TemporalEntity">
+      <h3>Entidad temporal<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#TemporalEntity</p>
+      <div class="comment">
+         <span class="markdown">Un intervalo temporal o un instante.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#">http://www.w3.org/2006/time#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instante de tiempo</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">intervalo</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">
+      <h3>Equipamiento<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility</p>
+      <div class="comment">
+         <span class="markdown">Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
+               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement">Elemento de la infraestructura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#SharedVehicleStation"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlEquipment">
+      <h3>Equipo de control<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment</p>
+      <div class="comment">
+         <span class="markdown">Un equipo que controla propiedades de un vehículo específico, como su velocidad o el acceso a ciertas áreas de la ciudad.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#DockSensor"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Equipo que permite detectar si un anclaje está libre u ocupado.</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DockSensor">
+      <h3>Equipo que permite detectar si un anclaje está libre u ocupado.<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor</p>
+      <div class="comment">
+         <span class="markdown">Equipment that allows you to detect if an anchor is free or occupied.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#TrafficMeasurementDevice"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">Dispositivo de medición de tráfico</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ControlEquipment"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">Equipo de control</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+      <h3>Esquema de conceptos<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
+      <div class="comment">
+         <span class="markdown">A concept scheme may be defined to include concepts from different sources.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">A set of concepts, optionally including statements about semantic relationships between those concepts.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#">http://www.w3.org/2004/02/skos/core#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">está en el esquema</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+         <dt>miembros</dt>
+         <dd>
+            <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState"
+               title="http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState">estado de la estación</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState"
+               title="http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState">estado del anclaje</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState"
+               title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState">estado del vehículo</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType"
+               title="http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType">tipo de sistema de propulsión</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
+               title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">tipo de vehículo</a>
+            <sup class="type-ni" title="Individuo">ni</sup>
+         </dd>
+         <dt>disjunto a</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SharedVehicleStation">
+      <h3>Estación de vehículos compartidos<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation</p>
+      <div class="comment">
+         <span class="markdown">Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
+               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Equipamiento</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#http://w3.org/ns/sosa/Platform" title="http://w3.org/ns/sosa/Platform">Plataforma</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#stationState"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState">estado de la estación</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#comissioningDate"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate">fecha de alta</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#closureDate"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate">fecha de baja</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#operatedBy"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy">operado por</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasDock"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock">tiene anclaje</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/FeatureOfInterest">
+      <h3>Feature Of Interest<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/FeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Ejemplo</dt>
+         <dd>
+            <dt>When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator.</dt>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#Dock"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">Anclaje</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Geometry">
+      <h3>Geometría<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Geometry</p>
+      <div class="comment">
+         <span class="markdown">Esta clase representa el tipo de geometría de alto nivel. Es equivalente a GFI_Geometry definida en ISO 19156 y es superclase de todos los tipos geométricos.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#">http://www.opengis.net/ont/geosparql#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">Objeto Espacial</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/sf#Point" title="http://www.opengis.net/ont/sf#Point">Punto geográfico</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">tiene geometría</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Instant">
+      <h3>Instante de tiempo<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Instant</p>
+      <div class="comment">
+         <span class="markdown">Una entidad temporal con extensión o duración de cero.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#">http://www.w3.org/2006/time#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Entidad temporal</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#inXSDgYearMonth" title="http://www.w3.org/2006/time#inXSDgYearMonth">en año-mes gregoriano XSD</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">Tiene final</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">Tiene principio</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Interval">
+      <h3>intervalo<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Interval</p>
+      <div class="comment">
+         <span class="markdown">Una entidad temporal con extensión o duración</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#">http://www.w3.org/2006/time#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Entidad temporal</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#ProperInterval" title="http://www.w3.org/2006/time#ProperInterval">intervalo preciso</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#ProperInterval">
+      <h3>intervalo preciso<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#ProperInterval</p>
+      <div class="comment">
+         <span class="markdown">Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#">http://www.w3.org/2006/time#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">intervalo</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">Tiene final</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">Tiene principio</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">intervalo de tiempo</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#SpatialObject">
+      <h3>Objeto Espacial<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#SpatialObject</p>
+      <div class="comment">
+         <span class="markdown">Esta clase representa un tipo de objeto espacial de alto nivel. Es equivalente a GFI SpatialObject difinido en ISO 19156 y es una superclase de todos los tipos de objetos espaciales.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#">http://www.opengis.net/ont/geosparql#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Característica geográfica</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometría</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/ObservableProperty">
+      <h3>Observable Property<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservableProperty</p>
+      <div class="comment">
+         <span class="markdown">An observable quality (property, characteristic) of a FeatureOfInterest.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">An observable quality (property, characteristic) of a FeatureOfInterest.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Ejemplo</dt>
+         <dd>
+            <dt>The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted.</dt>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#DockProperty"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty">Propiedad de anclaje</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DockObservation">
+      <h3>Observación de anclaje<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation</p>
+      <div class="comment">
+         <span class="markdown">Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Observation">
+      <h3>Observation<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation</p>
+      <div class="comment">
+         <span class="markdown">Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Ejemplo</dt>
+         <dd>
+            <dt>The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake.</dt>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#DockObservation"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation">Observación de anclaje</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">intervalo de tiempo</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">tiene resultado</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Organization">
+      <h3>Organización<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Organization</p>
+      <div class="comment">
+         <span class="markdown">Representa un conjunto de personas organizadas en una comunidad u otra estructura social, comercial o política.</span>
+      </div>
+      <dl class="description">
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#http://schema.org/manufacturer" title="http://schema.org/manufacturer">manufacturer</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#operatedBy"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy">operado por</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3.org/ns/sosa/Platform">
+      <h3>Plataforma<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3.org/ns/sosa/Platform</p>
+      <div class="comment">
+         <span class="markdown">Una plataforma es una entidad que alberga otras entidades, en particular sensores, actuadores, muestreadores y otras plataformas.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Característica geográfica</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#SharedVehicleStation"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot">
+      <h3>Plaza de aparcamiento<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot</p>
+      <div class="comment">
+         <span class="markdown">Plaza individual de estacionamiento dentro o fuera de la vía pública.</span>
+      </div>
+      <dl class="description">
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#destinationSpot"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot">plaza de aparcamiento estino</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#originSpot"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot">plaza de aparcamiento origen</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DockProperty">
+      <h3>Propiedad de anclaje<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty</p>
+      <div class="comment">
+         <span class="markdown">Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>miembros</dt>
+         <dd>
+            <a href="#dockAvailability"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability">disponibilidad del anclaje</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#numberOccupiedDocks"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks">número de anclajes ocupados</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#numberEmptyDocks"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks">número de anclajes vacíos</a>
+            <sup class="type-ni" title="Individuo">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Waypoint">
+      <h3>Punto de paso<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint</p>
+      <div class="comment">
+         <span class="markdown">Parte de un trayecto definido por unas coordenadas y una fecha y hora.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Característica geográfica</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#passingDateTime"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime">fecha y hora punto de paso</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#order"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order">orden</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#hasWaypoint"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint">tiene punto de paso</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/sf#Point">
+      <h3>Punto geográfico<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/sf#Point</p>
+      <div class="comment">
+         <span class="markdown">Se representa un tipo de punto de alto nivel. Esta clase es equivalente a GFI_Point definida en ISO 19156 y es superclase de todos los tipos de puntos.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#">http://www.opengis.net/ont/geosparql#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometría</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/QuantityValue">
+      <h3>Quantity value<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/QuantityValue</p>
+      <div class="comment">
+         <span class="markdown">A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to "http://physics.nist.gov/Pubs/SP811/sec07.html", NIST SP 811, section 7 for more on quantity values.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt">http://qudt.org/schema/qudt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Concept"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Concept">concept</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="http://qudt.org/schema/qudt/Quantifiable"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantifiable">quantifiable</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Sensor">
+      <h3>Sensor<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor</p>
+      <div class="comment">
+         <span class="markdown">Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Ejemplo</dt>
+         <dd>
+            <dt>Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes.</dt>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#DockSensor"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">Equipo que permite detectar si un anclaje está libre u ocupado.</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Route">
+      <h3>Trayecto<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route</p>
+      <div class="comment">
+         <span class="markdown">Espacio que se recorre para llegar desde un origen hasta un destino.</span>
+      </div>
+      <dl class="description">
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#destinationSpot"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot">plaza de aparcamiento estino</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#originSpot"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot">plaza de aparcamiento origen</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#madeByVehicle"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle">realizado por vehículo</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#destinationDock"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock">tiene anclaje destino</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#originDock"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock">tiene anclaje origen</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasWaypoint"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint">tiene punto de paso</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/Unit">
+      <h3>unit<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/Unit</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Concept"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Concept">concept</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/hasUnit" title="http://qudt.org/schema/qudt/hasUnit">has unit</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">
+      <h3>Vehículo<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle</p>
+      <div class="comment">
+         <span class="markdown">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</span>
+      </div>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#SharedVehicle"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle">Vehículo compartido</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SharedVehicle">
+      <h3>Vehículo compartido<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle</p>
+      <div class="comment">
+         <span class="markdown">Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#vehicleState"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState">estado del vehículo</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#propulsionSystemType"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType">tipo de sistema de propulsión</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#madeByVehicle"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle">realizado por vehículo</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:era="http://data.europa.eu/949/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h2>Propiedades entre objetos</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#stationState"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState">estado de la estación</a>
+      </li>
+      <li>
+         <a href="#dockState"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState">estado del anclaje</a>
+      </li>
+      <li>
+         <a href="#vehicleState"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState">estado del vehículo</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">está en el esquema</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/hasUnit" title="http://qudt.org/schema/qudt/hasUnit">
+            <span>has unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">intervalo de tiempo</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/manufacturer" title="http://schema.org/manufacturer">manufacturer</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/observes" title="http://www.w3.org/ns/sosa/observes">observa</a>
+      </li>
+      <li>
+         <a href="#operatedBy"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy">operado por</a>
+      </li>
+      <li>
+         <a href="#destinationSpot"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot">plaza de aparcamiento estino</a>
+      </li>
+      <li>
+         <a href="#originSpot"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot">plaza de aparcamiento origen</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">propiedad observada</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">realizada por sensor</a>
+      </li>
+      <li>
+         <a href="#madeByVehicle"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle">realizado por vehículo</a>
+      </li>
+      <li>
+         <a href="#hasDock"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock">tiene anclaje</a>
+      </li>
+      <li>
+         <a href="#destinationDock"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock">tiene anclaje destino</a>
+      </li>
+      <li>
+         <a href="#originDock"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock">tiene anclaje origen</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">tiene característica de interés</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">Tiene final</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">tiene geometría</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">Tiene principio</a>
+      </li>
+      <li>
+         <a href="#hasWaypoint"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint">tiene punto de paso</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">tiene resultado</a>
+      </li>
+      <li>
+         <a href="#propulsionSystemType"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType">tipo de sistema de propulsión</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">tipo de vehículo</a>
+      </li>
+   </ul>
+   <div class="entity" id="stationState">
+      <h3>estado de la estación<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState</p>
+      <div class="comment">
+         <span class="markdown">Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#SharedVehicleStation"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">está en el esquema</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState"
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState">estado de la estación</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dockState">
+      <h3>estado del anclaje<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState</p>
+      <div class="comment">
+         <span class="markdown">Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Dock"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">Anclaje</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">está en el esquema</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState"
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState">estado del anclaje</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vehicleState">
+      <h3>estado del vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState</p>
+      <div class="comment">
+         <span class="markdown">Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#SharedVehicle"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle">Vehículo compartido</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">está en el esquema</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState"
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState">estado del vehículo</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
+      <h3>está en el esquema<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
+      <div class="comment">
+         <span class="markdown">Relaciona un recurso (por ejemplo un concepto) con un esquema de conceptos en el que está incluido.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/hasUnit">
+      <h3>has unit<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/hasUnit</p>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="http://qudt.org/schema/qudt/unitFor"
+                  target="_blank"
+                  title="http://qudt.org/schema/qudt/unitFor">unit for</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/phenomenonTime">
+      <h3>intervalo de tiempo<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/phenomenonTime</p>
+      <div class="comment">
+         <span class="markdown">Esta propiedad establece el intervalo de tiempo de la observación.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/time#ProperInterval" title="http://www.w3.org/2006/time#ProperInterval">intervalo preciso</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/isHostedBy">
+      <h3>is hosted by<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/isHostedBy</p>
+      <div class="comment">
+         <span class="markdown">Relation between a Sensor, or Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://w3.org/ns/sosa/Platform" title="http://w3.org/ns/sosa/Platform">Plataforma</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/manufacturer">
+      <h3>manufacturer<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/manufacturer</p>
+      <div class="comment">
+         <span class="markdown">The manufacturer of the product.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://schema.org/Organization" title="http://schema.org/Organization">Organización</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/observes">
+      <h3>observa<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/observes</p>
+      <div class="comment">
+         <span class="markdown">Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="operatedBy">
+      <h3>operado por<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy</p>
+      <div class="comment">
+         <span class="markdown">Relación entre una estación de vehículos compartidos y la organización que la opera.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#SharedVehicleStation"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://schema.org/Organization" title="http://schema.org/Organization">Organización</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="destinationSpot">
+      <h3>plaza de aparcamiento estino<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot</p>
+      <div class="comment">
+         <span class="markdown">Plaza de aparcamiento en donde finaliza la ruta de un vehículo.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Route"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">Trayecto</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot"
+                  title="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot">Plaza de aparcamiento</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="originSpot">
+      <h3>plaza de aparcamiento origen<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot</p>
+      <div class="comment">
+         <span class="markdown">Plaza de aparcamiento desde donde sale la ruta del vehículo.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Route"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">Trayecto</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot"
+                  title="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot">Plaza de aparcamiento</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/observedProperty">
+      <h3>propiedad observada<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/observedProperty</p>
+      <div class="comment">
+         <span class="markdown">Relación que enlaza la propiedad que se observa.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/madeBySensor">
+      <h3>realizada por sensor<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySensor</p>
+      <div class="comment">
+         <span class="markdown">Relation between an Observation and the Sensor which made the Observation.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="madeByVehicle">
+      <h3>realizado por vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle</p>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Route"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">Trayecto</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#SharedVehicle"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle">Vehículo compartido</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDock">
+      <h3>tiene anclaje<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock</p>
+      <div class="comment">
+         <span class="markdown">Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#SharedVehicleStation"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#Dock"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">Anclaje</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="destinationDock">
+      <h3>tiene anclaje destino<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock</p>
+      <div class="comment">
+         <span class="markdown">El anclaje de una estación a donde finaliza una ruta de un vehículo.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Route"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">Trayecto</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#Dock"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">Anclaje</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="originDock">
+      <h3>tiene anclaje origen<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock</p>
+      <div class="comment">
+         <span class="markdown">El anclaje en una estación desde donde el vehículo salió a una cierta ruta.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Route"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">Trayecto</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#Dock"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">Anclaje</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+      <h3>tiene característica de interés<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasFeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">Una relación entre una Observación y la entidad para la que se ha observado.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#hasEnd">
+      <h3>Tiene final<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#hasEnd</p>
+      <div class="comment">
+         <span class="markdown">Final de una entidad temporal.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/time#ProperInterval" title="http://www.w3.org/2006/time#ProperInterval">intervalo preciso</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instante de tiempo</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#hasGeometry">
+      <h3>tiene geometría<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#hasGeometry</p>
+      <div class="comment">
+         <span class="markdown">Una representación espacial para una característica determinada.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.opengis.net/spec/geosparql/1.0">http://www.opengis.net/spec/geosparql/1.0</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Característica geográfica</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometría</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#hasBeginning">
+      <h3>Tiene principio<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#hasBeginning</p>
+      <div class="comment">
+         <span class="markdown">Comienzo de una entidad temporal.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/time#ProperInterval" title="http://www.w3.org/2006/time#ProperInterval">intervalo preciso</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instante de tiempo</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasWaypoint">
+      <h3>tiene punto de paso<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint</p>
+      <div class="comment">
+         <span class="markdown">Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Route"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">Trayecto</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#Waypoint"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint">Punto de paso</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/hasResult">
+      <h3>tiene resultado<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasResult</p>
+      <div class="comment">
+         <span class="markdown">Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/common/">http://www.w3.org/ns/sosa/common/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>el dominio incluye</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Actuation"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Actuation">actuation</a>
+            </dd>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            </dd>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Sampling"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Sampling">sampling</a>
+            </dd>
+            <dt>el rango incluye</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Sample"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Sample">sample</a>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/isResultOf"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/isResultOf">is result of</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="propulsionSystemType">
+      <h3>tipo de sistema de propulsión<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType</p>
+      <div class="comment">
+         <span class="markdown">Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#SharedVehicle"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle">Vehículo compartido</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">está en el esquema</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType"
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType">tipo de sistema de propulsión</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">
+      <h3>tipo de vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType</p>
+      <div class="comment">
+         <span class="markdown">Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concepto</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">está en el esquema</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">tipo de vehículo</a>)</dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:era="http://data.europa.eu/949/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/2006/time#inXSDgYearMonth" title="http://www.w3.org/2006/time#inXSDgYearMonth">en año-mes gregoriano XSD</a>
+      </li>
+      <li>
+         <a href="#comissioningDate"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate">fecha de alta</a>
+      </li>
+      <li>
+         <a href="#closureDate"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate">fecha de baja</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/endDate" title="http://schema.org/endDate">fecha de fin</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/startDate" title="http://schema.org/startDate">fecha de inicio (prevista)</a>
+      </li>
+      <li>
+         <a href="#passingDateTime"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime">fecha y hora punto de paso</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</a>
+      </li>
+      <li>
+         <a href="#order"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order">orden</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/2006/time#inXSDgYearMonth">
+      <h3>en año-mes gregoriano XSD<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#inXSDgYearMonth</p>
+      <div class="comment">
+         <span class="markdown">Posición de un instante, expresado utilizando xsd:gYearMonth.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instante de tiempo</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#gYearMonth"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#gYearMonth">g year month</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="comissioningDate">
+      <h3>fecha de alta<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate</p>
+      <div class="comment">
+         <span class="markdown">Fecha en que la estación es certificada y puesta en servicio oficialmente.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#SharedVehicleStation"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#date"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#date">date</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="closureDate">
+      <h3>fecha de baja<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate</p>
+      <div class="comment">
+         <span class="markdown">Fecha en la cual la estación cesa sus operaciones.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#SharedVehicleStation"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">Estación de vehículos compartidos</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#date"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#date">date</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/endDate">
+      <h3>fecha de fin<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/endDate</p>
+      <div class="comment">
+         <span class="markdown">La fecha y hora de finalización de
+	una incidencia (en formato fecha ISO 8601)</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="https://schema.org/">https://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/startDate">
+      <h3>fecha de inicio (prevista)<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/startDate</p>
+      <div class="comment">
+         <span class="markdown">La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="https://schema.org/">https://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="passingDateTime">
+      <h3>fecha y hora punto de paso<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime</p>
+      <div class="comment">
+         <span class="markdown">Fecha y hora en que el vehículo pasó por el punto en la ruta.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Waypoint"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint">Punto de paso</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+      <h3>latitude<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#lat</p>
+      <div class="comment">
+         <span class="markdown">Latitud en WGS84</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/sf#Point" title="http://www.opengis.net/ont/sf#Point">Punto geográfico</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+      <h3>longitude<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#long</p>
+      <div class="comment">
+         <span class="markdown">Longitud en WGS84</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/sf#Point" title="http://www.opengis.net/ont/sf#Point">Punto geográfico</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="order">
+      <h3>orden<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order</p>
+      <div class="comment">
+         <span class="markdown">El número de orden un un punto de paso.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Waypoint"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint">Punto de paso</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:era="http://data.europa.eu/949/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Individuos</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#dockAvailability"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability">disponibilidad del anclaje</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState">estado de la estación</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState">estado del anclaje</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState">estado del vehículo</a>
+      </li>
+      <li>
+         <a href="#numberOccupiedDocks"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks">número de anclajes ocupados</a>
+      </li>
+      <li>
+         <a href="#numberEmptyDocks"
+            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks">número de anclajes vacíos</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType">tipo de sistema de propulsión</a>
+      </li>
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">tipo de vehículo</a>
+      </li>
+   </ul>
+   <div class="entity" id="dockAvailability">
+      <h3>disponibilidad del anclaje<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability</p>
+      <div class="comment">
+         <span class="markdown">Número total de anclajes ocupados con vehículos, en una estación.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#DockProperty"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty">Propiedad de anclaje</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState">
+      <h3>estado de la estación<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState</p>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState">
+      <h3>estado del anclaje<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState</p>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState">
+      <h3>estado del vehículo<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState</p>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="numberOccupiedDocks">
+      <h3>número de anclajes ocupados<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks</p>
+      <div class="comment">
+         <span class="markdown">Número total de anclajes ocupados por vehículos.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#DockProperty"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty">Propiedad de anclaje</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="numberEmptyDocks">
+      <h3>número de anclajes vacíos<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks</p>
+      <div class="comment">
+         <span class="markdown">Número total de anclajes vacíos en la estación, es decir, disponibles para aparcar un vehículo.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#DockProperty"
+               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty">Propiedad de anclaje</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType">
+      <h3>tipo de sistema de propulsión<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType</p>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">
+      <h3>tipo de vehículo<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType</p>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Esquema de conceptos</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Clases">c</sup>: Clases <br/>
+<sup class="type-op" title="Propiedades de objeto">op</sup>: Propiedades de objeto <br/>
+<sup class="type-dp" title="Propiedades de datos">dp</sup>: Propiedades de datos <br/>
+<sup class="type-ni" title="Individuos">ni</sup>: Individuos
+</div>
+</div>

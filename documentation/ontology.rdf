@@ -1,11 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://vocab.ciudadesabiertas.es/def/transporte/vehiculos-compartidos#"
-     xml:base="http://vocab.ciudadesabiertas.es/def/transporte/vehiculos-compartidos"
+<rdf:RDF xmlns="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#"
+     xml:base="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:p0="http://vocab.ciudadesabiertas.es/def/transporte/censovehiculos#"
-     xmlns:sf="http://www.opengis.net/ont/sf#"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -13,18 +9,9 @@
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:sosa="http://w3.org/ns/sosa/"
-     xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:escjr="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#"
-     xmlns:schema="http://schema.org/"
-     xmlns:geocore="https://datos.ign.es/def/geo_core#"
-     xmlns:edintinf="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/infraestrucura#"
-     xmlns:edintkos="http://vocab.linkeddata.es/datosabiertos/kos/edint/"
-     xmlns:edintveh="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#"
-     xmlns:edintapar="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#"
-     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
-     xmlns:edintvehcom="http://vocab.ciudadesabiertas.es/def/transporte/vehiculos-compartidos#">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos">
         <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos/0.1.0"/>
         <dc:creator>Daniel Doña</dc:creator>
@@ -34,8 +21,8 @@
         <dc:creator>Socorro Bernardos</dc:creator>
         <dc:title xml:lang="es">Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades</dc:title>
         <dc:title xml:lang="en">Vocabulary for the representation of data on shared vehicle systems in cities</dc:title>
-        <dct:created>2026-05-18</dct:created>
-        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/4.0</dct:license>
+        <terms:created>2026-05-18</terms:created>
+        <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
         <vann:preferredNamespacePrefix>edintvehcom</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#"/>
         <rdfs:comment xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
@@ -55,10 +42,12 @@ In addition, data on the journeys made by these vehicles, including their origin
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/elements/1.1/abstract -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
     
@@ -66,11 +55,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://purl.org/dc/elements/1.1/contributor -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
@@ -78,11 +69,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://purl.org/dc/elements/1.1/date -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
@@ -90,11 +83,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://purl.org/dc/elements/1.1/identifier -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
@@ -102,17 +97,20 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://purl.org/dc/elements/1.1/source -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
     <!-- http://purl.org/dc/terms/created -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
         <rdfs:domain rdf:resource="http://purl.org/dc/elements/1.1/date"/>
@@ -122,14 +120,16 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://purl.org/dc/terms/hasVersion -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
     
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
-        <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#issued-003"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#issued-003"/>
         <rdfs:comment xml:lang="en">Date of formal issuance (e.g., publication) of the resource.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://purl.org/dc/terms/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Date Issued</rdfs:label>
@@ -140,11 +140,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://purl.org/dc/terms/license -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
     <!-- http://purl.org/dc/terms/publisher -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
     
@@ -152,11 +154,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
@@ -164,11 +168,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://qudt.org/schema/qudt/informativeReference -->
 
+
     <owl:AnnotationProperty rdf:about="http://qudt.org/schema/qudt/informativeReference"/>
     
 
 
     <!-- http://schema.org/domainIncludes -->
+
 
     <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
     
@@ -176,17 +182,20 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://schema.org/rangeIncludes -->
 
+
     <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
+
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#example -->
+
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
     
@@ -200,10 +209,12 @@ In addition, data on the journeys made by these vehicles, including their origin
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://qudt.org/schema/qudt/LatexString -->
+
 
     <rdfs:Datatype rdf:about="http://qudt.org/schema/qudt/LatexString"/>
     
@@ -211,17 +222,20 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML -->
 
+
     <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
     
 
 
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
+
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
     <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
+
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
     
@@ -235,10 +249,12 @@ In addition, data on the journeys made by these vehicles, including their origin
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://qudt.org/schema/qudt/hasUnit -->
+
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasUnit">
         <owl:inverseOf rdf:resource="http://qudt.org/schema/qudt/unitFor"/>
@@ -249,11 +265,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://qudt.org/schema/qudt/unitFor -->
 
+
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/unitFor"/>
     
 
 
     <!-- http://schema.org/manufacturer -->
+
 
     <owl:ObjectProperty rdf:about="http://schema.org/manufacturer">
         <rdfs:range rdf:resource="http://schema.org/Organization"/>
@@ -264,6 +282,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType -->
+
 
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">
         <rdfs:range>
@@ -287,6 +306,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock -->
 
+
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"/>
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"/>
@@ -300,6 +320,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot -->
 
+
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"/>
         <rdfs:range rdf:resource="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot"/>
@@ -312,6 +333,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState -->
+
 
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"/>
@@ -336,6 +358,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock -->
 
+
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"/>
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"/>
@@ -348,6 +371,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint -->
+
 
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"/>
@@ -362,6 +386,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle -->
 
+
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"/>
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle"/>
@@ -374,6 +399,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy -->
+
 
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"/>
@@ -388,6 +414,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock -->
 
+
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"/>
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"/>
@@ -401,11 +428,12 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot -->
 
+
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"/>
         <rdfs:range rdf:resource="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot"/>
-        <rdfs:comment>Parking spot from where the vehicle route starts.</rdfs:comment>
         <rdfs:comment xml:lang="es">Plaza de aparcamiento desde donde sale la ruta del vehículo.</rdfs:comment>
+        <rdfs:comment>Parking spot from where the vehicle route starts.</rdfs:comment>
         <rdfs:label xml:lang="en">origin parking spot</rdfs:label>
         <rdfs:label xml:lang="es">plaza de aparcamiento origen</rdfs:label>
     </owl:ObjectProperty>
@@ -413,6 +441,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType -->
+
 
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle"/>
@@ -437,6 +466,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState -->
 
+
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"/>
         <rdfs:range>
@@ -459,6 +489,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState -->
+
 
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle"/>
@@ -483,6 +514,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
 
+
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
@@ -497,6 +529,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
@@ -509,6 +542,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/2006/time#hasBeginning -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning">
         <rdfs:domain rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
@@ -523,6 +557,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2006/time#hasEnd -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd">
         <rdfs:domain rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
         <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
@@ -536,6 +571,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
         <rdfs:comment xml:lang="en">A relation between an Observation and the entity whose quality was observed.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una relación entre una Observación y la entidad para la que se ha observado.</rdfs:comment>
@@ -547,6 +583,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/ns/sosa/hasResult -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult">
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
@@ -570,6 +607,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/ns/sosa/isHostedBy -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
         <rdfs:range rdf:resource="http://w3.org/ns/sosa/Platform"/>
@@ -581,11 +619,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/ns/sosa/isResultOf -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isResultOf"/>
     
 
 
     <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
         <rdfs:comment xml:lang="en">Relación entre una Observación y un Sensor que realiza la Observación.</rdfs:comment>
@@ -599,6 +639,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/ns/sosa/observedProperty -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty">
         <rdfs:comment xml:lang="es">Relación que enlaza la propiedad que se observa.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.</rdfs:comment>
@@ -611,6 +652,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/ns/sosa/observes -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observes">
         <rdfs:comment xml:lang="es">Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relation between a Sensor and an ObservableProperty that it is capable of sensing.</rdfs:comment>
@@ -622,6 +664,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/ns/sosa/phenomenonTime -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
@@ -642,10 +685,12 @@ In addition, data on the journeys made by these vehicles, including their origin
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://schema.org/endDate -->
+
 
     <owl:DatatypeProperty rdf:about="http://schema.org/endDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -661,6 +706,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://schema.org/startDate -->
 
+
     <owl:DatatypeProperty rdf:about="http://schema.org/startDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601).</rdfs:comment>
@@ -673,6 +719,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate -->
+
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"/>
@@ -687,11 +734,12 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate -->
 
+
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:comment>Date when the station is officially tested, certified, and put into active service.</rdfs:comment>
         <rdfs:comment xml:lang="es">Fecha en que la estación es certificada y puesta en servicio oficialmente.</rdfs:comment>
+        <rdfs:comment>Date when the station is officially tested, certified, and put into active service.</rdfs:comment>
         <rdfs:label xml:lang="en">comissionning date</rdfs:label>
         <rdfs:label xml:lang="es">fecha de alta</rdfs:label>
     </owl:DatatypeProperty>
@@ -699,6 +747,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order -->
+
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint"/>
@@ -712,6 +761,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime -->
+
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint"/>
@@ -727,6 +777,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/sf#Point"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -739,6 +790,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/sf#Point"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -750,6 +802,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/2006/time#inXSDgYearMonth -->
+
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#inXSDgYearMonth">
         <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Instant"/>
@@ -770,10 +823,12 @@ In addition, data on the journeys made by these vehicles, including their origin
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://qudt.org/schema/qudt/Concept -->
+
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Concept"/>
     
@@ -781,11 +836,13 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://qudt.org/schema/qudt/Quantifiable -->
 
+
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantifiable"/>
     
 
 
     <!-- http://qudt.org/schema/qudt/QuantityValue -->
+
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityValue">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Concept"/>
@@ -796,7 +853,7 @@ In addition, data on the journeys made by these vehicles, including their origin
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to &quot;http://physics.nist.gov/Pubs/SP811/sec07.html&quot;, NIST SP 811, section 7 for more on quantity values.</rdfs:comment>
+        <rdfs:comment>A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to &quot;http://physics.nist.gov/Pubs/SP811/sec07.html&quot;, NIST SP 811, section 7 for more on quantity values.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
         <rdfs:label>Quantity value</rdfs:label>
     </owl:Class>
@@ -805,6 +862,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://qudt.org/schema/qudt/Unit -->
 
+
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Concept"/>
     </owl:Class>
@@ -812,6 +870,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://schema.org/Organization -->
+
 
     <owl:Class rdf:about="http://schema.org/Organization">
         <rdfs:comment xml:lang="es">Representa un conjunto de personas organizadas en una comunidad u otra estructura social, comercial o política.</rdfs:comment>
@@ -824,6 +883,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot -->
 
+
     <owl:Class rdf:about="http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot">
         <rdfs:comment xml:lang="en">Individual parking space on-street or off-street.</rdfs:comment>
         <rdfs:comment xml:lang="es">Plaza individual de estacionamiento dentro o fuera de la vía pública.</rdfs:comment>
@@ -835,6 +895,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle -->
 
+
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">
         <rdfs:comment xml:lang="es">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:comment xml:lang="en">Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en)).</rdfs:comment>
@@ -845,6 +906,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment -->
+
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#ControlEquipment">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor"/>
@@ -858,6 +920,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock -->
 
+
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:comment xml:lang="es">Lugar de la estación donde se fijan las bicicletas</rdfs:comment>
@@ -869,6 +932,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation -->
+
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
@@ -882,6 +946,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty -->
 
+
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:comment xml:lang="es">Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos.</rdfs:comment>
@@ -893,6 +958,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor -->
+
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
@@ -906,6 +972,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route -->
 
+
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route">
         <rdfs:comment xml:lang="es">Espacio que se recorre para llegar desde un origen hasta un destino.</rdfs:comment>
         <rdfs:comment xml:lang="en">The path traveled to get from an origin to a destination</rdfs:comment>
@@ -916,6 +983,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle -->
+
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"/>
@@ -928,6 +996,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation -->
+
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"/>
@@ -942,6 +1011,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice -->
 
+
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#TrafficMeasurementDevice">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor"/>
         <rdfs:comment xml:lang="es">Tipo de dispositivo de tráfico que realiza mediciones de propiedades como el nivel de servicio, la intensidad del tráfico y la carga de tráfico.</rdfs:comment>
@@ -953,6 +1023,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint -->
+
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
@@ -966,6 +1037,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility -->
 
+
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"/>
         <rdfs:comment xml:lang="es">Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos.</rdfs:comment>
@@ -977,6 +1049,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement -->
+
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
@@ -990,6 +1063,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://w3.org/ns/sosa/Platform -->
 
+
     <owl:Class rdf:about="http://w3.org/ns/sosa/Platform">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:comment xml:lang="en">A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.</rdfs:comment>
@@ -1001,6 +1075,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
@@ -1017,6 +1092,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.opengis.net/ont/geosparql#Geometry -->
 
+
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
         <rdfs:comment xml:lang="es">Esta clase representa el tipo de geometría de alto nivel. Es equivalente a GFI_Geometry definida en ISO 19156 y es superclase de todos los tipos geométricos.</rdfs:comment>
@@ -1029,6 +1105,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
         <rdfs:comment xml:lang="es">Esta clase representa un tipo de objeto espacial de alto nivel. Es equivalente a GFI SpatialObject difinido en ISO 19156 y es una superclase de todos los tipos de objetos espaciales.</rdfs:comment>
@@ -1044,6 +1121,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.opengis.net/ont/sf#Point -->
 
+
     <owl:Class rdf:about="http://www.opengis.net/ont/sf#Point">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:comment xml:lang="es">Se representa un tipo de punto de alto nivel. Esta clase es equivalente a GFI_Point definida en ISO 19156 y es superclase de todos los tipos de puntos.</rdfs:comment>
@@ -1057,9 +1135,10 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
+
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
         <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <dct:issued>2004-02-xx</dct:issued>
+        <terms:issued>2004-02-xx</terms:issued>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
         <rdfs:label xml:lang="en">Concept</rdfs:label>
         <rdfs:label xml:lang="es">Concepto</rdfs:label>
@@ -1070,6 +1149,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
         <rdfs:comment xml:lang="en">A concept scheme may be defined to include concepts from different sources.</rdfs:comment>
@@ -1084,6 +1164,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2006/time#Instant -->
 
+
     <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:comment xml:lang="en">A temporal entity with zero extent or duration.</rdfs:comment>
@@ -1096,6 +1177,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/2006/time#Interval -->
+
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
@@ -1110,6 +1192,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2006/time#ProperInterval -->
 
+
     <owl:Class rdf:about="http://www.w3.org/2006/time#ProperInterval">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
         <rdfs:comment xml:lang="en">A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different.</rdfs:comment>
@@ -1123,6 +1206,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/2006/time#TemporalEntity -->
 
+
     <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
         <rdfs:comment xml:lang="en">A temporal interval or instant.</rdfs:comment>
         <rdfs:comment xml:lang="es">Un intervalo temporal o un instante.</rdfs:comment>
@@ -1134,6 +1218,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
         <rdfs:comment xml:lang="en">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</rdfs:comment>
@@ -1147,6 +1232,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
 
+
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
         <rdfs:comment xml:lang="en">An observable quality (property, characteristic) of a FeatureOfInterest.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
@@ -1159,6 +1245,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://www.w3.org/ns/sosa/Observation -->
 
+
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation">
         <rdfs:comment xml:lang="en">Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
@@ -1170,6 +1257,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://www.w3.org/ns/sosa/Sensor -->
+
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
         <rdfs:comment xml:lang="en">Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</rdfs:comment>
@@ -1189,10 +1277,12 @@ In addition, data on the journeys made by these vehicles, including their origin
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability -->
+
 
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability">
         <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty"/>
@@ -1206,6 +1296,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks -->
 
+
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks">
         <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty"/>
         <rdfs:comment xml:lang="es">Número total de anclajes vacíos en la estación, es decir, disponibles para aparcar un vehículo.</rdfs:comment>
@@ -1217,6 +1308,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks -->
+
 
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks">
         <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty"/>
@@ -1230,6 +1322,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState -->
 
+
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">dock state</rdfs:label>
@@ -1239,6 +1332,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType -->
+
 
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
@@ -1250,6 +1344,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState -->
 
+
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="es">estado de la estación</rdfs:label>
@@ -1259,6 +1354,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <!-- http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState -->
+
 
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
@@ -1270,6 +1366,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <!-- http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType -->
 
+
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="es">tipo de vehículo</rdfs:label>
@@ -1279,5 +1376,6 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
 
