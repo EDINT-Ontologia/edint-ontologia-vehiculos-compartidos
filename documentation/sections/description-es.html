@@ -18,98 +18,196 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 
 </span>
 <h3>3.1 Ejemplos de uso<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
-<span class="markdown">
-  Con la finalidad de facilitar la comprensión del uso de algunas clases y propiedades de esta ontología se proporcionarán a continuación algunos ejemplos.
-
-  En primer lugar para la representación de una estación de bicicleta se crea una instancia de la clase <a href="#EstacionBicicleta">esbici:EstacionBicicleta</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador de la estación), <a href="https://schema.org/name">schema:name</a> (nombre de la estación), <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta">esequip:fechaAlta</a> (fecha de alta de la estación), <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja">esequip:fechaBaja</a> (fecha de baja de la estación) y <a href="https://schema.org/address">schema:address</a> (dirección de la estación). Asimismo, se enlaza mediante la propiedad <a href="#estadoEstacion">esbici:estadoEstacion</a> la estación con el concepto correspondiente de la taxonomía de estado de la estación, que para el caso del ejemplo se trata de una estación <a href="http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-estacion/operativa">esbici-kos:operativa</a>. Finalmente, la estación se asocia a través de la propiedad <a href="#tieneAsociadoAnclaje">esbici:tieneAsociadoAnclaje</a> con una instancia de <a href="#Anclaje">esbici:Anclaje</a> que corresponde a uno e los anclajes de la estación y que tiene un <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador).
-</span>
-<pre><textarea style="resize:none" readonly id="code6" name="code" rows="25" cols="100">
-  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt; a esbici:EstacionBicicleta ;
-  dct:identifier "001A"@es ;
-  esequip:nombre "Puerta del Sol A"@es ;
-  esequip:fechaAlta "2014-06-23"^^xsd:date ;
-  schema:address "PUERTA DEL SOL, PLAZA, DE LA, 1 B"@es ;
-  esbici:estadoEstacion &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-estacion/operativa&gt; ;
-  esequipo:tipoEquipamiento &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/estacion-de-bicicletas&gt; ;
-  esbici:tieneAsociadoAnclaje &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; .
-</textarea></pre>
-  <script>
-      var editor2 = CodeMirror.fromTextArea(document.getElementById("code6"), {
-          mode: "text/turtle",
-          matchBrackets: true
-      });
-      editor2.setSize(null, "140px"); // ancho automático, altura menor
-</script>
 
 <span class="markdown">
-  A continuación, se representa una instancia de <a href="#Anclaje">esbici:Anclaje</a> para la que se ha especificado su identificador (<a href="http://purl.org/dc/terms/identifier">dct:identifier</a>) y el estado en el que se encuentra. Para expresar su estado se utiliza la propiedad <a href="#estadoAnclaje">esbici:estadoAnclaje</a> para enlazar el Anclaje con el concepto correspondiente del SKOS de <a href="http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-anclaje">tipo-estado-anclaje</a>, que para el caso del ejemplo es libre.
-</span>
-<pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
-  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; a esbici:Anclaje ;
-  dct:identifier "11AN"@es ;
-  esbici:estadoAnclaje &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-anclaje/libre&gt; .
-</textarea></pre>
-  <script>
-      var editor2 = CodeMirror.fromTextArea(document.getElementById("code5"), {
-          mode: "text/turtle",
-          matchBrackets: true
-      });
-      editor2.setSize(null, "80px"); // ancho automático, altura menor
-</script>
-
-<span class="markdown">
-Para representar un trayecto se ha creado una instancia de la clase <a href="#Trayecto">esbici:Trayecto</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador del trayecto), <a href="https://schema.org/startDate">schema:startDate</a> (fecha y hora de comienzo del trayecto), y las relaciones con las propiedades <a href="#tieneAsociadoBicicleta">esbici:tieneAsociadoBicicleta</a>, que indica la bicicleta asociada a ese trayecto, <a href="#tieneEstacionOrigen">esbici:tieneEstacionOrigen</a> que indica la estación de origen del trayecto y <a href="#tieneAnclajeOrigen">esbici:tieneAnclajeOrigen</a> que indica el anclaje exacto de la estación de origen. Como se puede ver a continuación, en la instancia de la clase <a href="#Bicicleta">esbici:Bicicleta</a> en su estado ocupada, el trayecto no ha concluido por lo que aún no se dispone de anclaje ni estación de destino. Para el caso en que el trayecto haya sido finalizado bastaría con agregar a este ejemplo la <a href="https://schema.org/endDate">schema:endDate</a> (fecha y hora de fin del trayecto), <a href="#tieneEstacionDestino">esbici:tieneEstacionDestino</a> para indicar la estación de destino, y <a href="#tieneAnclajeDestino">esbici:tieneAnclajeDestino</a> para indicar el anclaje en el que se dejó la Bicicleta.
-</span>
-<pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
-  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Trayecto/4f0b79985d77717ea2232760a2de2d36&gt; a esbici:Trayecto ;
-  dct:identifier "T201912100041"@es ;
-  schema:startDate "2019-12-10T11:30:00"^^xsd:dateTime ;
-  esbici:tieneAsociadoBicicleta &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Bicicleta/7c2a90085d77717ea2232760a2de2d36&gt; ;
-  esbici:tieneEstacionOrigen &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt; ;
-  esbici:tieneAnclajeOrigen &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; ;
-</textarea></pre>
-  <script>
-      var editor2 = CodeMirror.fromTextArea(document.getElementById("code3"), {
-          mode: "text/turtle",
-          matchBrackets: true
-      });
-      editor2.setSize(null, "120px"); // ancho automático, altura menor
-</script>
-
-
-<span class="markdown">
-Finalmente, se representa una instancia de <a href="#Bicicleta">esbici:Bicicleta</a> para la que se ha especificado su identificador (<a href="http://purl.org/dc/terms/identifier">dct:identifier</a>), su número de matrícula <a href="#matricula">esbici:matricula</a> y el estado en el que se encuentra. Para expresar su estado se utiliza la propiedad <a href="#estadoBicicleta">esbici:estadoBicicleta</a> para enlazar la Bicicleta con el concepto correspondiente del SKOS de <a href="http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-bicicleta">tipo-estado-bicicleta</a>, que para el caso del ejemplo es ocupada.
-</span>
-<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
-  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Bicicleta/7c2a90085d77717ea2232760a2de2d36&gt; a esbici:Bicicleta ;
-  dct:identifier "B13425"@es ;
-  esbici:matricula "MAD13425"@es ;
-  esbici:estadoBicicleta &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-bicicleta/ocupada&gt; .
-</textarea></pre>
-  <script>
-      var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
-          mode: "text/turtle",
-          matchBrackets: true
-      });
-      editor2.setSize(null, "80px"); // ancho automático, altura menor
-</script>
-
-<span class="markdown">
-Para representar una observación en una estación se ha creado una instancia de la clase <a href="#ObservacionEstacion">esbici:ObservacionEstacion</a> de la cual se ha obtenido el resultado de dicha observación (<a href="http://www.w3.org/ns/sosa/hasSimpleResult">sosa:hasSimpleResult</a>), la hora de dicha observación <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a>, el sensor que realizó dicha observación <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a> y la propiedad que se ha observado <a href="http://www.w3.org/ns/sosa/sosa:observedProperty">sosa:sosa:observedProperty</a>, en este caso, los anclajes ocupados de una estación.
+  Para representar una estación de vehículos compartidos se crea una instancia de la clase <a href="#SharedVehicleStation">edintvehcom:SharedVehicleStation</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador de la estación), <a href="https://schema.org/name">schema:name</a> (nombre de la estación), <a href="https://schema.org/address">schema:address</a> (dirección de la estación) y <a href="#comissioningDate">edintvehcom:comissioningDate</a> (fecha de alta). Asimismo, se enlaza la estación con el concepto correspondiente de estado mediante <a href="#stationState">edintvehcom:stationState</a>, con la organización que la opera mediante <a href="#operatedBy">edintvehcom:operatedBy</a>, y con sus anclajes mediante <a href="#hasDock">edintvehcom:hasDock</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
-  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/ObservacionEstacion/7g0l23012d77717ea2232760a2de2d36&gt; a sosa:Observation, esbici:ObservacionEstacion ;
-  sosa:hasSimpleResult “12” ;
-  sosa:resultTime "2019-12-10T13:00:00"^^xsd:dateTime ;
-  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt;
-  sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#anclajesOcupados&gt .
+&lt;Organization/operador-municipal-01&gt; a schema:Organization ;
+  schema:name &quot;Operador Municipal de Movilidad Compartida&quot;@es .
+
+&lt;SharedVehicleStation/estacion-001&gt; a edintvehcom:SharedVehicleStation ;
+  dct:identifier &quot;EST-001&quot; ;
+  schema:name &quot;Puerta del Sol&quot;@es ;
+  schema:address &quot;Puerta del Sol, 1, Madrid&quot;@es ;
+  edintvehcom:comissioningDate &quot;2024-03-15&quot;^^xsd:date ;
+  edintvehcom:stationState edintkosstatestate:operativa ;
+  edintvehcom:operatedBy &lt;Organization/operador-municipal-01&gt; ;
+  edintvehcom:hasDock &lt;Dock/anclaje-001-01&gt; ,
+                        &lt;Dock/anclaje-001-02&gt; .
 </textarea></pre>
   <script>
-      var editor2 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+      var editor_code1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
           mode: "text/turtle",
           matchBrackets: true
       });
-      editor2.setSize(null, "100px"); // ancho automático, altura menor
+      editor_code1.setSize(null, "200px"); // ancho automático, altura menor
 </script>
+
+<span class="markdown">
+  Después, se representan dos instancias de <a href="#Dock">edintvehcom:Dock</a>. Para cada anclaje se indica su identificador mediante <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> y su estado mediante la propiedad <a href="#dockState">edintvehcom:dockState</a>, que enlaza con un concepto del esquema de estados de anclaje.
+</span>
+<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+&lt;Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
+  dct:identifier &quot;DOCK-001-01&quot; ;
+  edintvehcom:dockState edintkosdockstate:en-servicio .
+
+&lt;Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
+  dct:identifier &quot;DOCK-001-02&quot; ;
+  edintvehcom:dockState edintkosdockstate:en-servicio .
+</textarea></pre>
+  <script>
+      var editor_code2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code2.setSize(null, "120px"); // ancho automático, altura menor
+</script>
+
+<span class="markdown">
+  Para representar un vehículo compartido se crea una instancia de la clase <a href="#SharedVehicle">edintvehcom:SharedVehicle</a>. En el ejemplo se especifica su identificador, su tipo de vehículo mediante <a href="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">edintveh:vehicleType</a>, su tipo de sistema de propulsión mediante <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>, su estado mediante <a href="#vehicleState">edintvehcom:vehicleState</a> y su fabricante mediante <a href="https://schema.org/manufacturer">schema:manufacturer</a>.
+</span>
+<pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
+&lt;Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
+  schema:name &quot;Fabricante Ejemplo S.A.&quot;@es .
+
+&lt;SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
+  dct:identifier &quot;VEH-0001&quot; ;
+  edintveh:vehicleType edintkosvehtype:bicicleta ;
+  edintvehcom:propulsionSystemType edintvehiclepropulsiontype:Electric ;
+  edintvehcom:vehicleState edintkosvehstate:disponible ;
+  schema:manufacturer &lt;Organization/fabricante-vehiculos-01&gt; .
+</textarea></pre>
+  <script>
+      var editor_code3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code3.setSize(null, "180px"); // ancho automático, altura menor
+</script>
+
+<span class="markdown">
+  Para representar un trayecto de un sistema basado en estaciones se crea una instancia de la clase <a href="#Route">edintvehcom:Route</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a>, <a href="https://schema.org/startDate">schema:startDate</a> y <a href="https://schema.org/endDate">schema:endDate</a>. El trayecto se relaciona con el vehículo que lo realiza mediante <a href="#madeByVehicle">edintvehcom:madeByVehicle</a>, con el anclaje de origen mediante <a href="#originDock">edintvehcom:originDock</a>, con el anclaje de destino mediante <a href="#destinationDock">edintvehcom:destinationDock</a> y con sus puntos de paso mediante <a href="#hasWaypoint">edintvehcom:hasWaypoint</a>. Cada punto de paso se representa como una instancia de <a href="#Waypoint">edintvehcom:Waypoint</a>, con su orden, fecha y hora de paso, y geometría asociada.
+</span>
+<pre><textarea style="resize:none" readonly id="code4" name="code" rows="25" cols="100">
+&lt;Route/trayecto-20260521-001&gt; a edintvehcom:Route ;
+  dct:identifier &quot;ROUTE-20260521-001&quot; ;
+  schema:startDate &quot;2026-05-21T08:30:00&quot;^^xsd:dateTime ;
+  schema:endDate &quot;2026-05-21T08:48:00&quot;^^xsd:dateTime ;
+  edintvehcom:madeByVehicle &lt;SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originDock &lt;Dock/anclaje-001-01&gt; ;
+  edintvehcom:destinationDock &lt;Dock/anclaje-001-02&gt; ;
+  edintvehcom:hasWaypoint &lt;Waypoint/trayecto-20260521-001-01&gt; ,
+                           &lt;Waypoint/trayecto-20260521-001-02&gt; .
+
+&lt;Waypoint/trayecto-20260521-001-01&gt; a edintvehcom:Waypoint ;
+  edintvehcom:order &quot;1&quot;^^xsd:integer ;
+  edintvehcom:passingDateTime &quot;2026-05-21T08:35:00&quot;^^xsd:dateTime ;
+  gsp:hasGeometry &lt;Geometry/trayecto-20260521-001-01&gt; .
+
+&lt;Geometry/trayecto-20260521-001-01&gt; a sf:Point ;
+  geo:lat &quot;40.416704&quot;^^xsd:float ;
+  geo:long &quot;-3.703582&quot;^^xsd:float .
+
+&lt;Waypoint/trayecto-20260521-001-02&gt; a edintvehcom:Waypoint ;
+  edintvehcom:order &quot;2&quot;^^xsd:integer ;
+  edintvehcom:passingDateTime &quot;2026-05-21T08:42:00&quot;^^xsd:dateTime ;
+  gsp:hasGeometry &lt;Geometry/trayecto-20260521-001-02&gt; .
+
+&lt;Geometry/trayecto-20260521-001-02&gt; a sf:Point ;
+  geo:lat &quot;40.418110&quot;^^xsd:float ;
+  geo:long &quot;-3.698960&quot;^^xsd:float .
+</textarea></pre>
+  <script>
+      var editor_code4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code4.setSize(null, "420px"); // ancho automático, altura menor
+</script>
+
+<span class="markdown">
+  En el caso de un modelo libre, el trayecto no se inicia ni finaliza necesariamente en anclajes de una estación. Por ello, la instancia de <a href="#Route">edintvehcom:Route</a> se relaciona con una plaza de aparcamiento de origen mediante <a href="#originSpot">edintvehcom:originSpot</a> y con una plaza de aparcamiento de destino mediante <a href="#destinationSpot">edintvehcom:destinationSpot</a>. Las plazas de aparcamiento se representan como instancias de <a href="#ParkingSpot">edintapar:ParkingSpot</a>.
+</span>
+<pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
+&lt;Route/trayecto-20260521-002&gt; a edintvehcom:Route ;
+  dct:identifier &quot;ROUTE-20260521-002&quot; ;
+  schema:startDate &quot;2026-05-21T09:10:00&quot;^^xsd:dateTime ;
+  schema:endDate &quot;2026-05-21T09:32:00&quot;^^xsd:dateTime ;
+  edintvehcom:madeByVehicle &lt;SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originSpot &lt;ParkingSpot/plaza-0001&gt; ;
+  edintvehcom:destinationSpot &lt;ParkingSpot/plaza-0002&gt; .
+
+&lt;ParkingSpot/plaza-0001&gt; a edintapar:ParkingSpot ;
+  dct:identifier &quot;PARK-0001&quot; .
+
+&lt;ParkingSpot/plaza-0002&gt; a edintapar:ParkingSpot ;
+  dct:identifier &quot;PARK-0002&quot; .
+</textarea></pre>
+  <script>
+      var editor_code5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code5.setSize(null, "220px"); // ancho automático, altura menor
+</script>
+
+<span class="markdown">
+  Para representar una observación sobre la disponibilidad de un anclaje se crea una instancia de <a href="#DockSensor">edintvehcom:DockSensor</a>, alojada en la estación mediante <a href="http://www.w3.org/ns/sosa/isHostedBy">sosa:isHostedBy</a>, y que observa la propiedad <a href="#dockAvailability">edintvehcom:dockAvailability</a>. La observación se representa con una instancia de <a href="#DockObservation">edintvehcom:DockObservation</a>, indicando el anclaje observado mediante <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, el sensor que realiza la observación mediante <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a>, la propiedad observada mediante <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a>, el instante de observación mediante <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a> y el resultado mediante <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> con una instancia de <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
+</span>
+<pre><textarea style="resize:none" readonly id="code6" name="code" rows="25" cols="100">
+&lt;DockSensor/sensor-anclaje-001-01&gt; a edintvehcom:DockSensor ;
+  dct:identifier &quot;SENSOR-DOCK-001-01&quot; ;
+  sosa:isHostedBy &lt;SharedVehicleStation/estacion-001&gt; ;
+  sosa:observes edintvehcom:dockAvailability .
+
+&lt;DockObservation/obs-anclaje-001-01-20260521T085000&gt; a edintvehcom:DockObservation ;
+  sosa:hasFeatureOfInterest &lt;Dock/anclaje-001-01&gt; ;
+  sosa:madeBySensor &lt;DockSensor/sensor-anclaje-001-01&gt; ;
+  sosa:observedProperty edintvehcom:dockAvailability ;
+  sosa:phenomenonTime &lt;Instant/obs-anclaje-001-01-20260521T085000&gt; ;
+  sosa:hasResult [
+    a qudt:QuantityValue ;
+    qudt:value &quot;1&quot;^^xsd:integer ;
+    qudt:hasUnit unit:NUM
+  ] .
+
+&lt;Instant/obs-anclaje-001-01-20260521T085000&gt; a time:Instant ;
+  time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
+</textarea></pre>
+  <script>
+      var editor_code6 = CodeMirror.fromTextArea(document.getElementById("code6"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code6.setSize(null, "320px"); // ancho automático, altura menor
+</script>
+
+<span class="markdown">
+  Finalmente, se representa una observación agregada sobre la estación para indicar el número de anclajes vacíos. En este caso, la característica de interés es la propia estación de vehículos compartidos y la propiedad observada es <a href="#numberEmptyDocks">edintvehcom:numberEmptyDocks</a>. El resultado se expresa igualmente mediante <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> y <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
+</span>
+<pre><textarea style="resize:none" readonly id="code7" name="code" rows="25" cols="100">
+&lt;Observation/obs-estacion-001-vacios-20260521T085000&gt; a sosa:Observation ;
+  sosa:hasFeatureOfInterest &lt;SharedVehicleStation/estacion-001&gt; ;
+  sosa:observedProperty edintvehcom:numberEmptyDocks ;
+  sosa:phenomenonTime &lt;Instant/obs-estacion-001-20260521T085000&gt; ;
+  sosa:hasResult [
+    a qudt:QuantityValue ;
+    qudt:value &quot;7&quot;^^xsd:integer ;
+    qudt:hasUnit unit:NUM
+  ] .
+
+&lt;Instant/obs-estacion-001-20260521T085000&gt; a time:Instant ;
+  time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
+</textarea></pre>
+  <script>
+      var editor_code7 = CodeMirror.fromTextArea(document.getElementById("code7"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code7.setSize(null, "240px"); // ancho automático, altura menor
+</script>
+
+
 
 </html>
