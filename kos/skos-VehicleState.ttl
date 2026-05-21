@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintvehiclestate: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:VehicleState a skos:ConceptScheme ;
+  dct:issued "2026-05-21"^^xsd:date ;
+  dct:modified "2026-05-21"^^xsd:date ;
+  cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+  rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+  rdfs:label "Vehicle state"@en ;
+  rdfs:label "Estado del vehículo"@es ;
+  dct:title "Concept scheme grouping vehicle states"@en ;
+  dct:title "Esquema de conceptos agrupando estados de vehículo"@es .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintvehiclestate:Active a skos:Concept ;
+  skos:inScheme edintkos:VehicleState ;
+  skos:prefLabel "Active"@en ;
+  skos:prefLabel "Activo"@es .
+
+edintvehiclestate:Inactive a skos:Concept ;
+  skos:inScheme edintkos:VehicleState ;
+  skos:prefLabel "Inactive"@en ;
+  skos:prefLabel "Inactivo"@es .
+
+edintvehiclestate:UnderRepair a skos:Concept ;
+  skos:inScheme edintkos:VehicleState ;
+  skos:prefLabel "Under repair"@en ;
+  skos:prefLabel "En reparación"@es .
+
+edintvehiclestate:Abandoned a skos:Concept ;
+  skos:inScheme edintkos:VehicleState ;
+  skos:prefLabel "Abandoned"@en ;
+  skos:prefLabel "Abandonado"@es .
