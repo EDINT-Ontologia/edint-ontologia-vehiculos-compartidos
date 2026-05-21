@@ -20,7 +20,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 <h3>3.1 Ejemplos de uso<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
 
 <span class="markdown">
-  Para representar una estación de vehículos compartidos se crea una instancia de la clase <a href="#SharedVehicleStation">edintvehcom:SharedVehicleStation</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador de la estación), <a href="https://schema.org/name">schema:name</a> (nombre de la estación), <a href="https://schema.org/address">schema:address</a> (dirección de la estación) y <a href="#comissioningDate">edintvehcom:comissioningDate</a> (fecha de alta). Asimismo, se enlaza la estación con el concepto correspondiente de estado mediante <a href="#stationState">edintvehcom:stationState</a>, con la organización que la opera mediante <a href="#operatedBy">edintvehcom:operatedBy</a>, y con sus anclajes mediante <a href="#hasDock">edintvehcom:hasDock</a>.
+  Para representar una estación de vehículos compartidos se crea una instancia de la clase <a href="#SharedVehicleStation">edintvehcom:SharedVehicleStation</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador de la estación), <a href="https://schema.org/name">schema:name</a> (nombre de la estación), <a href="https://schema.org/address">schema:address</a> (dirección de la estación) y <a href="#comissioningDate">edintvehcom:comissioningDate</a> (fecha de alta). Asimismo, se enlaza la estación mediante la propiedad <a href="#stationState">edintvehcom:stationState</a> con el concepto SKOS correspondiente del esquema de estados de estación, que en el ejemplo es una estación operativa; con la organización que la opera mediante <a href="#operatedBy">edintvehcom:operatedBy</a>, y con sus anclajes mediante <a href="#hasDock">edintvehcom:hasDock</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
 &lt;Organization/operador-municipal-01&gt; a schema:Organization ;
@@ -31,7 +31,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   schema:name &quot;Puerta del Sol&quot;@es ;
   schema:address &quot;Puerta del Sol, 1, Madrid&quot;@es ;
   edintvehcom:comissioningDate &quot;2024-03-15&quot;^^xsd:date ;
-  edintvehcom:stationState edintkosstatestate:operativa ;
+  edintvehcom:stationState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState/Operative&gt; ;
   edintvehcom:operatedBy &lt;Organization/operador-municipal-01&gt; ;
   edintvehcom:hasDock &lt;Dock/anclaje-001-01&gt; ,
                         &lt;Dock/anclaje-001-02&gt; .
@@ -45,16 +45,16 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 </script>
 
 <span class="markdown">
-  Después, se representan dos instancias de <a href="#Dock">edintvehcom:Dock</a>. Para cada anclaje se indica su identificador mediante <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> y su estado mediante la propiedad <a href="#dockState">edintvehcom:dockState</a>, que enlaza con un concepto del esquema de estados de anclaje.
+  Después, se representan dos instancias de <a href="#Dock">edintvehcom:Dock</a>. Para cada anclaje se indica su identificador mediante <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> y su estado mediante la propiedad <a href="#dockState">edintvehcom:dockState</a>, que enlaza con el concepto SKOS correspondiente del esquema de estados de anclaje. En el ejemplo, los anclajes se encuentran en estado activo.
 </span>
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
 &lt;Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-01&quot; ;
-  edintvehcom:dockState edintkosdockstate:en-servicio .
+  edintvehcom:dockState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState/Active&gt; .
 
 &lt;Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-02&quot; ;
-  edintvehcom:dockState edintkosdockstate:en-servicio .
+  edintvehcom:dockState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState/Active&gt; .
 </textarea></pre>
   <script>
       var editor_code2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
@@ -65,7 +65,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 </script>
 
 <span class="markdown">
-  Para representar un vehículo compartido se crea una instancia de la clase <a href="#SharedVehicle">edintvehcom:SharedVehicle</a>. En el ejemplo se especifica su identificador, su tipo de vehículo mediante <a href="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">edintveh:vehicleType</a>, su tipo de sistema de propulsión mediante <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>, su estado mediante <a href="#vehicleState">edintvehcom:vehicleState</a> y su fabricante mediante <a href="https://schema.org/manufacturer">schema:manufacturer</a>.
+  Para representar un vehículo compartido se crea una instancia de la clase <a href="#SharedVehicle">edintvehcom:SharedVehicle</a>. En el ejemplo se especifica su identificador, su tipo de vehículo mediante <a href="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">edintveh:vehicleType</a>, su tipo de sistema de propulsión mediante <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>, su estado mediante <a href="#vehicleState">edintvehcom:vehicleState</a> y su fabricante mediante <a href="https://schema.org/manufacturer">schema:manufacturer</a>. Las propiedades <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a> y <a href="#vehicleState">edintvehcom:vehicleState</a> enlazan con los conceptos SKOS correspondientes; en este caso se representa una bicicleta eléctrica en estado activo. Las propiedades <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a> y <a href="#vehicleState">edintvehcom:vehicleState</a> enlazan con los conceptos SKOS correspondientes; en este caso se representa una bicicleta eléctrica en estado activo.
 </span>
 <pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
 &lt;Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
@@ -74,8 +74,8 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 &lt;SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
   dct:identifier &quot;VEH-0001&quot; ;
   edintveh:vehicleType edintkosvehtype:bicicleta ;
-  edintvehcom:propulsionSystemType edintvehiclepropulsiontype:Electric ;
-  edintvehcom:vehicleState edintkosvehstate:disponible ;
+  edintvehcom:propulsionSystemType &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType/Electric&gt; ;
+  edintvehcom:vehicleState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState/Active&gt; ;
   schema:manufacturer &lt;Organization/fabricante-vehiculos-01&gt; .
 </textarea></pre>
   <script>
@@ -103,20 +103,18 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 &lt;Waypoint/trayecto-20260521-001-01&gt; a edintvehcom:Waypoint ;
   edintvehcom:order &quot;1&quot;^^xsd:integer ;
   edintvehcom:passingDateTime &quot;2026-05-21T08:35:00&quot;^^xsd:dateTime ;
-  gsp:hasGeometry &lt;Geometry/trayecto-20260521-001-01&gt; .
+  geosparql:hasGeometry &lt;Geometry/trayecto-20260521-001-01&gt; .
 
-&lt;Geometry/trayecto-20260521-001-01&gt; a sf:Point ;
-  geo:lat &quot;40.416704&quot;^^xsd:float ;
-  geo:long &quot;-3.703582&quot;^^xsd:float .
+&lt;Geometry/trayecto-20260521-001-01&gt; a geosparql:Geometry ;
+  geosparql:asWKT &quot;POINT (-3.703582 40.416704)&quot;^^geosparql:wktLiteral .
 
 &lt;Waypoint/trayecto-20260521-001-02&gt; a edintvehcom:Waypoint ;
   edintvehcom:order &quot;2&quot;^^xsd:integer ;
   edintvehcom:passingDateTime &quot;2026-05-21T08:42:00&quot;^^xsd:dateTime ;
-  gsp:hasGeometry &lt;Geometry/trayecto-20260521-001-02&gt; .
+  geosparql:hasGeometry &lt;Geometry/trayecto-20260521-001-02&gt; .
 
-&lt;Geometry/trayecto-20260521-001-02&gt; a sf:Point ;
-  geo:lat &quot;40.418110&quot;^^xsd:float ;
-  geo:long &quot;-3.698960&quot;^^xsd:float .
+&lt;Geometry/trayecto-20260521-001-02&gt; a geosparql:Geometry ;
+  geosparql:asWKT &quot;POINT (-3.698960 40.418110)&quot;^^geosparql:wktLiteral .
 </textarea></pre>
   <script>
       var editor_code4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
@@ -207,6 +205,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
       });
       editor_code7.setSize(null, "240px"); // ancho automático, altura menor
 </script>
+
 
 
 
