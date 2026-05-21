@@ -45,3 +45,5 @@ Para gestionar esos incidentes o las mejoras sugeridas con respecto a la ontolog
 # Financiación
 
 Incluir aquí la información sobre financiación del proyecto e imágenes necesarias.
+
+![Logos](./resources/EDINT_UE_V-Color.png)
