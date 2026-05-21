@@ -23,8 +23,8 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 
   En primer lugar para la representación de una estación de bicicleta se crea una instancia de la clase <a href="#EstacionBicicleta">esbici:EstacionBicicleta</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador de la estación), <a href="https://schema.org/name">schema:name</a> (nombre de la estación), <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta">esequip:fechaAlta</a> (fecha de alta de la estación), <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja">esequip:fechaBaja</a> (fecha de baja de la estación) y <a href="https://schema.org/address">schema:address</a> (dirección de la estación). Asimismo, se enlaza mediante la propiedad <a href="#estadoEstacion">esbici:estadoEstacion</a> la estación con el concepto correspondiente de la taxonomía de estado de la estación, que para el caso del ejemplo se trata de una estación <a href="http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-estacion/operativa">esbici-kos:operativa</a>. Finalmente, la estación se asocia a través de la propiedad <a href="#tieneAsociadoAnclaje">esbici:tieneAsociadoAnclaje</a> con una instancia de <a href="#Anclaje">esbici:Anclaje</a> que corresponde a uno e los anclajes de la estación y que tiene un <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador).
 </span>
-<pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt; a esbici:EstacionBicicleta ;
+<pre><textarea style="resize:none" readonly id="code6" name="code" rows="25" cols="100">
+  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt; a esbici:EstacionBicicleta ;
   dct:identifier "001A"@es ;
   esequip:nombre "Puerta del Sol A"@es ;
   esequip:fechaAlta "2014-06-23"^^xsd:date ;
@@ -32,50 +32,84 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   esbici:estadoEstacion &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-estacion/operativa&gt; ;
   esequipo:tipoEquipamiento &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/estacion-de-bicicletas&gt; ;
   esbici:tieneAsociadoAnclaje &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; .
-</pre>
+</textarea></pre>
+  <script>
+      var editor2 = CodeMirror.fromTextArea(document.getElementById("code6"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor2.setSize(null, "135px"); // ancho automático, altura menor
+</script>
+
 <span class="markdown">
   A continuación, se representa una instancia de <a href="#Anclaje">esbici:Anclaje</a> para la que se ha especificado su identificador (<a href="http://purl.org/dc/terms/identifier">dct:identifier</a>) y el estado en el que se encuentra. Para expresar su estado se utiliza la propiedad <a href="#estadoAnclaje">esbici:estadoAnclaje</a> para enlazar el Anclaje con el concepto correspondiente del SKOS de <a href="http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-anclaje">tipo-estado-anclaje</a>, que para el caso del ejemplo es libre.
 </span>
-<pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; a esbici:Anclaje ;
+<pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
+  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; a esbici:Anclaje ;
   dct:identifier "11AN"@es ;
   esbici:estadoAnclaje &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-anclaje/libre&gt; .
-</pre>
+</textarea></pre>
+  <script>
+      var editor2 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor2.setSize(null, "80px"); // ancho automático, altura menor
+</script>
 
 <span class="markdown">
 Para representar un trayecto se ha creado una instancia de la clase <a href="#Trayecto">esbici:Trayecto</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador del trayecto), <a href="https://schema.org/startDate">schema:startDate</a> (fecha y hora de comienzo del trayecto), y las relaciones con las propiedades <a href="#tieneAsociadoBicicleta">esbici:tieneAsociadoBicicleta</a>, que indica la bicicleta asociada a ese trayecto, <a href="#tieneEstacionOrigen">esbici:tieneEstacionOrigen</a> que indica la estación de origen del trayecto y <a href="#tieneAnclajeOrigen">esbici:tieneAnclajeOrigen</a> que indica el anclaje exacto de la estación de origen. Como se puede ver a continuación, en la instancia de la clase <a href="#Bicicleta">esbici:Bicicleta</a> en su estado ocupada, el trayecto no ha concluido por lo que aún no se dispone de anclaje ni estación de destino. Para el caso en que el trayecto haya sido finalizado bastaría con agregar a este ejemplo la <a href="https://schema.org/endDate">schema:endDate</a> (fecha y hora de fin del trayecto), <a href="#tieneEstacionDestino">esbici:tieneEstacionDestino</a> para indicar la estación de destino, y <a href="#tieneAnclajeDestino">esbici:tieneAnclajeDestino</a> para indicar el anclaje en el que se dejó la Bicicleta.
 </span>
-
-<pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Trayecto/4f0b79985d77717ea2232760a2de2d36&gt; a esbici:Trayecto ;
+<pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
+  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Trayecto/4f0b79985d77717ea2232760a2de2d36&gt; a esbici:Trayecto ;
   dct:identifier "T201912100041"@es ;
   schema:startDate "2019-12-10T11:30:00"^^xsd:dateTime ;
   esbici:tieneAsociadoBicicleta &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Bicicleta/7c2a90085d77717ea2232760a2de2d36&gt; ;
   esbici:tieneEstacionOrigen &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt; ;
   esbici:tieneAnclajeOrigen &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Anclaje/9b1a90085d77717ea2232760a2de2d36&gt; ;
-</pre>
+</textarea></pre>
+  <script>
+      var editor2 = CodeMirror.fromTextArea(document.getElementById("code3"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor2.setSize(null, "120px"); // ancho automático, altura menor
+</script>
+
 
 <span class="markdown">
 Finalmente, se representa una instancia de <a href="#Bicicleta">esbici:Bicicleta</a> para la que se ha especificado su identificador (<a href="http://purl.org/dc/terms/identifier">dct:identifier</a>), su número de matrícula <a href="#matricula">esbici:matricula</a> y el estado en el que se encuentra. Para expresar su estado se utiliza la propiedad <a href="#estadoBicicleta">esbici:estadoBicicleta</a> para enlazar la Bicicleta con el concepto correspondiente del SKOS de <a href="http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-bicicleta">tipo-estado-bicicleta</a>, que para el caso del ejemplo es ocupada.
 </span>
-
-<pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Bicicleta/7c2a90085d77717ea2232760a2de2d36&gt; a esbici:Bicicleta ;
+<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/Bicicleta/7c2a90085d77717ea2232760a2de2d36&gt; a esbici:Bicicleta ;
   dct:identifier "B13425"@es ;
   esbici:matricula "MAD13425"@es ;
   esbici:estadoBicicleta &lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/bicicleta-publica/tipo-estado-bicicleta/ocupada&gt; .
-</pre>
-
+</textarea></pre>
+  <script>
+      var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor2.setSize(null, "80px"); // ancho automático, altura menor
+</script>
 
 <span class="markdown">
 Para representar una observación en una estación se ha creado una instancia de la clase <a href="#ObservacionEstacion">esbici:ObservacionEstacion</a> de la cual se ha obtenido el resultado de dicha observación (<a href="http://www.w3.org/ns/sosa/hasSimpleResult">sosa:hasSimpleResult</a>), la hora de dicha observación <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a>, el sensor que realizó dicha observación <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a> y la propiedad que se ha observado <a href="http://www.w3.org/ns/sosa/sosa:observedProperty">sosa:sosa:observedProperty</a>, en este caso, los anclajes ocupados de una estación.
 </span>
-
-<pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/ObservacionEstacion/7g0l23012d77717ea2232760a2de2d36&gt; a sosa:Observation, esbici:ObservacionEstacion ;
+<pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
+  &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/ObservacionEstacion/7g0l23012d77717ea2232760a2de2d36&gt; a sosa:Observation, esbici:ObservacionEstacion ;
   sosa:hasSimpleResult “12” ;
   sosa:resultTime "2019-12-10T13:00:00"^^xsd:dateTime ;
   sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/transporte/bicicleta-publica/EstacionBicicleta/6c0a90085d77717ea2232760a2de2d36&gt;
   sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#anclajesOcupados&gt .
-</pre>
+</textarea></pre>
+  <script>
+      var editor2 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor2.setSize(null, "80px"); // ancho automático, altura menor
+</script>
+
 </html>
