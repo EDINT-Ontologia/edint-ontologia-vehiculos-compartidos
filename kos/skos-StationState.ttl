@@ -18,7 +18,6 @@
 edintkos:StationState a skos:ConceptScheme ;
   dct:issued "2026-05-21"^^xsd:date ;
   dct:modified "2026-05-21"^^xsd:date ;
-  cc:license <https://creativecommons.org/licenses/by/4.0/> ;
   rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
   rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
   rdfs:label "Station state"@en ;
