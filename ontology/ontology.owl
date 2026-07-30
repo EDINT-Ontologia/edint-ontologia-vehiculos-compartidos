@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vocab.ciudadesabiertas.es/def/transporte/vehiculos-compartidos#"
      xml:base="http://vocab.ciudadesabiertas.es/def/transporte/vehiculos-compartidos"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:p0="http://vocab.ciudadesabiertas.es/def/transporte/censovehiculos#"
      xmlns:sf="http://www.opengis.net/ont/sf#"
-     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -27,15 +26,18 @@
      xmlns:edintvehcom="http://vocab.ciudadesabiertas.es/def/transporte/vehiculos-compartidos#">
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos">
         <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos/0.1.0"/>
-        <dc:creator>Daniel Doña</dc:creator>
-        <dc:creator>Edna Ruckhaus</dc:creator>
-        <dc:creator>Lucía Sánchez</dc:creator>
-        <dc:creator>Oscar Corcho</dc:creator>
-        <dc:creator>Socorro Bernardos</dc:creator>
-        <dc:title xml:lang="es">Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades</dc:title>
-        <dc:title xml:lang="en">Vocabulary for the representation of data on shared vehicle systems in cities</dc:title>
-        <dct:created>2026-05-18</dct:created>
-        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/4.0</dct:license>
+        <dcterms:creator>Daniel Doña</dcterms:creator>
+        <dcterms:creator>Edna Ruckhaus</dcterms:creator>
+        <dcterms:creator>Lucía Sánchez</dcterms:creator>
+        <dcterms:creator>Oscar Corcho</dcterms:creator>
+        <dcterms:creator>Socorro Bernardos</dcterms:creator>
+        <dcterms:title xml:lang="es">Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades</dcterms:title>
+        <dcterms:title xml:lang="en">Vocabulary for the representation of data on shared vehicle systems in cities</dcterms:title>
+        <dcterms:created>2026-05-18</dcterms:created>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-18</dcterms:issued>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:description xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino.</dcterms:description>
+        <dcterms:description xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented.</dcterms:description>
         <vann:preferredNamespacePrefix>edintvehcom</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#"/>
         <rdfs:comment xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
@@ -129,7 +131,7 @@ In addition, data on the journeys made by these vehicles, including their origin
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
-        <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#issued-003"/>
+        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#issued-003"/>
         <rdfs:comment xml:lang="en">Date of formal issuance (e.g., publication) of the resource.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://purl.org/dc/terms/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Date Issued</rdfs:label>
@@ -1035,7 +1037,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
         <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <dct:issued>2004-02-xx</dct:issued>
+        <dcterms:issued>2004-02-xx</dcterms:issued>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
         <rdfs:label xml:lang="en">Concept</rdfs:label>
         <rdfs:label xml:lang="es">Concepto</rdfs:label>
