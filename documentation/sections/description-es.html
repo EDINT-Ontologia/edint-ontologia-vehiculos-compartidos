@@ -6,14 +6,14 @@
 <p>Para representar un trayecto se tiene el concepto <a href="#Route">Trayecto</a> que debe tener asociado un <a href="#SharedVehicle">Vehículo compartido</a> y, a su vez, tanto un <a href="#originDock">anclaje de origen</a>  como un <a href="#destinationDock">anclaje de destino</a> en caso de que el modelo del sistema esté basado en estaciones. En caso de que el modelo sea "Libre", entonces el trayecto tendrá tanto una <a href="#originSpot">plaza de aparcamiento de origen</a> como una <a href="#destinationSpot">plaza de aparcamiento de destino</a>.
 Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adicionalmente, en esta ontología se han utilizado varios esquemas de conceptos SKOS para representar el estado de un vehículo (activo, en reparación, abandonado), el tipo de propulsión (eléctrico, gasolina, etc.) y el tipo de vehículo (coche, bicicleta, patinete, etc.).</p>
 
-<p>Con la finalidad de representar los posibles puntos de paso de los trayectos, expresados en términos de su longitud y latitud, se han reutilizado las clases <a href="http://www.opengis.net/doc/IS/geosparql/1.0#Feature">geosparql:Feature</a>, <a href="http://www.opengis.net/doc/IS/geosparql/1.0#SpatialObject">geosparql:SpatialObject</a>, <a href="http://www.opengis.net/doc/IS/geosparql/1.0#Geometry">geosparql:Geometry</a> y <a href="http://www.opengis.net/doc/IS/geosparql/1.0#Point">geosparql:Point</a> del vocabulario <a href="http://www.opengis.net/doc/IS/geosparql/1.0">geosparql</a> siguiendo el "Patrón de localización" de la Figura 1.</p>
+<p>Con la finalidad de representar los posibles puntos de paso de los trayectos, expresados en términos de su longitud y latitud, se han reutilizado las clases <a href="#http://www.opengis.net/ont/geosparql#Feature">geosparql:Feature</a>, <a href="#http://www.opengis.net/ont/geosparql#SpatialObject">geosparql:SpatialObject</a>, <a href="#http://www.opengis.net/ont/geosparql#Geometry">geosparql:Geometry</a> y <a href="#http://www.opengis.net/ont/sf#Point">geosparql:Point</a> del vocabulario <a href="https://docs.ogc.org/is/22-047r1/22-047r1.html">geosparql</a> siguiendo el "Patrón de localización" de la Figura 1.</p>
 
-<p>Asimismo, se representan todas las observaciones acerca de la disponibilidad de los anclajes de las estaciones, tal como se puede ver en la Figura 2. Se reutiliza el patrón de diseño de la <a href="https://www.w3.org/TR/vocab-ssn/">Ontología de sensores semánticos</a>.</p>
+<p>Asimismo, se representan todas las observaciones acerca de la disponibilidad de los anclajes de las estaciones, tal como se puede ver en la Figura 2. Se reutiliza el patrón de diseño de la <a href="https://www.w3.org/TR/vocab-ssn/">Semantic Sensor Network Ontology (sosa)</a>.</p>
 </span>
 <center><img src="images/diagrama-conceptual-estaciones.png"><figcaption>Figura 2. - Diagrama conceptual de estaciones y anclajes</figcaption></center>
 
 <span class="markdown">
-<p>El concepto principal es el de <a href="#Dock">Anclaje</a> para el cual se reutilizan las clases <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a>, <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>, <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a>, <a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a> y <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a> de la ontología <a href="http://www.w3.org/ns/sosa/">sosa</a>. Concretamente, se va a observar la disponibilidad de un anclaje que a su vez es la característica de interés. La propiedad que se va a observar y para la que se va a obtener el resultado de la observación es la <a href="#dockAvailability">disponibilidad de un anclaje</a>. Esta propiedad de la estación permite representar el <a href="#numberEmptyDocks">número de anclajes vacíos (libres)</a>, y el <a href="#numberOccupiedDocks">número de anclajes ocupados</a>.</p>
+<p>El concepto principal es el de <a href="#Dock">Anclaje</a> para el cual se reutilizan las clases <a href="#http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a>, <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>, <a href="#http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a>, <a href="#http://w3.org/ns/sosa/Platform">sosa:Platform</a> y <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a> de la ontología <a href="http://www.w3.org/ns/sosa/">sosa</a>. Concretamente, se va a observar la disponibilidad de un anclaje que a su vez es la característica de interés. La propiedad que se va a observar y para la que se va a obtener el resultado de la observación es la <a href="#dockAvailability">disponibilidad de un anclaje</a>. Esta propiedad permite representar el <a href="#numberEmptyDocks">número de anclajes vacíos (libres)</a>, y el <a href="#numberOccupiedDocks">número de anclajes ocupados</a> que a su vez son también propiedades observables de la <a href="#SharedVehicleStation">Estación</a> en general.</p>
 </span>
 
 </span>
@@ -31,7 +31,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   schema:name &quot;Puerta del Sol&quot;@es ;
   schema:address &quot;Puerta del Sol, 1, Madrid&quot;@es ;
   edintvehcom:comissioningDate &quot;2024-03-15&quot;^^xsd:date ;
-  edintvehcom:stationState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState/Operative&gt; ;
+  edintvehcom:stationState &lt;https://edint.es/kos/StationState/Operative&gt; ;
   edintvehcom:operatedBy &lt;Organization/operador-municipal-01&gt; ;
   edintvehcom:hasDock &lt;Dock/anclaje-001-01&gt; ,
                         &lt;Dock/anclaje-001-02&gt; .
@@ -50,11 +50,11 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
 &lt;Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-01&quot; ;
-  edintvehcom:dockState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState/Active&gt; .
+  edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
 
 &lt;Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-02&quot; ;
-  edintvehcom:dockState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState/Active&gt; .
+  edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
 </textarea></pre>
   <script>
       var editor_code2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
@@ -65,7 +65,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 </script>
 
 <span class="markdown">
-  Para representar un vehículo compartido se crea una instancia de la clase <a href="#SharedVehicle">edintvehcom:SharedVehicle</a>. En el ejemplo se especifica su identificador, su tipo de vehículo mediante <a href="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">edintveh:vehicleType</a>, su tipo de sistema de propulsión mediante <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>, su estado mediante <a href="#vehicleState">edintvehcom:vehicleState</a> y su fabricante mediante <a href="https://schema.org/manufacturer">schema:manufacturer</a>. Las propiedades <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a> y <a href="#vehicleState">edintvehcom:vehicleState</a> enlazan con los conceptos SKOS correspondientes; en este caso se representa una bicicleta eléctrica en estado activo.
+  Para representar un vehículo compartido se crea una instancia de la clase <a href="#SharedVehicle">edintvehcom:SharedVehicle</a>. En el ejemplo se especifica su identificador, su tipo de vehículo mediante <a href="#https://edint.es/def/censovehiculos#vehicleType">edintveh:vehicleType</a>, su tipo de sistema de propulsión mediante <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>, su estado mediante <a href="#vehicleState">edintvehcom:vehicleState</a> y su fabricante mediante <a href="https://schema.org/manufacturer">schema:manufacturer</a>. Las propiedades <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a> y <a href="#vehicleState">edintvehcom:vehicleState</a> enlazan con los conceptos SKOS correspondientes; en este caso se representa una bicicleta eléctrica en estado activo.
 </span>
 <pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
 &lt;Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
@@ -74,8 +74,8 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 &lt;SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
   dct:identifier &quot;VEH-0001&quot; ;
   edintveh:vehicleType edintkosvehtype:bicicleta ;
-  edintvehcom:propulsionSystemType &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType/Electric&gt; ;
-  edintvehcom:vehicleState &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState/Active&gt; ;
+  edintvehcom:propulsionSystemType &lt;https://edint.es/kos/PropulsionSystemType/Electric&gt; ;
+  edintvehcom:vehicleState &lt;https://edint.es/kos/VehicleState/Active&gt; ;
   schema:manufacturer &lt;Organization/fabricante-vehiculos-01&gt; .
 </textarea></pre>
   <script>
@@ -125,7 +125,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 </script>
 
 <span class="markdown">
-  En el caso de un modelo libre, el trayecto no se inicia ni finaliza necesariamente en anclajes de una estación. Por ello, la instancia de <a href="#Route">edintvehcom:Route</a> se relaciona con una plaza de aparcamiento de origen mediante <a href="#originSpot">edintvehcom:originSpot</a> y con una plaza de aparcamiento de destino mediante <a href="#destinationSpot">edintvehcom:destinationSpot</a>. Las plazas de aparcamiento se representan como instancias de <a href="#ParkingSpot">edintapar:ParkingSpot</a>.
+  En el caso de un modelo libre, el trayecto no se inicia ni finaliza necesariamente en anclajes de una estación. Por ello, la instancia de <a href="#Route">edintvehcom:Route</a> se relaciona con una plaza de aparcamiento de origen mediante <a href="#originSpot">edintvehcom:originSpot</a> y con una plaza de aparcamiento de destino mediante <a href="#destinationSpot">edintvehcom:destinationSpot</a>. Las plazas de aparcamiento se representan como instancias de <a href="#https://edint.es/def/aparcamiento#ParkingSpot">edintapar:ParkingSpot</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
 &lt;Route/trayecto-20260521-002&gt; a edintvehcom:Route ;
@@ -151,7 +151,7 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
 </script>
 
 <span class="markdown">
-  Para representar una observación sobre la disponibilidad de un anclaje se crea una instancia de <a href="#DockSensor">edintvehcom:DockSensor</a>, alojada en la estación mediante <a href="http://www.w3.org/ns/sosa/isHostedBy">sosa:isHostedBy</a>, y que observa la propiedad <a href="#dockAvailability">edintvehcom:dockAvailability</a>. La observación se representa con una instancia de <a href="#DockObservation">edintvehcom:DockObservation</a>, indicando el anclaje observado mediante <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, el sensor que realiza la observación mediante <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a>, la propiedad observada mediante <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a>, el instante de observación mediante <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a> y el resultado mediante <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> con una instancia de <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
+  Para representar una observación sobre la disponibilidad de un anclaje se crea una instancia de <a href="#DockSensor">edintvehcom:DockSensor</a>, alojada en la estación mediante <a href="http://www.w3.org/ns/sosa/isHostedBy">sosa:isHostedBy</a>, y que observa la propiedad <a href="#dockAvailability">edintvehcom:dockAvailability</a>. La observación se representa con una instancia de <a href="#DockObservation">edintvehcom:DockObservation</a>, indicando el anclaje observado mediante <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, el sensor que realiza la observación mediante <a href="#http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a>, la propiedad observada mediante <a href="#http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a>, el instante de observación mediante <a href="#http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a> y el resultado mediante <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> con una instancia de <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code6" name="code" rows="25" cols="100">
 &lt;DockSensor/sensor-anclaje-001-01&gt; a edintvehcom:DockSensor ;

@@ -12,7 +12,7 @@
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType"
+    "@id" : "https://edint.es/kos/PropulsionSystemType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -31,7 +31,7 @@
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState"
+    "@id" : "https://edint.es/kos/StationState"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -50,7 +50,7 @@
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState"
+    "@id" : "https://edint.es/kos/VehicleState"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -69,7 +69,7 @@
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
+    "@id" : "https://edint.es/kos/VehicleType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -88,7 +88,7 @@
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState"
+    "@id" : "https://edint.es/kos/DockState"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -137,6 +137,12 @@
     "@id" : "http://purl.org/dc/elements/1.1/date"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/hasVersion",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -165,6 +171,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
@@ -303,799 +312,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Individual parking space on-street or off-street."
-  }, {
-    "@language" : "es",
-    "@value" : "Plaza individual de estacionamiento dentro o fuera de la vía pública."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Parking spot"
-  }, {
-    "@language" : "es",
-    "@value" : "Plaza de aparcamiento"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."
-  }, {
-    "@language" : "en",
-    "@value" : "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Vehicle"
-  }, {
-    "@language" : "es",
-    "@value" : "Vehículo"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."
-  }, {
-    "@language" : "en",
-    "@value" : "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "tipo de vehículo"
-  }, {
-    "@language" : "en",
-    "@value" : "vehicle type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Daniel Doña"
-  }, {
-    "@value" : "Edna Ruckhaus"
-  }, {
-    "@value" : "Lucía Sánchez"
-  }, {
-    "@value" : "Oscar Corcho"
-  }, {
-    "@value" : "Socorro Bernardos"
-  } ],
-  "http://purl.org/dc/elements/1.1/title" : [ {
-    "@language" : "es",
-    "@value" : "Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades"
-  }, {
-    "@language" : "en",
-    "@value" : "Vocabulary for the representation of data on shared vehicle systems in cities"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2026-05-18"
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@value" : "https://creativecommons.org/licenses/by/4.0"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "edintvehcom"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. \nAdemás, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino."
-  }, {
-    "@language" : "en",
-    "@value" : "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.\nIn addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos/0.1.0"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.0"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Lugar de la estación donde se fijan las bicicletas"
-  }, {
-    "@language" : "en",
-    "@value" : "Place in the station where the vehicles are secured."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Anclaje"
-  }, {
-    "@language" : "en",
-    "@value" : "Dock"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo."
-  }, {
-    "@language" : "en",
-    "@value" : "Observation by a dock sensor that detects the dock's availability to park a vehicle (free), or occupied by a vehicle."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Dock observation"
-  }, {
-    "@language" : "es",
-    "@value" : "Observación de anclaje"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Observation"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Observable properties of the dock that refer to its availability: free or occupied by a vehicle."
-  }, {
-    "@language" : "es",
-    "@value" : "Propiedades que están relacionadas con la disponibilidad de los anclajes (vacíos u ocupados) en donde se enganchan los vehículos."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Dock property"
-  }, {
-    "@language" : "es",
-    "@value" : "Propiedad de anclaje"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Equipment that allows you to detect if an anchor is free or occupied."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Dock sensor"
-  }, {
-    "@language" : "es",
-    "@value" : "Equipo que permite detectar si un anclaje está libre u ocupado."
-  }, {
-    "@language" : "es",
-    "@value" : "Sensor de anclaje"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Sensor"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Espacio que se recorre para llegar desde un origen hasta un destino."
-  }, {
-    "@language" : "en",
-    "@value" : "The path traveled to get from an origin to a destination"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Route"
-  }, {
-    "@language" : "es",
-    "@value" : "Trayecto"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda."
-  }, {
-    "@language" : "en",
-    "@value" : "Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Shared vehicle"
-  }, {
-    "@language" : "es",
-    "@value" : "Vehículo compartido"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."
-  }, {
-    "@language" : "en",
-    "@value" : "Place where you can both leave and pick up a shared vehicles. It is composed of docks"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Estación de vehículos compartidos"
-  }, {
-    "@language" : "en",
-    "@value" : "Shared vehicle station"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  }, {
-    "@id" : "http://w3.org/ns/sosa/Platform"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Part of a route defined by coordinates and a date and time"
-  }, {
-    "@language" : "es",
-    "@value" : "Parte de un trayecto definido por unas coordenadas y una fecha y hora."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Punto de paso"
-  }, {
-    "@language" : "en",
-    "@value" : "Waypoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Date when the station ceases operation."
-  }, {
-    "@language" : "es",
-    "@value" : "Fecha en la cual la estación cesa sus operaciones."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "closure date"
-  }, {
-    "@language" : "es",
-    "@value" : "fecha de baja"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#date"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Fecha en que la estación es certificada y puesta en servicio oficialmente."
-  }, {
-    "@value" : "Date when the station is officially tested, certified, and put into active service."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "comissionning date"
-  }, {
-    "@language" : "es",
-    "@value" : "fecha de alta"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#date"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "El anclaje de una estación a donde finaliza una ruta de un vehículo."
-  }, {
-    "@language" : "en",
-    "@value" : "The dock in a station where a vehicle's route ends."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "destination dock"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene anclaje destino"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Parking spot where a vehicle's route ends."
-  }, {
-    "@language" : "es",
-    "@value" : "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "destination parking spot"
-  }, {
-    "@language" : "es",
-    "@value" : "plaza de aparcamiento estino"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Indicates whether the dock is free or occupied."
-  }, {
-    "@language" : "es",
-    "@value" : "Número total de anclajes ocupados con vehículos, en una estación."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "disponibilidad del anclaje"
-  }, {
-    "@language" : "en",
-    "@value" : "dock availability"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."
-  }, {
-    "@language" : "en",
-    "@value" : "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "dock state"
-  }, {
-    "@language" : "es",
-    "@value" : "estado del anclaje"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid5"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a shared vehicle siation and the docks that belong to it."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has dock"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene anclaje"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."
-  }, {
-    "@language" : "en",
-    "@value" : "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has waypoint"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene punto de paso"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un trayecto y el vehículo que lo realiza."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a route and the vehicle that makes it."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "made by vehicle"
-  }, {
-    "@language" : "es",
-    "@value" : "realizado por vehículo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Número total de anclajes vacíos en la estación, es decir, disponibles para aparcar un vehículo."
-  }, {
-    "@language" : "en",
-    "@value" : "Total number of empty docks at the station, i.e., available to park a vehicle."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "number of empty docks"
-  }, {
-    "@language" : "es",
-    "@value" : "número de anclajes vacíos"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Número total de anclajes ocupados por vehículos."
-  }, {
-    "@language" : "en",
-    "@value" : "Total number of docks that are occupied by vehicles."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "number occupied docks"
-  }, {
-    "@language" : "es",
-    "@value" : "número de anclajes ocupados"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre una estación de vehículos compartidos y la organización que la opera."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a vehicle-sharing station and the organization that operates it."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "operado por"
-  }, {
-    "@language" : "en",
-    "@value" : "operated by"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://schema.org/Organization"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "El número de orden un un punto de paso."
-  }, {
-    "@language" : "en",
-    "@value" : "The order number of a waypoint."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "orden"
-  }, {
-    "@language" : "en",
-    "@value" : "order"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."
-  }, {
-    "@language" : "en",
-    "@value" : "The dock in a station from where the vehicle departed on a certain route."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "origin dock"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene anclaje origen"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Plaza de aparcamiento desde donde sale la ruta del vehículo."
-  }, {
-    "@value" : "Parking spot from where the vehicle route starts."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "origin parking spot"
-  }, {
-    "@language" : "es",
-    "@value" : "plaza de aparcamiento origen"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : ""
-  }, {
-    "@language" : "en",
-    "@value" : "Date and time when the vehicle passed through the waypoint in a route."
-  }, {
-    "@language" : "es",
-    "@value" : "Fecha y hora en que el vehículo pasó por el punto en la ruta."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "fecha y hora punto de paso"
-  }, {
-    "@language" : "en",
-    "@value" : "passing date and time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "propulsion system type"
-  }, {
-    "@language" : "es",
-    "@value" : "tipo de sistema de propulsión"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid9"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "estado de la estación"
-  }, {
-    "@language" : "en",
-    "@value" : "station state"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid13"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "estado del vehículo"
-  }, {
-    "@language" : "en",
-    "@value" : "vehicle state"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid17"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."
-  }, {
-    "@language" : "en",
-    "@value" : "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Equipamiento"
-  }, {
-    "@language" : "en",
-    "@value" : "Facility"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."
-  }, {
-    "@language" : "en",
-    "@value" : "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Elemento de la infraestructura"
-  }, {
-    "@language" : "en",
-    "@value" : "Infrastructure element"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "dock state"
-  }, {
-    "@language" : "es",
-    "@value" : "estado del anclaje"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "propulsion system type"
-  }, {
-    "@language" : "es",
-    "@value" : "tipo de sistema de propulsión"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "estado de la estación"
-  }, {
-    "@language" : "en",
-    "@value" : "station state"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "estado del vehículo"
-  }, {
-    "@language" : "en",
-    "@value" : "vehicle state"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "tipo de vehículo"
-  }, {
-    "@language" : "en",
-    "@value" : "vehicle type"
   } ]
 }, {
   "@id" : "http://w3.org/ns/sosa/Platform",
@@ -1530,10 +746,6 @@
     "@language" : "en",
     "@value" : "Feature Of Interest"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."
@@ -1551,10 +763,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Observable Property"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "An observable quality (property, characteristic) of a FeatureOfInterest."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1574,10 +782,6 @@
     "@language" : "en",
     "@value" : "Observation"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."
@@ -1595,10 +799,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Sensor"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1665,10 +865,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://www.w3.org/ns/sosa/isResultOf"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/sosa/isHostedBy",
@@ -1772,5 +968,832 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2006/time#ProperInterval"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/aparcamiento#ParkingSpot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Individual parking space on-street or off-street."
+  }, {
+    "@language" : "es",
+    "@value" : "Plaza individual de estacionamiento dentro o fuera de la vía pública."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Parking spot"
+  }, {
+    "@language" : "es",
+    "@value" : "Plaza de aparcamiento"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/censovehiculos#Vehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."
+  }, {
+    "@language" : "en",
+    "@value" : "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle"
+  }, {
+    "@language" : "es",
+    "@value" : "Vehículo"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/censovehiculos#vehicleType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tipo de vehículo"
+  }, {
+    "@language" : "en",
+    "@value" : "vehicle type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#Facility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."
+  }, {
+    "@language" : "en",
+    "@value" : "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Equipamiento"
+  }, {
+    "@language" : "en",
+    "@value" : "Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#InfrastructureElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."
+  }, {
+    "@language" : "en",
+    "@value" : "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Elemento de la infraestructura"
+  }, {
+    "@language" : "en",
+    "@value" : "Infrastructure element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#StationProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Observable properties of the station that refer to the number of occupied docks and the number of empty docks available to park a vehicle."
+  }, {
+    "@language" : "es",
+    "@value" : "Propiedades observables de una estación que se refieren al número de anclajes ocupados o al número de anclajes vacíos disponibles para aparcar un vehiculo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Propiedad de estación"
+  }, {
+    "@language" : "en",
+    "@value" : "Station property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2026-05-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Daniel Doña"
+  }, {
+    "@value" : "Edna Ruckhaus"
+  }, {
+    "@value" : "Lucía Sánchez"
+  }, {
+    "@value" : "Socorro Bernardos"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "es",
+    "@value" : "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino."
+  }, {
+    "@language" : "en",
+    "@value" : "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-05-18"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "es",
+    "@value" : "Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades"
+  }, {
+    "@language" : "en",
+    "@value" : "Vocabulary for the representation of data on shared vehicle systems in cities"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "edintvehcom"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. \nAdemás, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino."
+  }, {
+    "@language" : "en",
+    "@value" : "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.\nIn addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.1.1"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#Dock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Lugar de la estación donde se fijan las bicicletas"
+  }, {
+    "@language" : "en",
+    "@value" : "Place in the station where the vehicles are secured."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Anclaje"
+  }, {
+    "@language" : "en",
+    "@value" : "Dock"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#DockObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo."
+  }, {
+    "@language" : "en",
+    "@value" : "Observation by a dock sensor that detects the dock's availability to park a vehicle (free), or occupied by a vehicle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dock observation"
+  }, {
+    "@language" : "es",
+    "@value" : "Observación de anclaje"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#DockProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Observable property of the dock that refer to its availability: free or occupied by a vehicle."
+  }, {
+    "@language" : "es",
+    "@value" : "Propiedad observable de un anclaje que se refiere a la disponibilidad del anclaje, libre u ocupado por un vehículo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dock property"
+  }, {
+    "@language" : "es",
+    "@value" : "Propiedad de anclaje"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#DockSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Equipment that allows you to detect if an anchor is free or occupied."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dock sensor"
+  }, {
+    "@language" : "es",
+    "@value" : "Equipo que permite detectar si un anclaje está libre u ocupado."
+  }, {
+    "@language" : "es",
+    "@value" : "Sensor de anclaje"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#Route",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Espacio que se recorre para llegar desde un origen hasta un destino."
+  }, {
+    "@language" : "en",
+    "@value" : "The path traveled to get from an origin to a destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Route"
+  }, {
+    "@language" : "es",
+    "@value" : "Trayecto"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda."
+  }, {
+    "@language" : "en",
+    "@value" : "Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shared vehicle"
+  }, {
+    "@language" : "es",
+    "@value" : "Vehículo compartido"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/censovehiculos#Vehicle"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."
+  }, {
+    "@language" : "en",
+    "@value" : "Place where you can both leave and pick up a shared vehicles. It is composed of docks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Estación de vehículos compartidos"
+  }, {
+    "@language" : "en",
+    "@value" : "Shared vehicle station"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3.org/ns/sosa/Platform"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  }, {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#Waypoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Part of a route defined by coordinates and a date and time"
+  }, {
+    "@language" : "es",
+    "@value" : "Parte de un trayecto definido por unas coordenadas y una fecha y hora."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Punto de paso"
+  }, {
+    "@language" : "en",
+    "@value" : "Waypoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#closureDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date when the station ceases operation."
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha en la cual la estación cesa sus operaciones."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "closure date"
+  }, {
+    "@language" : "es",
+    "@value" : "fecha de baja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#comissioningDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fecha en que la estación es certificada y puesta en servicio oficialmente."
+  }, {
+    "@value" : "Date when the station is officially tested, certified, and put into active service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comissionning date"
+  }, {
+    "@language" : "es",
+    "@value" : "fecha de alta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#destinationDock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El anclaje de una estación a donde finaliza una ruta de un vehículo."
+  }, {
+    "@language" : "en",
+    "@value" : "The dock in a station where a vehicle's route ends."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "destination dock"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene anclaje destino"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Dock"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#destinationSpot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parking spot where a vehicle's route ends."
+  }, {
+    "@language" : "es",
+    "@value" : "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "destination parking spot"
+  }, {
+    "@language" : "es",
+    "@value" : "plaza de aparcamiento estino"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/aparcamiento#ParkingSpot"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#dockAvailability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#DockProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates whether the dock is free or occupied."
+  }, {
+    "@language" : "es",
+    "@value" : "Número total de anclajes ocupados con vehículos, en una estación."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "disponibilidad del anclaje"
+  }, {
+    "@language" : "en",
+    "@value" : "dock availability"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#dockState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Dock"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dock state"
+  }, {
+    "@language" : "es",
+    "@value" : "estado del anclaje"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#hasDock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a shared vehicle siation and the docks that belong to it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has dock"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene anclaje"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Dock"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#hasWaypoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."
+  }, {
+    "@language" : "en",
+    "@value" : "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has waypoint"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene punto de paso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Waypoint"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#madeByVehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un trayecto y el vehículo que lo realiza."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a route and the vehicle that makes it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "made by vehicle"
+  }, {
+    "@language" : "es",
+    "@value" : "realizado por vehículo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicle"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#numberEmptyDocks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/infraestructura#StationProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Número total de anclajes vacíos en la estación, es decir, disponibles para aparcar un vehículo."
+  }, {
+    "@language" : "en",
+    "@value" : "Total number of empty docks at the station, i.e., available to park a vehicle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "number of empty docks"
+  }, {
+    "@language" : "es",
+    "@value" : "número de anclajes vacíos"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#numberOccupiedDocks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/infraestructura#StationProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Número total de anclajes ocupados por vehículos."
+  }, {
+    "@language" : "en",
+    "@value" : "Total number of docks that are occupied by vehicles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "number occupied docks"
+  }, {
+    "@language" : "es",
+    "@value" : "número de anclajes ocupados"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#operatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre una estación de vehículos compartidos y la organización que la opera."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a vehicle-sharing station and the organization that operates it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "operado por"
+  }, {
+    "@language" : "en",
+    "@value" : "operated by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://schema.org/Organization"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#order",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El número de orden un un punto de paso."
+  }, {
+    "@language" : "en",
+    "@value" : "The order number of a waypoint."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Waypoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "orden"
+  }, {
+    "@language" : "en",
+    "@value" : "order"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#originDock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."
+  }, {
+    "@language" : "en",
+    "@value" : "The dock in a station from where the vehicle departed on a certain route."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "origin dock"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene anclaje origen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Dock"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#originSpot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Plaza de aparcamiento desde donde sale la ruta del vehículo."
+  }, {
+    "@value" : "Parking spot from where the vehicle route starts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "origin parking spot"
+  }, {
+    "@language" : "es",
+    "@value" : "plaza de aparcamiento origen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/aparcamiento#ParkingSpot"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#passingDateTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  }, {
+    "@language" : "en",
+    "@value" : "Date and time when the vehicle passed through the waypoint in a route."
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha y hora en que el vehículo pasó por el punto en la ruta."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#Waypoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fecha y hora punto de paso"
+  }, {
+    "@language" : "en",
+    "@value" : "passing date and time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#propulsionSystemType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "propulsion system type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de sistema de propulsión"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#stationState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "estado de la estación"
+  }, {
+    "@language" : "en",
+    "@value" : "station state"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#vehicleState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "estado del vehículo"
+  }, {
+    "@language" : "en",
+    "@value" : "vehicle state"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/DockState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dock state"
+  }, {
+    "@language" : "es",
+    "@value" : "estado del anclaje"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/PropulsionSystemType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "propulsion system type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de sistema de propulsión"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/StationState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "estado de la estación"
+  }, {
+    "@language" : "en",
+    "@value" : "station state"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/VehicleState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "estado del vehículo"
+  }, {
+    "@language" : "en",
+    "@value" : "vehicle state"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/VehicleType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tipo de vehículo"
+  }, {
+    "@language" : "en",
+    "@value" : "vehicle type"
   } ]
 } ]

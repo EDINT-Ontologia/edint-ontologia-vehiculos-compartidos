@@ -1,29 +1,32 @@
-@prefix : <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> .
+@prefix : <https://edint.es/def/vehiculos-compartidos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> .
+@base <https://edint.es/def/vehiculos-compartidos#> .
 
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos> rdf:type owl:Ontology ;
-                                                                                 owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos/0.1.0> ;
-                                                                                 <http://purl.org/dc/elements/1.1/creator> "Daniel Doña" ,
-                                                                                                                           "Edna Ruckhaus" ,
-                                                                                                                           "Lucía Sánchez" ,
-                                                                                                                           "Oscar Corcho" ,
-                                                                                                                           "Socorro Bernardos" ;
-                                                                                 <http://purl.org/dc/elements/1.1/title> "Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades"@es ,
-                                                                                                                         "Vocabulary for the representation of data on shared vehicle systems in cities"@en ;
-                                                                                 <http://purl.org/dc/terms/created> "2026-05-18" ;
-                                                                                 <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
-                                                                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintvehcom" ;
-                                                                                 <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                                                                                 rdfs:comment """La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
+<https://edint.es/def/vehiculos-compartidos> rdf:type owl:Ontology ;
+                                              owl:versionIRI <https://edint.es/def/vehiculos-compartidos> ;
+                                              <http://purl.org/dc/terms/created> "2026-05-18" ;
+                                              <http://purl.org/dc/terms/creator> "Daniel Doña" ,
+                                                                                 "Edna Ruckhaus" ,
+                                                                                 "Lucía Sánchez" ,
+                                                                                 "Socorro Bernardos" ;
+                                              <http://purl.org/dc/terms/description> "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino."@es ,
+                                                                                     "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."@en ;
+                                              <http://purl.org/dc/terms/issued> "2026-05-18"^^xsd:date ;
+                                              <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                              <http://purl.org/dc/terms/title> "Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades"@es ,
+                                                                               "Vocabulary for the representation of data on shared vehicle systems in cities"@en ;
+                                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintvehcom" ;
+                                              <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                                              rdfs:comment """La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
 Además, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino."""@es ,
-                                                                                              """The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
+                                                           """The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
 In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."""@en ;
-                                                                                 owl:versionInfo "0.1.0" .
+                                              owl:priorVersion <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0> ;
+                                              owl:versionInfo "0.1.1" .
 
 #################################################################
 #    Annotation properties
@@ -70,16 +73,20 @@ In addition, data on the journeys made by these vehicles, including their origin
                                    rdfs:domain <http://purl.org/dc/elements/1.1/date> .
 
 
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/hasVersion
 <http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
-                                  <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#issued-003> ;
-                                  rdfs:comment "Date of formal issuance (e.g., publication) of the resource."@en ;
-                                  rdfs:isDefinedBy "http://purl.org/dc/terms/"@en ;
-                                  rdfs:label "Date Issued"@en ;
                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
 
 
@@ -89,6 +96,10 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 ###  http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -160,170 +171,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                  rdfs:label "manufacturer"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType> rdf:type owl:ObjectProperty ;
-                                                                                     rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                         owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType>
-                                                                                                                       ]
-                                                                                                                     ) ;
-                                                                                                  rdf:type owl:Class
-                                                                                                ] ;
-                                                                                     rdfs:comment "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."@es ,
-                                                                                                  "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."@en ;
-                                                                                     rdfs:label "tipo de vehículo"@es ,
-                                                                                                "vehicle type"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationDock
-:destinationDock rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Route ;
-                 rdfs:range :Dock ;
-                 rdfs:comment "El anclaje de una estación a donde finaliza una ruta de un vehículo."@es ,
-                              "The dock in a station where a vehicle's route ends."@en ;
-                 rdfs:label "destination dock"@en ,
-                            "tiene anclaje destino"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#destinationSpot
-:destinationSpot rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Route ;
-                 rdfs:range <http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> ;
-                 rdfs:comment "Parking spot where a vehicle's route ends."@en ,
-                              "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."@es ;
-                 rdfs:label "destination parking spot"@en ,
-                            "plaza de aparcamiento estino"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockState
-:dockState rdf:type owl:ObjectProperty ;
-           rdfs:domain :Dock ;
-           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                               owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState>
-                                             ]
-                                           ) ;
-                        rdf:type owl:Class
-                      ] ;
-           rdfs:comment "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."@es ,
-                        "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."@en ;
-           rdfs:label "dock state"@en ,
-                      "estado del anclaje"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasDock
-:hasDock rdf:type owl:ObjectProperty ;
-         rdfs:domain :SharedVehicleStation ;
-         rdfs:range :Dock ;
-         rdfs:comment "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."@es ,
-                      "Relationship between a shared vehicle siation and the docks that belong to it."@en ;
-         rdfs:label "has dock"@en ,
-                    "tiene anclaje"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#hasWaypoint
-:hasWaypoint rdf:type owl:ObjectProperty ;
-             rdfs:domain :Route ;
-             rdfs:range :Waypoint ;
-             rdfs:comment "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."@es ,
-                          "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."@en ;
-             rdfs:label "has waypoint"@en ,
-                        "tiene punto de paso"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#madeByVehicle
-:madeByVehicle rdf:type owl:ObjectProperty ;
-               rdfs:domain :Route ;
-               rdfs:range :SharedVehicle ;
-               <http://purl.org/vocab/vann/preferredNamespaceUri> "Relación entre un trayecto y el vehículo que lo realiza."@es ,
-                                                                  "Relationship between a route and the vehicle that makes it."@en ;
-               rdfs:label "made by vehicle"@en ,
-                          "realizado por vehículo"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#operatedBy
-:operatedBy rdf:type owl:ObjectProperty ;
-            rdfs:domain :SharedVehicleStation ;
-            rdfs:range <http://schema.org/Organization> ;
-            rdfs:comment "Relación entre una estación de vehículos compartidos y la organización que la opera."@es ,
-                         "Relationship between a vehicle-sharing station and the organization that operates it."@en ;
-            rdfs:label "operado por"@es ,
-                       "operated by"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originDock
-:originDock rdf:type owl:ObjectProperty ;
-            rdfs:domain :Route ;
-            rdfs:range :Dock ;
-            rdfs:comment "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."@es ,
-                         "The dock in a station from where the vehicle departed on a certain route."@en ;
-            rdfs:label "origin dock"@en ,
-                       "tiene anclaje origen"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#originSpot
-:originSpot rdf:type owl:ObjectProperty ;
-            rdfs:domain :Route ;
-            rdfs:range <http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> ;
-            rdfs:comment "Plaza de aparcamiento desde donde sale la ruta del vehículo."@es ,
-                         "Parking spot from where the vehicle route starts." ;
-            rdfs:label "origin parking spot"@en ,
-                       "plaza de aparcamiento origen"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#propulsionSystemType
-:propulsionSystemType rdf:type owl:ObjectProperty ;
-                      rdfs:domain :SharedVehicle ;
-                      rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                          owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType>
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-                      rdfs:comment "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."@es ,
-                                   "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."@en ;
-                      rdfs:label "propulsion system type"@en ,
-                                 "tipo de sistema de propulsión"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#stationState
-:stationState rdf:type owl:ObjectProperty ;
-              rdfs:domain :SharedVehicleStation ;
-              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                  owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState>
-                                                ]
-                                              ) ;
-                           rdf:type owl:Class
-                         ] ;
-              rdfs:comment "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."@es ,
-                           "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."@en ;
-              rdfs:label "estado de la estación"@es ,
-                         "station state"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#vehicleState
-:vehicleState rdf:type owl:ObjectProperty ;
-              rdfs:domain :SharedVehicle ;
-              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                  owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState>
-                                                ]
-                                              ) ;
-                           rdf:type owl:Class
-                         ] ;
-              rdfs:comment "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."@es ,
-                           "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."@en ;
-              rdfs:label "estado del vehículo"@es ,
-                         "vehicle state"@en .
-
-
 ###  http://www.opengis.net/ont/geosparql#hasGeometry
 <http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
@@ -389,8 +236,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                       rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ,
                                                        <http://www.w3.org/ns/sosa/common/> ;
                                       rdfs:label "has result"@en ,
-                                                 "tiene resultado"@es ;
-                                      <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en .
+                                                 "tiene resultado"@es .
 
 
 ###  http://www.w3.org/ns/sosa/isHostedBy
@@ -442,6 +288,170 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                       "time interval"@en .
 
 
+###  https://edint.es/def/censovehiculos#vehicleType
+<https://edint.es/def/censovehiculos#vehicleType> rdf:type owl:ObjectProperty ;
+                                                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                      owl:hasValue <https://edint.es/kos/VehicleType>
+                                                                                    ]
+                                                                                  ) ;
+                                                               rdf:type owl:Class
+                                                             ] ;
+                                                  rdfs:comment "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."@es ,
+                                                               "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."@en ;
+                                                  rdfs:label "tipo de vehículo"@es ,
+                                                             "vehicle type"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#destinationDock
+:destinationDock rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Route ;
+                 rdfs:range :Dock ;
+                 rdfs:comment "El anclaje de una estación a donde finaliza una ruta de un vehículo."@es ,
+                              "The dock in a station where a vehicle's route ends."@en ;
+                 rdfs:label "destination dock"@en ,
+                            "tiene anclaje destino"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#destinationSpot
+:destinationSpot rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Route ;
+                 rdfs:range <https://edint.es/def/aparcamiento#ParkingSpot> ;
+                 rdfs:comment "Parking spot where a vehicle's route ends."@en ,
+                              "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."@es ;
+                 rdfs:label "destination parking spot"@en ,
+                            "plaza de aparcamiento estino"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#dockState
+:dockState rdf:type owl:ObjectProperty ;
+           rdfs:domain :Dock ;
+           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                               owl:hasValue <https://edint.es/kos/DockState>
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ;
+           rdfs:comment "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."@es ,
+                        "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."@en ;
+           rdfs:label "dock state"@en ,
+                      "estado del anclaje"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#hasDock
+:hasDock rdf:type owl:ObjectProperty ;
+         rdfs:domain :SharedVehicleStation ;
+         rdfs:range :Dock ;
+         rdfs:comment "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."@es ,
+                      "Relationship between a shared vehicle siation and the docks that belong to it."@en ;
+         rdfs:label "has dock"@en ,
+                    "tiene anclaje"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#hasWaypoint
+:hasWaypoint rdf:type owl:ObjectProperty ;
+             rdfs:domain :Route ;
+             rdfs:range :Waypoint ;
+             rdfs:comment "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."@es ,
+                          "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."@en ;
+             rdfs:label "has waypoint"@en ,
+                        "tiene punto de paso"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#madeByVehicle
+:madeByVehicle rdf:type owl:ObjectProperty ;
+               rdfs:domain :Route ;
+               rdfs:range :SharedVehicle ;
+               <http://purl.org/vocab/vann/preferredNamespaceUri> "Relación entre un trayecto y el vehículo que lo realiza."@es ,
+                                                                  "Relationship between a route and the vehicle that makes it."@en ;
+               rdfs:label "made by vehicle"@en ,
+                          "realizado por vehículo"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#operatedBy
+:operatedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :SharedVehicleStation ;
+            rdfs:range <http://schema.org/Organization> ;
+            rdfs:comment "Relación entre una estación de vehículos compartidos y la organización que la opera."@es ,
+                         "Relationship between a vehicle-sharing station and the organization that operates it."@en ;
+            rdfs:label "operado por"@es ,
+                       "operated by"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#originDock
+:originDock rdf:type owl:ObjectProperty ;
+            rdfs:domain :Route ;
+            rdfs:range :Dock ;
+            rdfs:comment "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."@es ,
+                         "The dock in a station from where the vehicle departed on a certain route."@en ;
+            rdfs:label "origin dock"@en ,
+                       "tiene anclaje origen"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#originSpot
+:originSpot rdf:type owl:ObjectProperty ;
+            rdfs:domain :Route ;
+            rdfs:range <https://edint.es/def/aparcamiento#ParkingSpot> ;
+            rdfs:comment "Plaza de aparcamiento desde donde sale la ruta del vehículo."@es ,
+                         "Parking spot from where the vehicle route starts." ;
+            rdfs:label "origin parking spot"@en ,
+                       "plaza de aparcamiento origen"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#propulsionSystemType
+:propulsionSystemType rdf:type owl:ObjectProperty ;
+                      rdfs:domain :SharedVehicle ;
+                      rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                          owl:hasValue <https://edint.es/kos/PropulsionSystemType>
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                      rdfs:comment "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."@es ,
+                                   "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."@en ;
+                      rdfs:label "propulsion system type"@en ,
+                                 "tipo de sistema de propulsión"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#stationState
+:stationState rdf:type owl:ObjectProperty ;
+              rdfs:domain :SharedVehicleStation ;
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <https://edint.es/kos/StationState>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+              rdfs:comment "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."@es ,
+                           "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."@en ;
+              rdfs:label "estado de la estación"@es ,
+                         "station state"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#vehicleState
+:vehicleState rdf:type owl:ObjectProperty ;
+              rdfs:domain :SharedVehicle ;
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <https://edint.es/kos/VehicleState>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+              rdfs:comment "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."@es ,
+                           "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."@en ;
+              rdfs:label "estado del vehículo"@es ,
+                         "vehicle state"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -465,47 +475,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                               rdfs:isDefinedBy <https://schema.org/> ;
                               rdfs:label "(expected) start date"@en ,
                                          "fecha de inicio (prevista)"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#closureDate
-:closureDate rdf:type owl:DatatypeProperty ;
-             rdfs:domain :SharedVehicleStation ;
-             rdfs:range xsd:date ;
-             rdfs:comment "Date when the station ceases operation."@en ,
-                          "Fecha en la cual la estación cesa sus operaciones."@es ;
-             rdfs:label "closure date"@en ,
-                        "fecha de baja"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#comissioningDate
-:comissioningDate rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :SharedVehicleStation ;
-                  rdfs:range xsd:date ;
-                  rdfs:comment "Fecha en que la estación es certificada y puesta en servicio oficialmente."@es ,
-                               "Date when the station is officially tested, certified, and put into active service." ;
-                  rdfs:label "comissionning date"@en ,
-                             "fecha de alta"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#order
-:order rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Waypoint ;
-       rdfs:range xsd:integer ;
-       rdfs:comment "El número de orden un un punto de paso."@es ,
-                    "The order number of a waypoint."@en ;
-       rdfs:label "orden"@es ,
-                  "order"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#passingDateTime
-:passingDateTime rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Waypoint ;
-                 rdfs:range xsd:dateTime ;
-                 rdfs:comment ""@en ,
-                              "Date and time when the vehicle passed through the waypoint in a route."@en ,
-                              "Fecha y hora en que el vehículo pasó por el punto en la ruta."@es ;
-                 rdfs:label "fecha y hora punto de paso"@es ,
-                            "passing date and time"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
@@ -534,6 +503,47 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                            "Position of an instant, expressed using xsd:gYearMonth."@en ;
                                               rdfs:label "en año-mes gregoriano XSD"@es ,
                                                          "in XSD g-YearMonth"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#closureDate
+:closureDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :SharedVehicleStation ;
+             rdfs:range xsd:date ;
+             rdfs:comment "Date when the station ceases operation."@en ,
+                          "Fecha en la cual la estación cesa sus operaciones."@es ;
+             rdfs:label "closure date"@en ,
+                        "fecha de baja"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#comissioningDate
+:comissioningDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :SharedVehicleStation ;
+                  rdfs:range xsd:date ;
+                  rdfs:comment "Fecha en que la estación es certificada y puesta en servicio oficialmente."@es ,
+                               "Date when the station is officially tested, certified, and put into active service." ;
+                  rdfs:label "comissionning date"@en ,
+                             "fecha de alta"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#order
+:order rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Waypoint ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "El número de orden un un punto de paso."@es ,
+                    "The order number of a waypoint."@en ;
+       rdfs:label "orden"@es ,
+                  "order"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#passingDateTime
+:passingDateTime rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Waypoint ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment ""@en ,
+                              "Date and time when the vehicle passed through the waypoint in a route."@en ,
+                              "Fecha y hora en que el vehículo pasó por el punto en la ruta."@es ;
+                 rdfs:label "fecha y hora punto de paso"@es ,
+                            "passing date and time"@en .
 
 
 #################################################################
@@ -572,112 +582,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                               "Represents a collection of people organized together into a community or other social, commercial or political structure."@en ;
                                  rdfs:label "Organización"@es ,
                                             "Organization"@en .
-
-
-###  http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot
-<http://vocab.ciudadesabiertas.es/def/urbanismo-infraestructuras/aparcamiento#ParkingSpot> rdf:type owl:Class ;
-                                                                                           rdfs:comment "Individual parking space on-street or off-street."@en ,
-                                                                                                        "Plaza individual de estacionamiento dentro o fuera de la vía pública."@es ;
-                                                                                           rdfs:label "Parking spot"@en ,
-                                                                                                      "Plaza de aparcamiento"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> rdf:type owl:Class ;
-                                                                                 rdfs:comment "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."@es ,
-                                                                                              "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@en ;
-                                                                                 rdfs:label "Vehicle"@en ,
-                                                                                            "Vehículo"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Dock
-:Dock rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
-      rdfs:comment "Lugar de la estación donde se fijan las bicicletas"@es ,
-                   "Place in the station where the vehicles are secured."@en ;
-      rdfs:label "Anclaje"@es ,
-                 "Dock"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockObservation
-:DockObservation rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
-                 rdfs:comment "Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo."@es ,
-                              "Observation by a dock sensor that detects the dock's availability to park a vehicle (free), or occupied by a vehicle."@en ;
-                 rdfs:label "Dock observation"@en ,
-                            "Observación de anclaje"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockProperty
-:DockProperty rdf:type owl:Class ;
-              rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
-              rdfs:comment "Observable properties of the dock that refer to its availability: free or occupied by a vehicle."@es ,
-                           "Propiedades que están relacionadas con la disponibilidad de los anclajes (vacíos u ocupados) en donde se enganchan los vehículos."@es ;
-              rdfs:label "Dock property"@en ,
-                         "Propiedad de anclaje"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#DockSensor
-:DockSensor rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
-            rdfs:comment "Equipment that allows you to detect if an anchor is free or occupied."@en ;
-            rdfs:label "Dock sensor"@en ,
-                       "Equipo que permite detectar si un anclaje está libre u ocupado."@es ,
-                       "Sensor de anclaje"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Route
-:Route rdf:type owl:Class ;
-       rdfs:comment "Espacio que se recorre para llegar desde un origen hasta un destino."@es ,
-                    "The path traveled to get from an origin to a destination"@en ;
-       rdfs:label "Route"@en ,
-                  "Trayecto"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicle
-:SharedVehicle rdf:type owl:Class ;
-               rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> ;
-               rdfs:comment "Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda."@es ,
-                            "Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access."@en ;
-               rdfs:label "Shared vehicle"@en ,
-                          "Vehículo compartido"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#SharedVehicleStation
-:SharedVehicleStation rdf:type owl:Class ;
-                      rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> ,
-                                      <http://w3.org/ns/sosa/Platform> ;
-                      rdfs:comment "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."@es ,
-                                   "Place where you can both leave and pick up a shared vehicles. It is composed of docks"@en ;
-                      rdfs:label "Estación de vehículos compartidos"@es ,
-                                 "Shared vehicle station"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#Waypoint
-:Waypoint rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
-          rdfs:comment "Part of a route defined by coordinates and a date and time"@en ,
-                       "Parte de un trayecto definido por unas coordenadas y una fecha y hora."@es ;
-          rdfs:label "Punto de paso"@es ,
-                     "Waypoint"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> rdf:type owl:Class ;
-                                                                                                   rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> ;
-                                                                                                   rdfs:comment "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es ,
-                                                                                                                "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en ;
-                                                                                                   rdfs:label "Equipamiento"@es ,
-                                                                                                              "Facility"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> rdf:type owl:Class ;
-                                                                                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
-                                                                                                                rdfs:comment "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."@es ,
-                                                                                                                             "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."@en ;
-                                                                                                                rdfs:label "Elemento de la infraestructura"@es ,
-                                                                                                                           "Infrastructure element"@en .
 
 
 ###  http://w3.org/ns/sosa/Platform
@@ -797,7 +701,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                               rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
                                               rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
                                               rdfs:label "Feature Of Interest"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
                                               <http://www.w3.org/2004/02/skos/core#example> "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
 
 
@@ -806,7 +709,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
                                                rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
                                                rdfs:label "Observable Property"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
                                                <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
 
 
@@ -815,7 +717,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                         rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with"@en ;
                                         rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
                                         rdfs:label "Observation"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#definition> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
                                         <http://www.w3.org/2004/02/skos/core#example> "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
 
 
@@ -824,15 +725,130 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                    rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
                                    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
                                    rdfs:label "Sensor"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#definition> "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
                                    <http://www.w3.org/2004/02/skos/core#example> "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+
+
+###  https://edint.es/def/aparcamiento#ParkingSpot
+<https://edint.es/def/aparcamiento#ParkingSpot> rdf:type owl:Class ;
+                                                rdfs:comment "Individual parking space on-street or off-street."@en ,
+                                                             "Plaza individual de estacionamiento dentro o fuera de la vía pública."@es ;
+                                                rdfs:label "Parking spot"@en ,
+                                                           "Plaza de aparcamiento"@es .
+
+
+###  https://edint.es/def/censovehiculos#Vehicle
+<https://edint.es/def/censovehiculos#Vehicle> rdf:type owl:Class ;
+                                              rdfs:comment "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."@es ,
+                                                           "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@en ;
+                                              rdfs:label "Vehicle"@en ,
+                                                         "Vehículo"@es .
+
+
+###  https://edint.es/def/infraestructura#Facility
+<https://edint.es/def/infraestructura#Facility> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://edint.es/def/infraestructura#InfrastructureElement> ;
+                                                rdfs:comment "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es ,
+                                                             "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en ;
+                                                rdfs:label "Equipamiento"@es ,
+                                                           "Facility"@en .
+
+
+###  https://edint.es/def/infraestructura#InfrastructureElement
+<https://edint.es/def/infraestructura#InfrastructureElement> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                             rdfs:comment "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."@es ,
+                                                                          "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."@en ;
+                                                             rdfs:label "Elemento de la infraestructura"@es ,
+                                                                        "Infrastructure element"@en .
+
+
+###  https://edint.es/def/infraestructura#StationProperty
+<https://edint.es/def/infraestructura#StationProperty> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                       rdfs:comment "Observable properties of the station that refer to the number of occupied docks and the number of empty docks available to park a vehicle."@en ,
+                                                                    "Propiedades observables de una estación que se refieren al número de anclajes ocupados o al número de anclajes vacíos disponibles para aparcar un vehiculo."@es ;
+                                                       rdfs:label "Propiedad de estación"@es ,
+                                                                  "Station property"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#Dock
+:Dock rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+      rdfs:comment "Lugar de la estación donde se fijan las bicicletas"@es ,
+                   "Place in the station where the vehicles are secured."@en ;
+      rdfs:label "Anclaje"@es ,
+                 "Dock"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#DockObservation
+:DockObservation rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
+                 rdfs:comment "Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo."@es ,
+                              "Observation by a dock sensor that detects the dock's availability to park a vehicle (free), or occupied by a vehicle."@en ;
+                 rdfs:label "Dock observation"@en ,
+                            "Observación de anclaje"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#DockProperty
+:DockProperty rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+              rdfs:comment "Observable property of the dock that refer to its availability: free or occupied by a vehicle."@en ,
+                           "Propiedad observable de un anclaje que se refiere a la disponibilidad del anclaje, libre u ocupado por un vehículo."@es ;
+              rdfs:label "Dock property"@en ,
+                         "Propiedad de anclaje"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#DockSensor
+:DockSensor rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+            rdfs:comment "Equipment that allows you to detect if an anchor is free or occupied."@en ;
+            rdfs:label "Dock sensor"@en ,
+                       "Equipo que permite detectar si un anclaje está libre u ocupado."@es ,
+                       "Sensor de anclaje"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#Route
+:Route rdf:type owl:Class ;
+       rdfs:comment "Espacio que se recorre para llegar desde un origen hasta un destino."@es ,
+                    "The path traveled to get from an origin to a destination"@en ;
+       rdfs:label "Route"@en ,
+                  "Trayecto"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#SharedVehicle
+:SharedVehicle rdf:type owl:Class ;
+               rdfs:subClassOf <https://edint.es/def/censovehiculos#Vehicle> ;
+               rdfs:comment "Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda."@es ,
+                            "Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access."@en ;
+               rdfs:label "Shared vehicle"@en ,
+                          "Vehículo compartido"@es .
+
+
+###  https://edint.es/def/vehiculos-compartidos#SharedVehicleStation
+:SharedVehicleStation rdf:type owl:Class ;
+                      rdfs:subClassOf <http://w3.org/ns/sosa/Platform> ,
+                                      <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                      <https://edint.es/def/infraestructura#Facility> ;
+                      rdfs:comment "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."@es ,
+                                   "Place where you can both leave and pick up a shared vehicles. It is composed of docks"@en ;
+                      rdfs:label "Estación de vehículos compartidos"@es ,
+                                 "Shared vehicle station"@en .
+
+
+###  https://edint.es/def/vehiculos-compartidos#Waypoint
+:Waypoint rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+          rdfs:comment "Part of a route defined by coordinates and a date and time"@en ,
+                       "Parte de un trayecto definido por unas coordenadas y una fecha y hora."@es ;
+          rdfs:label "Punto de paso"@es ,
+                     "Waypoint"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#dockAvailability
+###  https://edint.es/def/vehiculos-compartidos#dockAvailability
 :dockAvailability rdf:type owl:NamedIndividual ,
                            :DockProperty ;
                   rdfs:comment "Indicates whether the dock is free or occupied."@en ,
@@ -841,57 +857,67 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                              "dock availability"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberEmptyDocks
+###  https://edint.es/def/vehiculos-compartidos#numberEmptyDocks
 :numberEmptyDocks rdf:type owl:NamedIndividual ,
-                           :DockProperty ;
+                           <https://edint.es/def/infraestructura#StationProperty> ;
                   rdfs:comment "Número total de anclajes vacíos en la estación, es decir, disponibles para aparcar un vehículo."@es ,
                                "Total number of empty docks at the station, i.e., available to park a vehicle."@en ;
                   rdfs:label "number of empty docks"@en ,
                              "número de anclajes vacíos"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#numberOccupiedDocks
+###  https://edint.es/def/vehiculos-compartidos#numberOccupiedDocks
 :numberOccupiedDocks rdf:type owl:NamedIndividual ,
-                              :DockProperty ;
+                              <https://edint.es/def/infraestructura#StationProperty> ;
                      rdfs:comment "Número total de anclajes ocupados por vehículos."@es ,
                                   "Total number of docks that are occupied by vehicles."@en ;
                      rdfs:label "number occupied docks"@en ,
                                 "número de anclajes ocupados"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/DockState> rdf:type owl:NamedIndividual ,
-                                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                               rdfs:label "dock state"@en ,
-                                                                          "estado del anclaje"@es .
+###  https://edint.es/kos/DockState
+<https://edint.es/kos/DockState> rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                 rdfs:label "dock state"@en ,
+                                            "estado del anclaje"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionSystemType> rdf:type owl:NamedIndividual ,
-                                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                                          rdfs:label "propulsion system type"@en ,
-                                                                                     "tipo de sistema de propulsión"@es .
+###  https://edint.es/kos/PropulsionSystemType
+<https://edint.es/kos/PropulsionSystemType> rdf:type owl:NamedIndividual ,
+                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                            rdfs:label "propulsion system type"@en ,
+                                                       "tipo de sistema de propulsión"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState> rdf:type owl:NamedIndividual ,
-                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                                  rdfs:label "estado de la estación"@es ,
-                                                                             "station state"@en .
+###  https://edint.es/kos/StationState
+<https://edint.es/kos/StationState> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                    rdfs:label "estado de la estación"@es ,
+                                               "station state"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleState> rdf:type owl:NamedIndividual ,
-                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                                  rdfs:label "estado del vehículo"@es ,
-                                                                             "vehicle state"@en .
+###  https://edint.es/kos/VehicleState
+<https://edint.es/kos/VehicleState> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                    rdfs:label "estado del vehículo"@es ,
+                                               "vehicle state"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> rdf:type owl:NamedIndividual ,
-                                                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                                 rdfs:label "tipo de vehículo"@es ,
-                                                                            "vehicle type"@en .
+###  https://edint.es/kos/VehicleType
+<https://edint.es/kos/VehicleType> rdf:type owl:NamedIndividual ,
+                                            <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                   rdfs:label "tipo de vehículo"@es ,
+                                              "vehicle type"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/issued> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#issued-003> ;
+                                  rdfs:comment "Date of formal issuance (e.g., publication) of the resource."@en ;
+                                  rdfs:isDefinedBy "http://purl.org/dc/terms/"@en ;
+                                  rdfs:label "Date Issued"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
