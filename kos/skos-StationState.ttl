@@ -5,9 +5,9 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintstationstate: <http://vocab.linkeddata.es/datosabiertos/kos/edint/StationState/> .
+@prefix edintvehcom: <https://edint.es/def/vehiculos-compartidos#> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintstationstate: <https://edint.es/kos/StationState/> .
 
 #################################################################
 #

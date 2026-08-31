@@ -1,4 +1,220 @@
-<h2 id="desc" class="list">Vehículos Compartidos: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+<html>
+<h2 id="desc" class="list">Ontology for the representation of data on shared vehicle systems: Description <span class="backlink"> back to <a href="#toc">index</a></span></h2>
+<span class="markdown">Figure 1 shows the classes and properties of the shared vehicle systems ontology. The main objective of this portion of the ontology is to allow the representation of the routes taken by the vehicles in a system.
 
+<center><img src="images/diagrama-conceptual-vehiculos.png"><figcaption>Figure 1. - Conceptual diagram of the shared vehicles systems and their routes</figcaption></center>
+
+<span class="markdown">
+<p>To represent a route, we have the concept of <a href="#Route">Route</a> which must have an associated <a href="#SharedVehicle">Shared Vehicle</a> and, in turn, both an <a href="#originDock">origin dock</a> and a <a href="#destinationDock">destination dock</a> if the system model is station-based. If the model is "Free", then the route will have both an <a href="#originSpot">origin parking space</a>and a <a href="#destinationSpot">destination parking space</a>.
+
+A route can have a series of <a href="#Waypoint">waypoints</a>. Additionally, this ontology uses several SKOS concept schemas to represent a vehicle's state (active, under repair, abandoned), its propulsion type (electric, gasoline, etc.), and its vehicle type (car, bicycle, scooter, etc.).
+
+To represent the possible waypoints of the routes, expressed in terms of their longitude and latitude, the classes g<a href="#http://www.opengis.net/ont/geosparql#Feature">geosparql:Feature</a>, <a href="#http://www.opengis.net/ont/geosparql#SpatialObject">geosparql:SpatialObject</a>, <a href="#http://www.opengis.net/ont/geosparql#Geometry">geosparql:Geometry</a> y <a href="#http://www.opengis.net/ont/sf#Point">geosparql:Point</a> have been reused from the <a href="https://docs.ogc.org/is/22-047r1/22-047r1.html">geosparql</a> vocabulary, following the "Location Pattern" in Figure 1.</p>
+
+<p>Furthermore, all observations regarding the availability of station docks are represented, as shown in Figure 2. The design pattern from the <a href="https://www.w3.org/TR/vocab-ssn/">Semantic Sensor Network Ontology</a> is reused.</a></p>
+</span>
+<center><img src="images/diagrama-conceptual-estaciones.png"><figcaption>Figure 2. - Conceptual diagram of stations and docks</figcaption></center>
+
+<span class="markdown">
+<p>The main concept is <a href="#Dock">Dock</a> for which the classes <a href="#http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a>, <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>, <a href="#http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a>, <a href="#http://w3.org/ns/sosa/Platform">sosa:Platform</a> and <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a> are reused, of the <a href="http://www.w3.org/ns/sosa/">sosa</a> ontology. Specifically, we will observe the <a href="#dockAvailability">availability of a dock</a>, which is the property to be observed, and for which the result of the observation will be obtained. This property allows you to represent the <a href="#numberEmptyDocks">number of empty (free) docks</a>, and the <a href="#numberOccupiedDocks">number of occupied docks</a>, which are also observable properties of the <a href="#SharedVehicleStation">Station</a> in general.</p>
+</span>
+
+</span>
+<h3>3.1 Usage Examples<span class="backlink">back to <a href="#toc">&iacute;ndice</a></span></h3>
+
+<span class="markdown">
+
+To represent a shared vehicle station, an instance of the class <a href="#SharedVehicleStation">edintvehcom:SharedVehicleStation</a> is created with the properties <a href="http://purl.org/dc/terms/identifier">dct:identifier</a>, <a href="https://schema.org/name">schema:name</a> (station name), <a href="https://schema.org/address">schema:address</a> (station address), and <a href="#comissioningDate">edintvehcom:comissioningDate</a> (commissioning date). The station is also linked, via the <a href="#stationState">edintvehcom:stationState</a> property, to the corresponding SKOS concept in the station state schema, which in this example is an operational station. with the organization that operates it through <a href="#operatedBy">edintvehcom:operatedBy</a>, and with its docks through <a href="#hasDock">edintvehcom:hasDock</a>.
+</span>
+<pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
+&lt;Organization/operador-municipal-01&gt; a schema:Organization ;
+  schema:name &quot;Operador Municipal de Movilidad Compartida&quot;@es .
+
+&lt;SharedVehicleStation/estacion-001&gt; a edintvehcom:SharedVehicleStation ;
+  dct:identifier &quot;EST-001&quot; ;
+  schema:name &quot;Puerta del Sol&quot;@es ;
+  schema:address &quot;Puerta del Sol, 1, Madrid&quot;@es ;
+  edintvehcom:comissioningDate &quot;2024-03-15&quot;^^xsd:date ;
+  edintvehcom:stationState &lt;https://edint.es/kos/StationState/Operative&gt; ;
+  edintvehcom:operatedBy &lt;Organization/operador-municipal-01&gt; ;
+  edintvehcom:hasDock &lt;Dock/anclaje-001-01&gt; ,
+                        &lt;Dock/anclaje-001-02&gt; .
+</textarea></pre>
+  <script>
+      var editor_code1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code1.setSize(null, "200px"); // ancho automático, altura menor
+</script>
+<span class="markdown">
+
+Next, two instances of <a href="#Dock">edintvehcom:Dock</a> are represented. For each dock, its identifier is indicated by <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> and its state by the property <a href="#dockState">edintvehcom:dockState</a>, which links to the corresponding SKOS concept in the dock state schema. In the example, the docks are in the active state.
+
+</span>
+<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+&lt;Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
+  dct:identifier &quot;DOCK-001-01&quot; ;
+  edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
+
+&lt;Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
+  dct:identifier &quot;DOCK-001-02&quot; ;
+  edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
+</textarea></pre>
+  <script>
+      var editor_code2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code2.setSize(null, "120px"); // ancho automático, altura menor
+</script>
+<span class="markdown">
+
+To represent a shared vehicle, an instance of the class <a href="#SharedVehicle">edintvehcom:SharedVehicle</a> is created. In the example, its identifier is specified, its vehicle type using <a href="#https://edint.es/def/censovehiculos#vehicleType">edintveh:vehicleType</a>, its propulsion system type using <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>, its state using <a href="#vehicleState">edintvehcom:vehicleState</a>, and its manufacturer using <a href="https://schema.org/manufacturer">schema:manufacturer</a>. The properties `<a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>` and `<a href="#vehicleState">edintvehcom:vehicleState</a>` link to the corresponding SKOS concepts; in this case, an electric bicycle in its active state is represented.
+
+</span>
+<pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
+&lt;Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
+  schema:name &quot;Fabricante Ejemplo S.A.&quot;@es .
+
+&lt;SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
+  dct:identifier &quot;VEH-0001&quot; ;
+  edintveh:vehicleType edintkosvehtype:bicicleta ;
+  edintvehcom:propulsionSystemType &lt;https://edint.es/kos/PropulsionSystemType/Electric&gt; ;
+  edintvehcom:vehicleState &lt;https://edint.es/kos/VehicleState/Active&gt; ;
+  schema:manufacturer &lt;Organization/fabricante-vehiculos-01&gt; .
+</textarea></pre>
+  <script>
+      var editor_code3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code3.setSize(null, "180px"); // ancho automático, altura menor
+</script>
+span class="markdown"> 
+To represent a route of a station-based system, an instance of the class <a href="#Route">edintvehcom:Route</a> is created with the properties <a href="http://purl.org/dc/terms/identifier">dct:identifier</a>, <a href="https://schema.org/startDate">schema:startDate</a> and <a href="https://schema.org/endDate">schema:endDate</a>. The route is linked to the vehicle using <a href="#madeByVehicle">edintvehcom:madeByVehicle</a>, to the origin dock using <a href="#originDock">edintvehcom:originDock</a>, to the destination dock using <a href="#destinationDock">edintvehcom:destinationDock</a>, and to its waypoints using <a href="#hasWaypoint">edintvehcom:hasWaypoint</a>. Each waypoint is represented as an instance of <a href="#Waypoint">edintvehcom:Waypoint</a>, with its order, date and time of passage, and associated geometry.
+
+</span>
+<pre><textarea style="resize:none" readonly id="code4" name="code" rows="25" cols="100">
+&lt;Route/trayecto-20260521-001&gt; a edintvehcom:Route ;
+  dct:identifier &quot;ROUTE-20260521-001&quot; ;
+  schema:startDate &quot;2026-05-21T08:30:00&quot;^^xsd:dateTime ;
+  schema:endDate &quot;2026-05-21T08:48:00&quot;^^xsd:dateTime ;
+  edintvehcom:madeByVehicle &lt;SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originDock &lt;Dock/anclaje-001-01&gt; ;
+  edintvehcom:destinationDock &lt;Dock/anclaje-001-02&gt; ;
+  edintvehcom:hasWaypoint &lt;Waypoint/trayecto-20260521-001-01&gt; ,
+                           &lt;Waypoint/trayecto-20260521-001-02&gt; .
+
+&lt;Waypoint/trayecto-20260521-001-01&gt; a edintvehcom:Waypoint ;
+  edintvehcom:order &quot;1&quot;^^xsd:integer ;
+  edintvehcom:passingDateTime &quot;2026-05-21T08:35:00&quot;^^xsd:dateTime ;
+  geosparql:hasGeometry &lt;Geometry/trayecto-20260521-001-01&gt; .
+
+&lt;Geometry/trayecto-20260521-001-01&gt; a geosparql:Geometry ;
+  geosparql:asWKT &quot;POINT (-3.703582 40.416704)&quot;^^geosparql:wktLiteral .
+
+&lt;Waypoint/trayecto-20260521-001-02&gt; a edintvehcom:Waypoint ;
+  edintvehcom:order &quot;2&quot;^^xsd:integer ;
+  edintvehcom:passingDateTime &quot;2026-05-21T08:42:00&quot;^^xsd:dateTime ;
+  geosparql:hasGeometry &lt;Geometry/trayecto-20260521-001-02&gt; .
+
+&lt;Geometry/trayecto-20260521-001-02&gt; a geosparql:Geometry ;
+  geosparql:asWKT &quot;POINT (-3.698960 40.418110)&quot;^^geosparql:wktLiteral .
+</textarea></pre>
+  <script>
+      var editor_code4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code4.setSize(null, "420px"); // ancho automático, altura menor
+</script>
+<span class="markdown">
+
+In the case of a free model, the route does not necessarily begin or end at a station's dock points. Therefore, the instance of <a href="#Route">edintvehcom:Route</a> is related to an origin parking space by <a href="#originSpot">edintvehcom:originSpot</a> and to a destination parking space by <a href="#destinationSpot">edintvehcom:destinationSpot</a>. Parking spaces are represented as instances of <a href="#https://edint.es/def/aparcamiento#ParkingSpot">edintapar:ParkingSpot</a>.
+
+</span>
+<pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
+&lt;Route/trayecto-20260521-002&gt; a edintvehcom:Route ;
+  dct:identifier &quot;ROUTE-20260521-002&quot; ;
+  schema:startDate &quot;2026-05-21T09:10:00&quot;^^xsd:dateTime ;
+  schema:endDate &quot;2026-05-21T09:32:00&quot;^^xsd:dateTime ;
+  edintvehcom:madeByVehicle &lt;SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originSpot &lt;ParkingSpot/plaza-0001&gt; ;
+  edintvehcom:destinationSpot &lt;ParkingSpot/plaza-0002&gt; .
+
+&lt;ParkingSpot/plaza-0001&gt; a edintapar:ParkingSpot ;
+  dct:identifier &quot;PARK-0001&quot; .
+
+&lt;ParkingSpot/plaza-0002&gt; a edintapar:ParkingSpot ;
+  dct:identifier &quot;PARK-0002&quot; .
+</textarea></pre>
+  <script>
+      var editor_code5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code5.setSize(null, "220px"); // ancho automático, altura menor
+</script>
+<span class="markdown">
+
+To represent an observation about the availability of an dock, an instance of <a href="#DockSensor">edintvehcom:DockSensor</a> is created, hosted on the station by <a href="#http://www.w3.org/ns/sosa/isHostedBy">sosa:isHostedBy</a>, and which observes the property <a href="#dockAvailability">edintvehcom:dockAvailability</a>. The observation is represented with an instance of <a href="#DockObservation">edintvehcom:DockObservation</a>, indicating the observed dock using <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, the sensor performing the observation using <a href="#http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a>, the observed property using <a href="#http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a>, the observation time using <a href="#http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a>, and the result using <a href="#http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> with an instance of <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
+</span>
+<pre><textarea style="resize:none" readonly id="code6" name="code" rows="25" cols="100">
+&lt;DockSensor/sensor-anclaje-001-01&gt; a edintvehcom:DockSensor ;
+  dct:identifier &quot;SENSOR-DOCK-001-01&quot; ;
+  sosa:isHostedBy &lt;SharedVehicleStation/estacion-001&gt; ;
+  sosa:observes edintvehcom:dockAvailability .
+
+&lt;DockObservation/obs-anclaje-001-01-20260521T085000&gt; a edintvehcom:DockObservation ;
+  sosa:hasFeatureOfInterest &lt;Dock/anclaje-001-01&gt; ;
+  sosa:madeBySensor &lt;DockSensor/sensor-anclaje-001-01&gt; ;
+  sosa:observedProperty edintvehcom:dockAvailability ;
+  sosa:phenomenonTime &lt;Instant/obs-anclaje-001-01-20260521T085000&gt; ;
+  sosa:hasResult [
+    a qudt:QuantityValue ;
+    qudt:value &quot;1&quot;^^xsd:integer ;
+    qudt:hasUnit unit:NUM
+  ] .
+
+&lt;Instant/obs-anclaje-001-01-20260521T085000&gt; a time:Instant ;
+  time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
+</textarea></pre>
+  <script>
+      var editor_code6 = CodeMirror.fromTextArea(document.getElementById("code6"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code6.setSize(null, "320px"); // ancho automático, altura menor
+</script>
+<span class="markdown">
+
+Finally, an aggregated observation about the station is displayed to indicate the number of empty docks. In this case, the feature of interest is the vehicle-sharing station itself, and the observed property is <a href="#numberEmptyDocks">edintvehcom:numberEmptyDocks</a>. The result is also expressed using <a href="#http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> and <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
+
+</span>
+<pre><textarea style="resize:none" readonly id="code7" name="code" rows="25" cols="100">
+&lt;Observation/obs-estacion-001-vacios-20260521T085000&gt; a sosa:Observation ;
+  sosa:hasFeatureOfInterest &lt;SharedVehicleStation/estacion-001&gt; ;
+  sosa:observedProperty edintvehcom:numberEmptyDocks ;
+  sosa:phenomenonTime &lt;Instant/obs-estacion-001-20260521T085000&gt; ;
+  sosa:hasResult [
+    a qudt:QuantityValue ;
+    qudt:value &quot;7&quot;^^xsd:integer ;
+    qudt:hasUnit unit:NUM
+  ] .
+
+&lt;Instant/obs-estacion-001-20260521T085000&gt; a time:Instant ;
+  time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
+</textarea></pre>
+  <script>
+      var editor_code7 = CodeMirror.fromTextArea(document.getElementById("code7"), {
+          mode: "text/turtle",
+          matchBrackets: true
+      });
+      editor_code7.setSize(null, "240px"); // ancho automático, altura menor
+</script>
+
+
+
+
+</html>
