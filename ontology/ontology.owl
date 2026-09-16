@@ -23,7 +23,8 @@
      xmlns:edintveh="https://edint.es/def/censovehiculos#"
      xmlns:edintapar="https://edint.es/def/aparcamiento#"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
-     xmlns:edintvehcom="https://edint.es/def/vehiculos-compartidos#">
+     xmlns:edintvehcom="https://edint.es/def/vehiculos-compartidos#"
+     xmlns:bibo="http://purl.org/ontology/bibo/">
     <owl:Ontology rdf:about="https://edint.es/def/vehiculos-compartidos">
         <owl:versionIRI rdf:resource="https://edint.es/def/vehiculos-compartidos"/>
         <dcterms:created>2026-05-18</dcterms:created>
@@ -45,7 +46,12 @@ Además, se representan datos de los trayectos realizados por estos vehículos i
 In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented.</rdfs:comment>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
-    </owl:Ontology>
+        <dcterms:publisher rdf:resource="https://www.femp.es/"/>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología para la representación de sistemas de vehículos compartidos de un municipio. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+    <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de representar los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. </dcterms:abstract>
+    <dcterms:abstract xml:lang="en">El propósito de esta ontología es el de representar los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. </dcterms:abstract>
+</owl:Ontology>
     
 
 
