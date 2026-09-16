@@ -20,7 +20,7 @@
      xmlns:geocore="https://datos.ign.es/def/geo_core#"
      xmlns:edintinf="https://edint.es/def/infraestructura#"
      xmlns:edintkos="https://edint.es/kos/"
-     xmlns:edintveh="https://edint.es/def/censovehiculos#"
+     xmlns:edintveh="https://edint.es/def/censo-vehiculos#"
      xmlns:edintapar="https://edint.es/def/aparcamiento#"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:edintvehcom="https://edint.es/def/vehiculos-compartidos#">
@@ -435,9 +435,9 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- https://edint.es/def/censovehiculos#vehicleType -->
+    <!-- https://edint.es/def/censo-vehiculos#vehicleType -->
 
-    <owl:ObjectProperty rdf:about="https://edint.es/def/censovehiculos#vehicleType">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/censo-vehiculos#vehicleType">
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1041,9 +1041,9 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- https://edint.es/def/censovehiculos#Vehicle -->
+    <!-- https://edint.es/def/censo-vehiculos#Vehicle -->
 
-    <owl:Class rdf:about="https://edint.es/def/censovehiculos#Vehicle">
+    <owl:Class rdf:about="https://edint.es/def/censo-vehiculos#Vehicle">
         <rdfs:comment xml:lang="es">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:comment xml:lang="en">Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:label xml:lang="en">Vehicle</rdfs:label>
@@ -1150,7 +1150,7 @@ In addition, data on the journeys made by these vehicles, including their origin
     <!-- https://edint.es/def/vehiculos-compartidos#SharedVehicle -->
 
     <owl:Class rdf:about="https://edint.es/def/vehiculos-compartidos#SharedVehicle">
-        <rdfs:subClassOf rdf:resource="https://edint.es/def/censovehiculos#Vehicle"/>
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/censo-vehiculos#Vehicle"/>
         <rdfs:comment xml:lang="es">Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda.</rdfs:comment>
         <rdfs:comment xml:lang="en">Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access.</rdfs:comment>
         <rdfs:label xml:lang="en">Shared vehicle</rdfs:label>
