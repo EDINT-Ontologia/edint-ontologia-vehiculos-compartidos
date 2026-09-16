@@ -25,7 +25,7 @@
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:edintvehcom="https://edint.es/def/vehiculos-compartidos#"
      xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/">    <owl:Ontology rdf:about="https://edint.es/def/vehiculos-compartidos">
-        <owl:versionIRI rdf:resource="https://edint.es/def/vehiculos-compartidos"/>
+        <owl:versionIRI rdf:resource="https://edint.es/def/vehiculos-compartidos/0.1.1"/>
         <dcterms:created>2026-05-18</dcterms:created>
         <dcterms:creator rdf:parseType="Resource">
             <foaf:name>Daniel Doña</foaf:name>
