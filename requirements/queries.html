@@ -194,7 +194,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </ul>
         </div>
         <div class="main-content">
-    <section class="file-card" id="VCOM01_sparql"><div class="file-header">VCOM01.sparql</div><div class="query-block"><span class="query-title">VCOM01: ¿Qué vehículos compartidos han realizado trayectos?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+    <section class="file-card" id="VCOM01_sparql"><div class="file-header">VCOM01.sparql</div><div class="query-block"><span class="query-title">VCOM01: ¿Qué vehículos compartidos han realizado trayectos?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?vehicle</span>
 <span class="k">WHERE</span> <span class="p">{</span>
@@ -202,7 +202,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
          <span class="nn">edintvehcom</span><span class="p">:</span><span class="nt">madeByVehicle</span> <span class="nv">?vehicle</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM02_sparql"><div class="file-header">VCOM02.sparql</div><div class="query-block"><span class="query-title">VCOM02: ¿Qué trayectos ha realizado un vehículo concreto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM02_sparql"><div class="file-header">VCOM02.sparql</div><div class="query-block"><span class="query-title">VCOM02: ¿Qué trayectos ha realizado un vehículo concreto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?route</span>
 <span class="k">WHERE</span> <span class="p">{</span>
@@ -210,7 +210,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
          <span class="nn">edintvehcom</span><span class="p">:</span><span class="nt">madeByVehicle</span> <span class="nl">&lt;URI_DEL_VEHICULO&gt;</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM03_sparql"><div class="file-header">VCOM03.sparql</div><div class="query-block"><span class="query-title">VCOM03: ¿Cuál es el origen y destino de cada trayecto?<br>Pueden ser anclajes o plazas de aparcamiento</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM03_sparql"><div class="file-header">VCOM03.sparql</div><div class="query-block"><span class="query-title">VCOM03: ¿Cuál es el origen y destino de cada trayecto?<br>Pueden ser anclajes o plazas de aparcamiento</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?route</span> 
        <span class="p">(</span><span class="nf">COALESCE</span><span class="p">(</span><span class="nv">?originDock</span><span class="p">,</span> <span class="nv">?originSpot</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?origin</span><span class="p">)</span>
@@ -227,7 +227,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 <span class="c"># Variante indicando el vehículo</span>
 
-<span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?route</span> <span class="nv">?vehicle</span>
        <span class="p">(</span><span class="nf">COALESCE</span><span class="p">(</span><span class="nv">?originDock</span><span class="p">,</span> <span class="nv">?originSpot</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?origin</span><span class="p">)</span>
@@ -245,7 +245,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 <span class="k">ORDER BY</span> <span class="nv">?vehicle</span> <span class="nv">?route</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM04_sparql"><div class="file-header">VCOM04.sparql</div><div class="query-block"><span class="query-title">VCOM04: ¿Qué puntos de paso tiene cada trayecto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM04_sparql"><div class="file-header">VCOM04.sparql</div><div class="query-block"><span class="query-title">VCOM04: ¿Qué puntos de paso tiene cada trayecto?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?route</span> <span class="nv">?waypoint</span>
 <span class="k">WHERE</span> <span class="p">{</span>
@@ -253,7 +253,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
          <span class="nn">edintvehcom</span><span class="p">:</span><span class="nt">hasWaypoint</span> <span class="nv">?waypoint</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM05_sparql"><div class="file-header">VCOM05.sparql</div><div class="query-block"><span class="query-title">VCOM05: ¿Qué estaciones existen, quién las opera  y en que estado están?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM05_sparql"><div class="file-header">VCOM05.sparql</div><div class="query-block"><span class="query-title">VCOM05: ¿Qué estaciones existen, quién las opera  y en que estado están?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
@@ -273,7 +273,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM06_sparql"><div class="file-header">VCOM06.sparql</div><div class="query-block"><span class="query-title">VCOM06: ¿Qué estaciones están operadas por una organización concreta?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM06_sparql"><div class="file-header">VCOM06.sparql</div><div class="query-block"><span class="query-title">VCOM06: ¿Qué estaciones están operadas por una organización concreta?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?station</span>
 <span class="k">WHERE</span> <span class="p">{</span>
@@ -281,7 +281,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
            <span class="nn">edintvehcom</span><span class="p">:</span><span class="nt">operatedBy</span> <span class="nl">&lt;URI_ORGANIZACION&gt;</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM07_sparql"><div class="file-header">VCOM07.sparql</div><div class="query-block"><span class="query-title">VCOM07: ¿Qué vehículos han pasado por determinados puntos de paso y en qué trayectos?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM07_sparql"><div class="file-header">VCOM07.sparql</div><div class="query-block"><span class="query-title">VCOM07: ¿Qué vehículos han pasado por determinados puntos de paso y en qué trayectos?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?vehicle</span> <span class="nv">?route</span> <span class="nv">?waypoint</span>
 <span class="k">WHERE</span> <span class="p">{</span>
@@ -294,7 +294,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 <span class="k">ORDER BY</span> <span class="nv">?vehicle</span> <span class="nv">?route</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM08_sparql"><div class="file-header">VCOM08.sparql</div><div class="query-block"><span class="query-title">VCOM08: ¿En qué estado están los vehiculos compartidos registrados?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM08_sparql"><div class="file-header">VCOM08.sparql</div><div class="query-block"><span class="query-title">VCOM08: ¿En qué estado están los vehiculos compartidos registrados?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?vehicle</span> <span class="nv">?state</span>
@@ -305,8 +305,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="nv">?state</span> 
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM09_sparql"><div class="file-header">VCOM09.sparql</div><div class="query-block"><span class="query-title">VCOM09: ¿Cuáles son los vehículos con estado X, propulsión Y y tipo Z?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">edintveh</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&gt;</span>
+</div></section><section class="file-card" id="VCOM09_sparql"><div class="file-header">VCOM09.sparql</div><div class="query-block"><span class="query-title">VCOM09: ¿Cuáles son los vehículos con estado X, propulsión Y y tipo Z?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintveh</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/censo-vehiculos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?vehicle</span>
 <span class="k">WHERE</span> <span class="p">{</span>
@@ -317,7 +317,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
            <span class="nn">edintveh</span><span class="p">:</span><span class="nt">vehicleType</span> <span class="nl">&lt;URI_TIPO_Z&gt;</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM10_sparql"><div class="file-header">VCOM10.sparql</div><div class="query-block"><span class="query-title">VCOM10: ¿Qué estaciones tienen anclajes disponibles?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM10_sparql"><div class="file-header">VCOM10.sparql</div><div class="query-block"><span class="query-title">VCOM10: ¿Qué estaciones tienen anclajes disponibles?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
 
@@ -332,7 +332,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 <span class="c"># Variante usando las observaciones</span>
 
-<span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">sosa</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span>
 
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?station</span>
@@ -348,7 +348,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <span class="k">FILTER</span> <span class="p">(</span><span class="nf">lcase</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="nv">?result</span><span class="p">))</span> <span class="o">=</span> <span class="s">&quot;free&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM11_sparql"><div class="file-header">VCOM11.sparql</div><div class="query-block"><span class="query-title">VCOM11: ¿Qué estaciones tienen más anclajes?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM11_sparql"><div class="file-header">VCOM11.sparql</div><div class="query-block"><span class="query-title">VCOM11: ¿Qué estaciones tienen más anclajes?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?station</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="nv">?dock</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?numDocks</span><span class="p">)</span>
 <span class="k">WHERE</span> <span class="p">{</span>
@@ -358,7 +358,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">GROUP BY</span> <span class="nv">?station</span>
 <span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?numDocks</span><span class="p">)</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM12_sparql"><div class="file-header">VCOM12.sparql</div><div class="query-block"><span class="query-title">VCOM12: ¿Dónde están los puntos de paso (coordenadas)?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM12_sparql"><div class="file-header">VCOM12.sparql</div><div class="query-block"><span class="query-title">VCOM12: ¿Dónde están los puntos de paso (coordenadas)?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">geosparql</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">geo</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;</span>
 
@@ -370,7 +370,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="nn">geo</span><span class="p">:</span><span class="nt">long</span> <span class="nv">?long</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM13_sparql"><div class="file-header">VCOM13.sparql</div><div class="query-block"><span class="query-title">VCOM13: ¿Qué anclajes son objeto de observación?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM13_sparql"><div class="file-header">VCOM13.sparql</div><div class="query-block"><span class="query-title">VCOM13: ¿Qué anclajes son objeto de observación?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">sosa</span><span class="p">:</span> <span class="nl">&lt;http://w3.org/ns/sosa/&gt;</span>
 
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?dock</span>
@@ -379,7 +379,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
        <span class="nn">sosa</span><span class="p">:</span><span class="nt">hasFeatureOfInterest</span> <span class="nv">?dock</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div></section><section class="file-card" id="VCOM14_sparql"><div class="file-header">VCOM14.sparql</div><div class="query-block"><span class="query-title">VCOM14: ¿Qué sensor realizó cada observación de anclaje?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#&gt;</span>
+</div></section><section class="file-card" id="VCOM14_sparql"><div class="file-header">VCOM14.sparql</div><div class="query-block"><span class="query-title">VCOM14: ¿Qué sensor realizó cada observación de anclaje?</span><div class="sparql-code"><pre><span></span><span class="k">PREFIX</span> <span class="nn">edintvehcom</span><span class="p">:</span> <span class="nl">&lt;https://edint.es/def/vehiculos-compartidos#&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">sosa</span><span class="p">:</span> <span class="nl">&lt;http://w3.org/ns/sosa/&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?obs</span> <span class="nv">?sensor</span>

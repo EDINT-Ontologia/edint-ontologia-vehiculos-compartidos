@@ -1,7 +1,7 @@
 
 # VCOM05: ¿Qué estaciones existen, quién las opera  y en que estado están?
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 PREFIX schema: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

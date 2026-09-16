@@ -1,7 +1,7 @@
 
 # VCOM14: ¿Qué sensor realizó cada observación de anclaje?
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 PREFIX sosa: <http://w3.org/ns/sosa/>
 
 SELECT ?obs ?sensor

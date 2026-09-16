@@ -1,7 +1,7 @@
 
 # VCOM08: ¿En qué estado están los vehiculos compartidos registrados?
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?vehicle ?state
