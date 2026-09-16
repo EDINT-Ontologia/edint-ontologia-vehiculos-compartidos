@@ -47,7 +47,7 @@ In addition, data on the journeys made by these vehicles, including their origin
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
         <dcterms:publisher rdf:resource="https://www.femp.es/"/>
-    <dcterms:bibliographicCitation xml:lang="es">Ontología para la representación de sistemas de vehículos compartidos de un municipio. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Sistemas de Vehículos Compartidos. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
     <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de representar los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. </dcterms:abstract>
     <dcterms:abstract xml:lang="en">El propósito de esta ontología es el de representar los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. </dcterms:abstract>
