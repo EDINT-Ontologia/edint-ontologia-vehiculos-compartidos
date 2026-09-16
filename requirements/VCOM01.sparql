@@ -1,7 +1,7 @@
 
 #VCOM01: ¿Qué vehículos compartidos han realizado trayectos?
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 
 SELECT DISTINCT ?vehicle
 WHERE {

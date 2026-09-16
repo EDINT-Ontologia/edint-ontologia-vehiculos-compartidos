@@ -1,7 +1,7 @@
 
 # VCOM11: ¿Qué estaciones tienen más anclajes?
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 
 SELECT ?station (COUNT(?dock) AS ?numDocks)
 WHERE {

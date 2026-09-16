@@ -3,7 +3,7 @@
 # Pueden ser anclajes o plazas de aparcamiento
 
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 
 SELECT ?route 
        (COALESCE(?originDock, ?originSpot) AS ?origin)
@@ -20,7 +20,7 @@ WHERE {
 
 # Variante indicando el vehículo
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 
 SELECT ?route ?vehicle
        (COALESCE(?originDock, ?originSpot) AS ?origin)

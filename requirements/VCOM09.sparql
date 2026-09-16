@@ -1,8 +1,8 @@
 
 # VCOM09: ¿Cuáles son los vehículos con estado X, propulsión Y y tipo Z?
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
-PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
 
 SELECT ?vehicle
 WHERE {

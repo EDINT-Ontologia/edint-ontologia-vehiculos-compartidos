@@ -1,7 +1,7 @@
 
 #VCOM06: ¿Qué estaciones están operadas por una organización concreta?
 
-PREFIX edintvehcom: <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
 
 SELECT ?station
 WHERE {
