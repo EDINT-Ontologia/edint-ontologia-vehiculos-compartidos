@@ -55,6 +55,7 @@ Además, se representan datos de los trayectos realizados por estos vehículos i
         <rdfs:comment xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
 In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented.</rdfs:comment>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0"/>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-18</dcterms:created>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
