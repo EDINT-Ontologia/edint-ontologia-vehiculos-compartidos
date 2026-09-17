@@ -4,7 +4,7 @@ Esta carpeta contiene los archivos de **implementación de la ontología**, que 
 
 # Propósito
 
-El objetivo de esta carpeta es almacenar los **recursos finales de implmeentación de ontología**, que describen las clases, propiedades, relaciones y restricciones definidas durante la fase de conceptualización.
+El objetivo de esta carpeta es almacenar los **recursos finales de implementación de ontología**, que describen las clases, propiedades, relaciones y restricciones definidas durante la fase de conceptualización.
 
 Estos archivos se utilizan típicamente para:
 

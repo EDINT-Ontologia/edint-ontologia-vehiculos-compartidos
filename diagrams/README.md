@@ -1,8 +1,8 @@
 # Recursos de conceptualización de ontologías
 
-Esta carpeta contiene todos los  **recursos relacionados con las fases de conceptualización y diseño** de la ontología.
+Esta carpeta contiene todos los **recursos relacionados con las fases de conceptualización y diseño** de la ontología.
 
-#  Propósito
+# Propósito
 
 El objetivo de este directorio es almacenar **materiales gráficos** que apoyen la comprensión y definición de los conceptos, relaciones y la estructura de la ontología, así como de su implementación (por ejemplo, en OWL o RDF)
 
@@ -15,10 +15,10 @@ Incluya cualquier archivo que represente o respalde el modelo conceptual de la o
 # Formatos aceptados
 
 Incluya recursos en los siguientes formatos:
-- `.svg` — Graficos en formato vectorial  
+- `.svg` — Gráficos en formato vectorial  
 - `.png` — Diagramas o capturas de pantalla  
-- `.drawio` — Diagramas editables creados con[diagrams.net (draw.io)](https://app.diagrams.net/)  
-Podrían inlcuire otros formatos si son relevantes para la descripción de la conceptualización (por ejemplo, `.pdf`, `.jpg`, `.pptx`).
+- `.drawio` — Diagramas editables creados con [diagrams.net (draw.io)](https://app.diagrams.net/)  
+Podrían incluir otros formatos si son relevantes para la descripción de la conceptualización (por ejemplo, `.pdf`, `.jpg`, `.pptx`).
 
 # Notas
 

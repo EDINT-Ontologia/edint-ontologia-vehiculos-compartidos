@@ -1,12 +1,12 @@
 # Ontología de sistemas de vehículos compartidos (Shared vehicle systems ontology)
 
-La ontología de sistemas de vehículos compartido representa los datos de los sistemas públicos y privados de vehículos compartidos en las ciudades, tales como bicicletas, patinetes, coches, etc.
+La ontología de sistemas de vehículos compartidos representa los datos de los sistemas públicos y privados de vehículos compartidos en las ciudades, tales como bicicletas, patinetes, coches, etc.
 
 
 # Propósito y alcance de la ontología (purpose and scope of the ontology)
 
 La ontología de vehículos compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
-Además, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino.
+Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino.
 
 # Prefijo y espacio de nombres de la ontología (Prefix and namespace of the ontology)
 
@@ -32,7 +32,7 @@ El repositorio contiene los siguientes directorios:
 | **kos/** | Contiene la implementación de vocabularios controlados o KOS, generalmente implementaciones SKOS en RDF.|
 | **ontology/** | Contiene los archivos de implementación de la ontología en formatos como .owl, .rdf, .ttl o .jsonld |
 | **requirements/** | Contiene todos los documentos utilizados para definir los requisitos de la ontología: ejemplos de datos, preguntas de competencia, requisitos funcionales, casos de uso, etc. |
-| **shapes/** | Contiene las restricciones SHACL utilizad para validar datos respecto a la ontología.  |
+| **shapes/** | Contiene las restricciones SHACL utilizadas para validar datos respecto a la ontología.  |
 
 # Mantenimiento del proyecto (Maintenance and evolution)
 
