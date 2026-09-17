@@ -1,5 +1,9 @@
 # Ontología de sistemas de vehículos compartidos (Shared vehicle systems ontology)
 
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/vehiculos-compartidos)
+![Prefijo](https://img.shields.io/badge/prefijo-edintvehcom-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
+
 La ontología de sistemas de vehículos compartidos representa los datos de los sistemas públicos y privados de vehículos compartidos en las ciudades, tales como bicicletas, patinetes, coches, etc.
 
 
