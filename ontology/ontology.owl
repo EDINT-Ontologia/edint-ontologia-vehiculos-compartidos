@@ -11,7 +11,7 @@
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:sosa="http://w3.org/ns/sosa/"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:escjr="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#"
@@ -399,7 +399,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <rdfs:range rdf:resource="http://w3.org/ns/sosa/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
         <rdfs:comment xml:lang="en">Relation between a Sensor, or Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by.</rdfs:comment>
         <rdfs:label xml:lang="en">is hosted by</rdfs:label>
     </owl:ObjectProperty>
@@ -867,9 +867,9 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- http://w3.org/ns/sosa/Platform -->
+    <!-- http://www.w3.org/ns/sosa/Platform -->
 
-    <owl:Class rdf:about="http://w3.org/ns/sosa/Platform">
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Platform">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:comment xml:lang="en">A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una plataforma es una entidad que alberga otras entidades, en particular sensores, actuadores, muestreadores y otras plataformas.</rdfs:comment>
@@ -1188,7 +1188,7 @@ In addition, data on the journeys made by these vehicles, including their origin
     <!-- https://edint.es/def/vehiculos-compartidos#SharedVehicleStation -->
 
     <owl:Class rdf:about="https://edint.es/def/vehiculos-compartidos#SharedVehicleStation">
-        <rdfs:subClassOf rdf:resource="http://w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:subClassOf rdf:resource="https://edint.es/def/infraestructura#Facility"/>
         <rdfs:comment xml:lang="es">Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes.</rdfs:comment>
@@ -1311,7 +1311,70 @@ In addition, data on the journeys made by these vehicles, including their origin
         <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
         <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
         <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
-    </owl:Ontology>
+            <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
+                <rdfs:label xml:lang="es">QUDT</rdfs:label>
+                <rdfs:label xml:lang="en">QUDT</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
+                <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
+                <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/sf"/>
+                <rdfs:label xml:lang="es">OGC Simple Features</rdfs:label>
+                <rdfs:label xml:lang="en">OGC Simple Features</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+                <rdfs:label xml:lang="es">WGS84 Geo Positioning</rdfs:label>
+                <rdfs:label xml:lang="en">WGS84 Geo Positioning</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/2006/time"/>
+                <rdfs:label xml:lang="es">OWL-Time</rdfs:label>
+                <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/ns/sosa"/>
+                <rdfs:label xml:lang="es">SOSA/SSN</rdfs:label>
+                <rdfs:label xml:lang="en">SOSA/SSN</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/aparcamiento"/>
+                <rdfs:label xml:lang="es">Aparcamiento (edintapar)</rdfs:label>
+                <rdfs:label xml:lang="en">Parking (edintapar)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/censovehiculos"/>
+                <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
+                <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
+                <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
+                <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+</owl:Ontology>
 </rdf:RDF>
 
 
