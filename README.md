@@ -14,7 +14,7 @@ Además, se representan datos de los trayectos realizados por estos vehículos i
 
 # Prefijo y espacio de nombres de la ontología (Prefix and namespace of the ontology)
 
-El prefijo de la ontología es: edintvehcom y se encuentra publicada en el espacio de nombres: [https://edint.es/def/vehiculos-compartidos#]([https://edint.es/def/suministro#](https://edint.es/def/vehiculos-compartidos#) 
+El prefijo de esta ontología es `edintvehcom` y se publica bajo el espacio de nombres https://edint.es/def/vehiculos-compartidos#
 
 # Modelo conceptual de la ontología (Ontology conceptualization)
 
