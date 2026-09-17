@@ -435,9 +435,9 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- https://edint.es/def/censovehiculos#vehicleType -->
+    <!-- https://edint.es/def/censo-vehiculos#vehicleType -->
 
-    <owl:ObjectProperty rdf:about="https://edint.es/def/censovehiculos#vehicleType">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/censo-vehiculos#vehicleType">
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1268,16 +1268,6 @@ In addition, data on the journeys made by these vehicles, including their origin
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="es">estado del vehículo</rdfs:label>
         <rdfs:label xml:lang="en">vehicle state</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://edint.es/kos/VehicleType -->
-
-    <owl:NamedIndividual rdf:about="https://edint.es/kos/VehicleType">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <rdfs:label xml:lang="es">tipo de vehículo</rdfs:label>
-        <rdfs:label xml:lang="en">vehicle type</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
