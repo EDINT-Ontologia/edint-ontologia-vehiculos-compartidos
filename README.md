@@ -1,4 +1,4 @@
-# Ontología de sistemas de vehículos compartidos (Shared vehicle systems ontology)
+# Ontología EDINT de Sistemas de Vehículos Compartidos
 
 [![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/vehiculos-compartidos)
 ![Prefijo](https://img.shields.io/badge/prefijo-edintvehcom-informational)
