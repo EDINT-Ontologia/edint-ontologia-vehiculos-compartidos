@@ -48,6 +48,8 @@
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="es">Ontología EDINT de Sistemas de Vehículos Compartidos</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Shared Vehicle Systems Ontology</dcterms:title>
+        <rdfs:label xml:lang="es">Vehículos Compartidos</rdfs:label>
+        <rdfs:label xml:lang="en">Shared Vehicles</rdfs:label>
         <vann:preferredNamespacePrefix>edintvehcom</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/vehiculos-compartidos#"/>
         <rdfs:comment xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
