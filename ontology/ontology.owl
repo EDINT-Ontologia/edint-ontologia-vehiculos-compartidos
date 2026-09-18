@@ -15,7 +15,7 @@
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:escjr="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#"
-     xmlns:schema="http://schema.org/"
+     xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:geocore="https://datos.ign.es/def/geo_core#"
      xmlns:edintinf="https://edint.es/def/infraestructura#"
