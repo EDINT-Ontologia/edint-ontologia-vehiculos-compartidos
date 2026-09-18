@@ -11,11 +11,11 @@
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:sosa="http://w3.org/ns/sosa/"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:escjr="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#"
-     xmlns:schema="http://schema.org/"
+     xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:geocore="https://datos.ign.es/def/geo_core#"
      xmlns:edintinf="https://edint.es/def/infraestructura#"
@@ -23,20 +23,33 @@
      xmlns:edintveh="https://edint.es/def/censovehiculos#"
      xmlns:edintapar="https://edint.es/def/aparcamiento#"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
-     xmlns:edintvehcom="https://edint.es/def/vehiculos-compartidos#">
-    <owl:Ontology rdf:about="https://edint.es/def/vehiculos-compartidos">
-        <owl:versionIRI rdf:resource="https://edint.es/def/vehiculos-compartidos"/>
-        <dcterms:created>2026-05-18</dcterms:created>
-        <dcterms:creator>Daniel Doña</dcterms:creator>
-        <dcterms:creator>Edna Ruckhaus</dcterms:creator>
-        <dcterms:creator>Lucía Sánchez</dcterms:creator>
-        <dcterms:creator>Socorro Bernardos</dcterms:creator>
+     xmlns:edintvehcom="https://edint.es/def/vehiculos-compartidos#"
+     xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:widoco="https://w3id.org/widoco/vocab#">    <owl:Ontology rdf:about="https://edint.es/def/vehiculos-compartidos">
+        <owl:versionIRI rdf:resource="https://edint.es/def/vehiculos-compartidos/0.1.1"/>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Daniel Doña</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Edna Ruckhaus</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Lucía Sánchez</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Socorro Bernardos</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
         <dcterms:description xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino.</dcterms:description>
         <dcterms:description xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented.</dcterms:description>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-18</dcterms:issued>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dcterms:title xml:lang="es">Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades</dcterms:title>
-        <dcterms:title xml:lang="en">Vocabulary for the representation of data on shared vehicle systems in cities</dcterms:title>
+        <dcterms:title xml:lang="es">Ontología EDINT de Sistemas de Vehículos Compartidos</dcterms:title>
+        <dcterms:title xml:lang="en">EDINT Shared Vehicle Systems Ontology</dcterms:title>
+        <rdfs:label xml:lang="es">Vehículos Compartidos</rdfs:label>
+        <rdfs:label xml:lang="en">Shared Vehicles</rdfs:label>
         <vann:preferredNamespacePrefix>edintvehcom</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/vehiculos-compartidos#"/>
         <rdfs:comment xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
@@ -44,8 +57,26 @@ Además, se representan datos de los trayectos realizados por estos vehículos i
         <rdfs:comment xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
 In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented.</rdfs:comment>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0"/>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos"/>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <owl:versionInfo>0.1.1</owl:versionInfo>
-    </owl:Ontology>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-18</dcterms:created>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
+        <dcterms:publisher rdf:parseType="Resource">
+            <foaf:name>FEMP</foaf:name>
+            <foaf:homepage rdf:resource="https://www.femp.es/"/>
+            <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
+        </dcterms:publisher>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Sistemas de Vehículos Compartidos. EDINT. Revisión: v0.1.1.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="en">EDINT Shared Vehicle Systems Ontology. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+    <dcterms:abstract xml:lang="es">El propósito de esta ontología es el de representar los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. </dcterms:abstract>
+    <dcterms:abstract xml:lang="en">El propósito de esta ontología es el de representar los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. </dcterms:abstract>
+</owl:Ontology>
+    <foaf:Organization rdf:about="https://oeg.fi.upm.es/">
+        <foaf:name>Ontology Engineering Group, UPM</foaf:name>
+    </foaf:Organization>
     
 
 
@@ -373,7 +404,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <rdfs:range rdf:resource="http://w3.org/ns/sosa/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
         <rdfs:comment xml:lang="en">Relation between a Sensor, or Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by.</rdfs:comment>
         <rdfs:label xml:lang="en">is hosted by</rdfs:label>
     </owl:ObjectProperty>
@@ -841,9 +872,9 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- http://w3.org/ns/sosa/Platform -->
+    <!-- http://www.w3.org/ns/sosa/Platform -->
 
-    <owl:Class rdf:about="http://w3.org/ns/sosa/Platform">
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Platform">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:comment xml:lang="en">A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una plataforma es una entidad que alberga otras entidades, en particular sensores, actuadores, muestreadores y otras plataformas.</rdfs:comment>
@@ -1162,7 +1193,7 @@ In addition, data on the journeys made by these vehicles, including their origin
     <!-- https://edint.es/def/vehiculos-compartidos#SharedVehicleStation -->
 
     <owl:Class rdf:about="https://edint.es/def/vehiculos-compartidos#SharedVehicleStation">
-        <rdfs:subClassOf rdf:resource="http://w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:subClassOf rdf:resource="https://edint.es/def/infraestructura#Facility"/>
         <rdfs:comment xml:lang="es">Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes.</rdfs:comment>
@@ -1269,6 +1300,87 @@ In addition, data on the journeys made by these vehicles, including their origin
         <rdfs:label xml:lang="es">estado del vehículo</rdfs:label>
         <rdfs:label xml:lang="en">vehicle state</rdfs:label>
     </owl:NamedIndividual>
+
+
+    <!-- https://edint.es/kos/VehicleType -->
+
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/VehicleType">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="es">tipo de vehículo</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle type</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <!-- Nombres de fichero de las serializaciones generadas (vocabulario Widoco) -->
+    <owl:Ontology rdf:about="https://edint.es/def/vehiculos-compartidos">
+        <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
+        <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
+        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
+            <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
+                <rdfs:label xml:lang="es">QUDT</rdfs:label>
+                <rdfs:label xml:lang="en">QUDT</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
+                <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
+                <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/sf"/>
+                <rdfs:label xml:lang="es">OGC Simple Features</rdfs:label>
+                <rdfs:label xml:lang="en">OGC Simple Features</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+                <rdfs:label xml:lang="es">WGS84 Geo Positioning</rdfs:label>
+                <rdfs:label xml:lang="en">WGS84 Geo Positioning</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/2006/time"/>
+                <rdfs:label xml:lang="es">OWL-Time</rdfs:label>
+                <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/ns/sosa"/>
+                <rdfs:label xml:lang="es">SOSA/SSN</rdfs:label>
+                <rdfs:label xml:lang="en">SOSA/SSN</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/aparcamiento"/>
+                <rdfs:label xml:lang="es">Aparcamiento (edintapar)</rdfs:label>
+                <rdfs:label xml:lang="en">Parking (edintapar)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/censovehiculos"/>
+                <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
+                <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
+                <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
+                <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+</owl:Ontology>
+
 </rdf:RDF>
 
 
