@@ -2,19 +2,18 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#> a prov:Entity;
-	 dc:title "Ontología para la representación de sistemas de vehículos compartidos";
+<https://edint.es/def/vehiculos-compartidos/0.1.1> a prov:Entity;
+	 dc:title "Ontología EDINT de Sistemas de Vehículos Compartidos";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
 	 prov:wasAttributedTo :agent3;
-	 prov:wasAttributedTo :agent4;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:specializationOf <http://vocab.linkeddata.es/datosabiertos/def/transporte/vehiculos-compartidos#>;
-	 prov:wasGeneratedAt "Date of release";
+	 prov:specializationOf <https://edint.es/def/vehiculos-compartidos>;
+	 prov:wasRevisionOf <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0>;
+	 prov:wasGeneratedAt "2026-05-18";
 .
-:agent0 a prov:Agent; foaf:name "Daniel Doña".
-:agent1 a prov:Agent; foaf:name "Edna Ruckhaus".
-:agent2 a prov:Agent; foaf:name "Lucía Sánchez".
-:agent3 a prov:Agent; foaf:name "Socorro Bernardos".
-:agent4 a prov:Agent; foaf:name "Oscar Corcho".
+:agent0 a prov:Agent; foaf:name "Socorro Bernardos".
+:agent1 a prov:Agent; foaf:name "Lucía Sánchez".
+:agent2 a prov:Agent; foaf:name "Daniel Doña".
+:agent3 a prov:Agent; foaf:name "Edna Ruckhaus".
