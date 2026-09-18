@@ -7,16 +7,16 @@
 La ontología de sistemas de vehículos compartidos representa los datos de los sistemas públicos y privados de vehículos compartidos en las ciudades, tales como bicicletas, patinetes, coches, etc.
 
 
-# Propósito y alcance de la ontología (purpose and scope of the ontology)
+## Propósito y alcance de la ontología (purpose and scope of the ontology)
 
 La ontología de vehículos compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
 Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino.
 
-# Prefijo y espacio de nombres de la ontología (Prefix and namespace of the ontology)
+## Prefijo y espacio de nombres de la ontología (Prefix and namespace of the ontology)
 
 El prefijo de esta ontología es `edintvehcom` y se publica bajo el espacio de nombres https://edint.es/def/vehiculos-compartidos#
 
-# Modelo conceptual de la ontología (Ontology conceptualization)
+## Modelo conceptual de la ontología (Ontology conceptualization)
 
 Modelo conceptual de vehículos y rutas
 
@@ -26,7 +26,7 @@ Modelo conceptual de estaciones, anclajes y sensores
 
 ![Modelo conceptual de estaciones](diagrams/diagrama-conceptual-estaciones.png)
 
-# Estructura del repositorio (Repository structure)
+## Estructura del repositorio (Repository structure)
 
 El repositorio contiene los siguientes directorios:
 | Carpeta | Descripción |
@@ -38,11 +38,11 @@ El repositorio contiene los siguientes directorios:
 | **requirements/** | Contiene todos los documentos utilizados para definir los requisitos de la ontología: ejemplos de datos, preguntas de competencia, requisitos funcionales, casos de uso, etc. |
 | **shapes/** | Contiene las restricciones SHACL utilizadas para validar datos respecto a la ontología.  |
 
-# Mantenimiento del proyecto (Maintenance and evolution)
+## Mantenimiento del proyecto (Maintenance and evolution)
 
 Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
-# Financiación (Funding)
+## Financiación (Funding)
 
 Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es/)). 
 
