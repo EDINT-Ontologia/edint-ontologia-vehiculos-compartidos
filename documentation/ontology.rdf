@@ -13,7 +13,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="http://schema.org/">
     <owl:Ontology rdf:about="https://edint.es/def/vehiculos-compartidos">
         <owl:versionIRI rdf:resource="https://edint.es/def/vehiculos-compartidos/0.1.1"/>
         <terms:abstract xml:lang="en">El propósito de esta ontología es el de representar los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. </terms:abstract>
@@ -35,9 +36,6 @@
         <terms:title xml:lang="es">Ontología EDINT de Sistemas de Vehículos Compartidos</terms:title>
         <vann:preferredNamespacePrefix>edintvehcom</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/vehiculos-compartidos#"/>
-        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos"/>
-        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
-        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <rdfs:comment xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
 Además, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino.</rdfs:comment>
         <rdfs:comment xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
@@ -46,6 +44,9 @@ In addition, data on the journeys made by these vehicles, including their origin
         <rdfs:label xml:lang="es">Vehículos Compartidos</rdfs:label>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos"/>
+        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <vocab:jsonldSerialization>ontology.jsonld</vocab:jsonldSerialization>
         <vocab:ntSerialization>ontology.nt</vocab:ntSerialization>
         <vocab:rdfxmlSerialization>ontology.rdf</vocab:rdfxmlSerialization>
@@ -61,25 +62,25 @@ In addition, data on the journeys made by these vehicles, including their origin
         <vocab:vocabularyLabel rdf:nodeID="genid14"/>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Socorro Bernardos</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid2">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Lucía Sánchez</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Daniel Doña</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid4">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Edna Ruckhaus</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid5">
-        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
         <foaf:homepage rdf:resource="https://www.femp.es/"/>
         <foaf:name>FEMP</foaf:name>
+        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid6">
         <rdfs:label xml:lang="en">QUDT</rdfs:label>
@@ -306,38 +307,10 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- http://schema.org/affiliation -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
-    
-
-
-    <!-- http://schema.org/codeRepository -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
-    
-
-
-    <!-- http://schema.org/creativeWorkStatus -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/creativeWorkStatus"/>
-    
-
-
     <!-- http://schema.org/domainIncludes -->
 
 
     <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
-    
-
-
-    <!-- http://schema.org/funding -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/funding"/>
     
 
 
@@ -373,6 +346,48 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://schema.org/creativeWorkStatus -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creativeWorkStatus"/>
+    
+
+
+    <!-- https://schema.org/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/domainIncludes"/>
+    
+
+
+    <!-- https://schema.org/funding -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funding"/>
+    
+
+
+    <!-- https://schema.org/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/rangeIncludes"/>
     
 
 
@@ -574,18 +589,18 @@ In addition, data on the journeys made by these vehicles, including their origin
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult">
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <rdfs:comment xml:lang="es">Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
         <rdfs:label xml:lang="en">has result</rdfs:label>
         <rdfs:label xml:lang="es">tiene resultado</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
     </owl:ObjectProperty>
     
 

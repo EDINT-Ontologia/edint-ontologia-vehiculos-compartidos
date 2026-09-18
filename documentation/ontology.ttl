@@ -27,9 +27,6 @@
                                                                                "Ontología EDINT de Sistemas de Vehículos Compartidos"@es ;
                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintvehcom" ;
                                               <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                                              <http://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos> ;
-                                              <http://schema.org/creativeWorkStatus> "Ontology Specification"@en ;
-                                              <http://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" ;
                                               rdfs:comment """La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
 Además, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino."""@es ,
                                                            """The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
@@ -38,6 +35,9 @@ In addition, data on the journeys made by these vehicles, including their origin
                                                          "Vehículos Compartidos"@es ;
                                               owl:priorVersion <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0> ;
                                               owl:versionInfo "0.1.1" ;
+                                              <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos> ;
+                                              <https://schema.org/creativeWorkStatus> "Ontology Specification"@en ;
+                                              <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" ;
                                               <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" ;
                                               <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" ;
                                               <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" ;
@@ -52,21 +52,21 @@ In addition, data on the journeys made by these vehicles, including their origin
                                                                                               _:genid13 ,
                                                                                               _:genid14 .
 
-_:genid1 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid2 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid3 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid4 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid5 <http://schema.org/affiliation> "Federación Española de Municipios y Provincias" ;
-          <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "FEMP" .
+_:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "FEMP" ;
+          <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 
 _:genid6 rdfs:label "QUDT"@en ,
                      "QUDT"@es ;
@@ -202,24 +202,8 @@ _:genid14 rdfs:label "Infraestructura (edintinf)"@es ,
 <http://qudt.org/schema/qudt/informativeReference> rdf:type owl:AnnotationProperty .
 
 
-###  http://schema.org/affiliation
-<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/codeRepository
-<http://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/creativeWorkStatus
-<http://schema.org/creativeWorkStatus> rdf:type owl:AnnotationProperty .
-
-
 ###  http://schema.org/domainIncludes
 <http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/funding
-<http://schema.org/funding> rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/rangeIncludes
@@ -240,6 +224,30 @@ _:genid14 rdfs:label "Infraestructura (edintinf)"@es ,
 
 ###  http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/affiliation
+<https://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/codeRepository
+<https://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/domainIncludes
+<https://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/funding
+<https://schema.org/funding> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/rangeIncludes
+<https://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/widoco/vocab#jsonldSerialization
@@ -361,18 +369,18 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 <http://www.w3.org/ns/sosa/hasResult> rdf:type owl:ObjectProperty ;
                                       owl:inverseOf <http://www.w3.org/ns/sosa/isResultOf> ;
                                       rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
-                                      <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> ,
-                                                                         <http://www.w3.org/ns/sosa/Observation> ,
-                                                                         <http://www.w3.org/ns/sosa/ObservationCollection> ,
-                                                                         <http://www.w3.org/ns/sosa/Sampling> ;
-                                      <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result> ,
-                                                                        <http://www.w3.org/ns/sosa/Sample> ;
                                       rdfs:comment "Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra."@es ,
                                                    "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en ;
                                       rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ,
                                                        <http://www.w3.org/ns/sosa/common/> ;
                                       rdfs:label "has result"@en ,
-                                                 "tiene resultado"@es .
+                                                 "tiene resultado"@es ;
+                                      <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> ,
+                                                                          <http://www.w3.org/ns/sosa/Observation> ,
+                                                                          <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                          <http://www.w3.org/ns/sosa/Sampling> ;
+                                      <https://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result> ,
+                                                                         <http://www.w3.org/ns/sosa/Sample> .
 
 
 ###  http://www.w3.org/ns/sosa/isHostedBy

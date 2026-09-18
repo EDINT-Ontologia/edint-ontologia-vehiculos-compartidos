@@ -6,39 +6,39 @@
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/bibliographicCitation> "Ontología EDINT de Sistemas de Vehículos Compartidos. EDINT. Revisión: v0.1.1."@es .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/created> "2026-05-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
-_:genid1 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/creator> _:genid2 .
+_:genid2 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid2 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
-_:genid2 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid3 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
-_:genid3 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/creator> _:genid4 .
+_:genid4 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid4 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
-_:genid4 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/description> "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino."@es .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/description> "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."@en .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/modified> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/publisher> _:genid5 .
+_:genid5 <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 _:genid5 <http://xmlns.com/foaf/0.1/name> "FEMP" .
 _:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
-_:genid5 <http://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/title> "EDINT Shared Vehicle Systems Ontology"@en .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/dc/terms/title> "Ontología EDINT de Sistemas de Vehículos Compartidos"@es .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintvehcom" .
 <https://edint.es/def/vehiculos-compartidos> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://edint.es/def/vehiculos-compartidos#> .
-<https://edint.es/def/vehiculos-compartidos> <http://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos> .
-<https://edint.es/def/vehiculos-compartidos> <http://schema.org/creativeWorkStatus> "Ontology Specification"@en .
-<https://edint.es/def/vehiculos-compartidos> <http://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
 <https://edint.es/def/vehiculos-compartidos> <http://www.w3.org/2000/01/rdf-schema#comment> "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. \nAdemás, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino."@es .
 <https://edint.es/def/vehiculos-compartidos> <http://www.w3.org/2000/01/rdf-schema#comment> "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.\nIn addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."@en .
 <https://edint.es/def/vehiculos-compartidos> <http://www.w3.org/2000/01/rdf-schema#label> "Shared Vehicles"@en .
 <https://edint.es/def/vehiculos-compartidos> <http://www.w3.org/2000/01/rdf-schema#label> "Vehículos Compartidos"@es .
 <https://edint.es/def/vehiculos-compartidos> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos/releases/tag/v0.1.0> .
 <https://edint.es/def/vehiculos-compartidos> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<https://edint.es/def/vehiculos-compartidos> <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-vehiculos-compartidos> .
+<https://edint.es/def/vehiculos-compartidos> <https://schema.org/creativeWorkStatus> "Ontology Specification"@en .
+<https://edint.es/def/vehiculos-compartidos> <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
 <https://edint.es/def/vehiculos-compartidos> <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" .
 <https://edint.es/def/vehiculos-compartidos> <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" .
 <https://edint.es/def/vehiculos-compartidos> <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" .
@@ -159,20 +159,8 @@ _:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "Infraestructura (edintin
 # http://qudt.org/schema/qudt/informativeReference
 <http://qudt.org/schema/qudt/informativeReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://schema.org/affiliation
-<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/codeRepository
-<http://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/creativeWorkStatus
-<http://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://schema.org/domainIncludes
 <http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/funding
-<http://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://schema.org/rangeIncludes
 <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -188,6 +176,24 @@ _:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "Infraestructura (edintin
 # 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/domainIncludes
+<https://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/rangeIncludes
+<https://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/widoco/vocab#jsonldSerialization
 <https://w3id.org/widoco/vocab#jsonldSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -300,18 +306,18 @@ _:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "Infraestructura (edintin
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isResultOf> .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
-<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
-<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
-<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
-<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
-<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result> .
-<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample> .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra."@es .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/common/> .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "tiene resultado"@es .
+<http://www.w3.org/ns/sosa/hasResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/hasResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/hasResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/hasResult> <https://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result> .
+<http://www.w3.org/ns/sosa/hasResult> <https://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample> .
 # 
 # http://www.w3.org/ns/sosa/isHostedBy
 <http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
