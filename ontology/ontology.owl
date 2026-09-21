@@ -1367,7 +1367,7 @@ In addition, data on the journeys made by these vehicles, including their origin
         </widoco:vocabularyLabel>
         <widoco:vocabularyLabel>
             <rdf:Description>
-                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/censo-vehiculos"/>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/censovehiculos"/>
                 <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
                 <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
             </rdf:Description>
