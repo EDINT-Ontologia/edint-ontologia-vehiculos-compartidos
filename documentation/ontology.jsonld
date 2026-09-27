@@ -1110,7 +1110,7 @@
     "@value" : "2026-05-18"
   } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+    "@id" : "https://creativecommons.org/licenses/by-sa/4.0/"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "es",
