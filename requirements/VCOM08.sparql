@@ -9,5 +9,4 @@ WHERE {
   ?vehicle a edintvehcom:SharedVehicle ;
            edintvehcom:vehicleState ?state .
     OPTIONAL {?state skos:prefLabel ?stateLabel }
-  ?state 
 }
