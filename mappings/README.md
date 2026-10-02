@@ -1,0 +1,1 @@
+En caso de que se hayan creado mappings para transformar datos existentes a RDF de acuerdo con esta ontología, esta carpeta contendrá dichos mappings.
