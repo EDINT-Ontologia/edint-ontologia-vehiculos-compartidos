@@ -1,0 +1,804 @@
+@prefix : <https://edint.es/def/vehiculos-compartidos#> .
+@prefix edintapar: <https://edint.es/def/aparcamiento#> .
+@prefix edintinf: <https://edint.es/def/infraestructura#> .
+@prefix edintveh: <https://edint.es/def/censo-vehiculos#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://astrea.linkeddata.es/shapes#01c4ae2a568c4225e48b740397251010> sh:nodeKind sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#0afecab4b9e9d25ef8f06612508cac67> a sh:NodeShape ;
+    rdfs:label "Dock property"@en,
+        "Propiedad de anclaje"@es ;
+    sh:description "Observable property of the dock that refer to its availability: free or occupied by a vehicle."@en,
+        "Propiedad observable de un anclaje que se refiere a la disponibilidad del anclaje, libre u ocupado por un vehículo."@es ;
+    sh:name "Dock property"@en,
+        "Propiedad de anclaje"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass :DockProperty .
+
+<https://astrea.linkeddata.es/shapes#0bbb954271d2bc3423ac28283326cda9> sh:nodeKind sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b> a sh:NodeShape ;
+    rdfs:label "Time instant"@en,
+        "Instante de tiempo"@es ;
+    rdfs:isDefinedBy time: ;
+    sh:description "A temporal entity with zero extent or duration."@en,
+        "Una entidad temporal con extensión o duración de cero."@es ;
+    sh:name "Time instant"@en,
+        "Instante de tiempo"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#a631c84768ff3e5f04fb1d6567ba75be> ;
+    sh:targetClass time:Instant .
+
+<https://astrea.linkeddata.es/shapes#15961e2bc38fbeb492c029bd1cde4c00> rdfs:label "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."@en,
+        "vehicle state"@en,
+        "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."@es,
+        "estado del vehículo"@es ;
+    sh:description "Relationship between a shared vehicle and a concept from the taxonomy of possible vehicle states, for example active, under repair, abandoned."@en,
+        "Relación entre un vehículo compartido y un concepto de la taxonomía de posibles estados de un vehículo, por ejemplo activo, en reparación, abandonado."@es ;
+    sh:name "vehicle state"@en,
+        "estado del vehículo"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#163744438032c52e32bf3c7c8bb195e8> a sh:NodeShape ;
+    rdfs:label "Geographic Point"@en,
+        "Punto geográfico"@es ;
+    rdfs:isDefinedBy geo: ;
+    sh:description "This class represents the top-level point type. This 	class is equivalent to GFI_Point defined in ISO 19156, and it is superclass of all point types."@en,
+        "Se representa un tipo de punto de alto nivel. Esta clase es equivalente a GFI_Point definida en ISO 19156 y es superclase de todos los tipos de puntos."@es ;
+    sh:name "Geographic Point"@en,
+        "Punto geográfico"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#172382a059e61f60b739a6e8d904fff3>,
+        <https://astrea.linkeddata.es/shapes#e7990c6dd6a3dca6de078b32328bc4ef> ;
+    sh:targetClass sf:Point .
+
+<https://astrea.linkeddata.es/shapes#176b6b3270ef7995c68cfded69cd5982> a sh:NodeShape ;
+    rdfs:label "Dock sensor"@en,
+        "Equipo que permite detectar si un anclaje está libre u ocupado."@es,
+        "Sensor de anclaje"@es ;
+    sh:description "Equipment that allows you to detect if an anchor is free or occupied."@en ;
+    sh:name "Dock sensor"@en,
+        "Equipo que permite detectar si un anclaje está libre u ocupado."@es,
+        "Sensor de anclaje"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass :DockSensor .
+
+<https://astrea.linkeddata.es/shapes#190f1c100cfb84927e5862eea9f6b913> a sh:NodeShape ;
+    rdfs:label "Station property"@en,
+        "Propiedad de estación"@es ;
+    sh:description "Observable properties of the station that refer to the number of occupied docks and the number of empty docks available to park a vehicle."@en,
+        "Propiedades observables de una estación que se refieren al número de anclajes ocupados o al número de anclajes vacíos disponibles para aparcar un vehiculo."@es ;
+    sh:name "Station property"@en,
+        "Propiedad de estación"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintinf:StationProperty .
+
+<https://astrea.linkeddata.es/shapes#1b22f04071e0e864530add38191940a6> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass qudt:Quantifiable .
+
+<https://astrea.linkeddata.es/shapes#1bc257992e4584fa4ec247decbd920d5> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass qudt:Unit .
+
+<https://astrea.linkeddata.es/shapes#1c06f64788ceed887349df530cb225ed> a sh:PropertyShape ;
+    rdfs:label "(expected) start date"@en,
+        "The start date and time of an incidence (in ISO 8601 date format)."@en,
+        "La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601)."@es,
+        "fecha de inicio (prevista)"@es ;
+    rdfs:isDefinedBy schema: ;
+    sh:datatype xsd:dateTime ;
+    sh:description "The start date and time of an incidence (in ISO 8601 date format)."@en,
+        "La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601)."@es ;
+    sh:name "(expected) start date"@en,
+        "fecha de inicio (prevista)"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path <http://schema.org/startDate> ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#1edec7068d03129d92604b36356d00db> sh:nodeKind sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#2198789dee206bc8c362408b14a3f558> a sh:PropertyShape ;
+    rdfs:label "The end date and time of an incidence (in ISO 8601 date format)."@en,
+        "end date"@en,
+        """La fecha y hora de finalización de
+	una incidencia (en formato fecha ISO 8601)"""@es,
+        "fecha de fin"@es ;
+    rdfs:isDefinedBy schema: ;
+    sh:datatype xsd:dateTime ;
+    sh:description "The end date and time of an incidence (in ISO 8601 date format)."@en,
+        """La fecha y hora de finalización de
+	una incidencia (en formato fecha ISO 8601)"""@es ;
+    sh:name "end date"@en,
+        "fecha de fin"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path <http://schema.org/endDate> ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#2b6823bca04741bae8cba8a34159f718> rdfs:label "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."@en,
+        "station state"@en,
+        "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."@es,
+        "estado de la estación"@es ;
+    sh:description "Relationship between a station and a concept of the taxonomy of states of a station, for example operational or non-operational."@en,
+        "Relación entre una Estación y un concepto de la taxonomía de estados de una estación, por ejemplo operativa o no operativa."@es ;
+    sh:name "station state"@en,
+        "estado de la estación"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#2c82ff73141966e6789c149dbd53c5fd> rdfs:label "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."@en,
+        "vehicle type"@en,
+        "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."@es,
+        "tipo de vehículo"@es ;
+    sh:description "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of vehicle types (e.g., bicycle, scooter, van, truck, caravan, etc.)."@en,
+        "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.)."@es ;
+    sh:name "vehicle type"@en,
+        "tipo de vehículo"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#330067406f26b0ce2652f5e294608bfe> rdfs:label "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."@en,
+        "dock state"@en,
+        "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."@es,
+        "estado del anclaje"@es ;
+    sh:description "Indicates whether the dock is in service or out of service for any reason, for example, for maintenance."@en,
+        "Indica si el anclaje está en servicio o fuera de servicio por alguna razón, por ejemplo, por mantenimiento."@es ;
+    sh:name "dock state"@en,
+        "estado del anclaje"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#37965e0183e52604b4172e4f7ea4055a> a sh:NodeShape ;
+    rdfs:label "Facility"@en,
+        "Equipamiento"@es ;
+    sh:description "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en,
+        "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es ;
+    sh:name "Facility"@en,
+        "Equipamiento"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintinf:Facility .
+
+<https://astrea.linkeddata.es/shapes#3e18b0f9fac2d3bdcd51a2fdadcbda53> a sh:NodeShape ;
+    rdfs:label "Temporal Entity"@en,
+        "Entidad temporal"@es ;
+    rdfs:isDefinedBy time: ;
+    sh:description "A temporal interval or instant."@en,
+        "Un intervalo temporal o un instante."@es ;
+    sh:name "Temporal Entity"@en,
+        "Entidad temporal"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass time:TemporalEntity .
+
+<https://astrea.linkeddata.es/shapes#4012686c84815fd55c7e1c4bc133b40d> a sh:NodeShape ;
+    rdfs:label "Proper interval"@en,
+        "intervalo preciso"@es ;
+    rdfs:isDefinedBy time: ;
+    sh:description "A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different."@en,
+        "Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes"@es ;
+    sh:name "Proper interval"@en,
+        "intervalo preciso"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#2532894d090d3f1667f7f7b6da65df98>,
+        <https://astrea.linkeddata.es/shapes#8d26f56ec9e75266434f08dc7f5c2047> ;
+    sh:targetClass time:ProperInterval .
+
+<https://astrea.linkeddata.es/shapes#468764bdf230b449a74ffdf9fd48fcb7> a sh:PropertyShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path sosa:isResultOf .
+
+<https://astrea.linkeddata.es/shapes#48ea695aa98408a6ade8ae77c99c7bb4> rdfs:label "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en,
+        "has result"@en,
+        "Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra."@es,
+        "tiene resultado"@es ;
+    rdfs:isDefinedBy sosa:,
+        <http://www.w3.org/ns/sosa/common/> ;
+    sh:description "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en,
+        "Relación que vincula una observación, una actuación o un acto de muestreo con un resultado o una muestra."@es ;
+    sh:name "has result"@en,
+        "tiene resultado"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0> a sh:NodeShape ;
+    rdfs:label "SpatialObject"@en,
+        "Objeto Espacial"@es ;
+    rdfs:isDefinedBy geo: ;
+    sh:description """This class represents the top-level spatial object
+	type. This class is equivalent to GFI_SpatialObject defined in ISO 19156, and it
+	is superclass of all spatial object types."""@en,
+        "Esta clase representa un tipo de objeto espacial de alto nivel. Es equivalente a GFI SpatialObject difinido en ISO 19156 y es una superclase de todos los tipos de objetos espaciales."@es ;
+    sh:name "SpatialObject"@en,
+        "Objeto Espacial"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass geo:SpatialObject .
+
+<https://astrea.linkeddata.es/shapes#684add183383f40ee3e60082fcfcfb39> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass qudt:Concept .
+
+<https://astrea.linkeddata.es/shapes#69bfc24827569ed9036ecae89a53d3c7> a sh:PropertyShape ;
+    rdfs:label "is in scheme"@en,
+        "está en el esquema"@es ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+    sh:class skos:ConceptScheme ;
+    sh:name "is in scheme"@en,
+        "está en el esquema"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path skos:inScheme .
+
+<https://astrea.linkeddata.es/shapes#785cf0976c2c4dcd5b1984e5d48bb456> a sh:NodeShape ;
+    rdfs:label "Dock observation"@en,
+        "Observación de anclaje"@es ;
+    sh:description "Observation by a dock sensor that detects the dock's availability to park a vehicle (free), or occupied by a vehicle."@en,
+        "Observación mediante un sensor de anclaje que detecta su disponibilidad para aparcar un vehículo (libre) o si está ocupado por un vehículo."@es ;
+    sh:name "Dock observation"@en,
+        "Observación de anclaje"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass :DockObservation .
+
+<https://astrea.linkeddata.es/shapes#81f8e8162eaf62938a3c8d86bc83e757> a sh:NodeShape ;
+    rdfs:label "Parking spot"@en,
+        "Plaza de aparcamiento"@es ;
+    sh:description "Individual parking space on-street or off-street."@en,
+        "Plaza individual de estacionamiento dentro o fuera de la vía pública."@es ;
+    sh:name "Parking spot"@en,
+        "Plaza de aparcamiento"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintapar:ParkingSpot .
+
+<https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425> a sh:NodeShape ;
+    rdfs:label "Feature"@en,
+        "Característica geográfica"@es ;
+    rdfs:isDefinedBy geo: ;
+    sh:description "Esta clase representa una característica de alto nivel, equivalente a GFI_Feature definida en ISP 19156 y es una supercale para todos los tipos de características espaciales."@en,
+        """This class represents the top-level feature type. This
+	class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of
+	all feature types."""@en ;
+    sh:name "Feature"@en,
+        "Característica geográfica"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642> ;
+    sh:targetClass geo:Feature .
+
+<https://astrea.linkeddata.es/shapes#8ef1ba038357601c5128fb6fd422964c> a sh:PropertyShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path qudt:unitFor .
+
+<https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67> a sh:NodeShape ;
+    rdfs:label "Geometry"@en,
+        "Geometría"@es ;
+    rdfs:isDefinedBy geo: ;
+    sh:description "This class represents the top-level geometry type. This class is equivalent to GFI_Geometry defined in ISO 19156, and it is superclass of all geometry types."@en,
+        "Esta clase representa el tipo de geometría de alto nivel. Es equivalente a GFI_Geometry definida en ISO 19156 y es superclase de todos los tipos geométricos."@es ;
+    sh:name "Geometry"@en,
+        "Geometría"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass geo:Geometry .
+
+<https://astrea.linkeddata.es/shapes#a71f9316e861a0d5c4e704af00a835a0> a sh:NodeShape ;
+    rdfs:label "Vehicle"@en,
+        "Vehículo"@es ;
+    sh:description "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@en,
+        "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."@es ;
+    sh:name "Vehicle"@en,
+        "Vehículo"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintveh:Vehicle .
+
+<https://astrea.linkeddata.es/shapes#aef1a78016b3598e01dd7671934b50b4> a sh:NodeShape ;
+    rdfs:label "Concept Scheme"@en,
+        "Esquema de conceptos"@es ;
+    rdfs:isDefinedBy skos: ;
+    sh:description "A concept scheme may be defined to include concepts from different sources."@en,
+        "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes.  Concept schemes are also embedded in glossaries and terminologies."@en ;
+    sh:name "Concept Scheme"@en,
+        "Esquema de conceptos"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass skos:ConceptScheme .
+
+<https://astrea.linkeddata.es/shapes#b0e4858dd6a7fdf0deca7b1a3e325357> a sh:NodeShape ;
+    rdfs:label "Observable Property"@en ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+    sh:name "Observable Property"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass sosa:ObservableProperty .
+
+<https://astrea.linkeddata.es/shapes#b28f1a50b3141c95955799dfa1cd4295> a sh:PropertyShape ;
+    rdfs:label "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en,
+        "observed property"@en,
+        "Relación que enlaza la propiedad que se observa."@es,
+        "propiedad observada"@es ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en,
+        "Relación que enlaza la propiedad que se observa."@es ;
+    sh:name "observed property"@en,
+        "propiedad observada"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path sosa:observedProperty .
+
+<https://astrea.linkeddata.es/shapes#b2bc06896c1c0fbf26f79b1b45f61a1c> a sh:NodeShape ;
+    rdfs:label "Shared vehicle station"@en,
+        "Estación de vehículos compartidos"@es ;
+    sh:description "Place where you can both leave and pick up a shared vehicles. It is composed of docks"@en,
+        "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."@es ;
+    sh:name "Shared vehicle station"@en,
+        "Estación de vehículos compartidos"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#687ce1f4966a80a177bcc6cc9365fcd1>,
+        <https://astrea.linkeddata.es/shapes#b4e33fd22afd1f37b76561e7d7b43259>,
+        <https://astrea.linkeddata.es/shapes#b6f7c1dfc727daec6b16a41f3f8a1127>,
+        <https://astrea.linkeddata.es/shapes#e8e913c9e52be9f0e4fae78887d32e8c> ;
+    sh:targetClass :SharedVehicleStation .
+
+<https://astrea.linkeddata.es/shapes#b5ece35ec56cc9e9e85f5fa6db6d1f95> rdfs:label "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."@en,
+        "propulsion system type"@en,
+        "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."@es,
+        "tipo de sistema de propulsión"@es ;
+    sh:description "Relationship between a vehicle and a concept from the taxonomy of propulsion system types such as electric, gasoline, hybrid."@en,
+        "Relación entre un vehículo y un concepto de la taxonomía de tipos de sistema de propulsión como por ejemplo, eléctrico, gasolina, híbrido."@es ;
+    sh:name "propulsion system type"@en,
+        "tipo de sistema de propulsión"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#b8840ae319dd17775a4c3ff2c43caeca> sh:nodeKind sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#c186b1044a6b8571d5484d0488dd2d7b> a sh:NodeShape ;
+    rdfs:label "Platform"@en,
+        "Plataforma"@es ;
+    sh:description "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en,
+        "Una plataforma es una entidad que alberga otras entidades, en particular sensores, actuadores, muestreadores y otras plataformas."@es ;
+    sh:name "Platform"@en,
+        "Plataforma"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass sosa:Platform .
+
+<https://astrea.linkeddata.es/shapes#c31152868dfd36bf465d410b6884b764> a sh:NodeShape ;
+    rdfs:label "Infrastructure element"@en,
+        "Elemento de la infraestructura"@es ;
+    sh:description "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."@en,
+        "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."@es ;
+    sh:name "Infrastructure element"@en,
+        "Elemento de la infraestructura"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintinf:InfrastructureElement .
+
+<https://astrea.linkeddata.es/shapes#c78adf719f2fc347d9729f079d86324b> a sh:PropertyShape ;
+    rdfs:label "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en,
+        "observes"@en,
+        "Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones."@es,
+        "observa"@es ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en,
+        "Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones."@es ;
+    sh:name "observes"@en,
+        "observa"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path sosa:observes .
+
+<https://astrea.linkeddata.es/shapes#c8ba0e30ea76a68976d6ab2f0d9ce576> a sh:PropertyShape ;
+    rdfs:label "A relation between an Observation and the entity whose quality was observed."@en,
+        "has feature of interest"@en,
+        "Una relación entre una Observación y la entidad para la que se ha observado."@es,
+        "tiene característica de interés"@es ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "A relation between an Observation and the entity whose quality was observed."@en,
+        "Una relación entre una Observación y la entidad para la que se ha observado."@es ;
+    sh:name "has feature of interest"@en,
+        "tiene característica de interés"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path sosa:hasFeatureOfInterest .
+
+<https://astrea.linkeddata.es/shapes#e41a065b371ae4e1c6f2d326a569146b> a sh:NodeShape ;
+    rdfs:label "Shared vehicle"@en,
+        "Vehículo compartido"@es ;
+    sh:description "Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access."@en,
+        "Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda."@es ;
+    sh:name "Shared vehicle"@en,
+        "Vehículo compartido"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass :SharedVehicle .
+
+<https://astrea.linkeddata.es/shapes#e4f8f8b501b2ca66a414aa9bc2ee33cf> a sh:PropertyShape ;
+    rdfs:label "The manufacturer of the product."@en,
+        "manufacturer"@en ;
+    sh:class <http://schema.org/Organization> ;
+    sh:description "The manufacturer of the product."@en ;
+    sh:name "manufacturer"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <http://schema.org/manufacturer> .
+
+<https://astrea.linkeddata.es/shapes#e61935f1cc0fbdc80be67c061e1cbf71> a sh:NodeShape ;
+    rdfs:label "Observation"@en ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with"@en ;
+    sh:name "Observation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#570e251d885fe83c81ffb787ce4307aa> ;
+    sh:targetClass sosa:Observation .
+
+<https://astrea.linkeddata.es/shapes#e76d01ce72a57811f882677d5c5c7a8c> a sh:NodeShape ;
+    rdfs:label "Waypoint"@en,
+        "Punto de paso"@es ;
+    sh:description "Part of a route defined by coordinates and a date and time"@en,
+        "Parte de un trayecto definido por unas coordenadas y una fecha y hora."@es ;
+    sh:name "Waypoint"@en,
+        "Punto de paso"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#1a865f84877bc439a5b651fdc7f269ce>,
+        <https://astrea.linkeddata.es/shapes#fd133c1209fe6a5fb188669b348d6fb4> ;
+    sh:targetClass :Waypoint .
+
+<https://astrea.linkeddata.es/shapes#e85f7f569c1b43b31809a79038a33ed0> a sh:NodeShape ;
+    rdfs:label "Feature Of Interest"@en ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+    sh:name "Feature Of Interest"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass sosa:FeatureOfInterest .
+
+<https://astrea.linkeddata.es/shapes#eef4e9102f8c4e433815a9af41e4f720> a sh:NodeShape ;
+    rdfs:label "Sensor"@en ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+    sh:name "Sensor"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#6fe7446209c7d0657bea56e0dd818d93> ;
+    sh:targetClass sosa:Sensor .
+
+<https://astrea.linkeddata.es/shapes#f19d0a17684b91303d6dc328e9cf2fb7> a sh:PropertyShape ;
+    sh:class qudt:Unit ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path qudt:hasUnit .
+
+<https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c> a sh:NodeShape ;
+    rdfs:label "Time interval"@en,
+        "intervalo"@es ;
+    rdfs:isDefinedBy time: ;
+    sh:description "A temporal entity with an extent or duration."@en,
+        "Una entidad temporal con extensión o duración"@es ;
+    sh:name "Time interval"@en,
+        "intervalo"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass time:Interval .
+
+<https://astrea.linkeddata.es/shapes#f32e1c4c9b6ebd9163d47f8f3951c2e5> a sh:NodeShape ;
+    rdfs:label "Route"@en,
+        "Trayecto"@es ;
+    sh:description "The path traveled to get from an origin to a destination"@en,
+        "Espacio que se recorre para llegar desde un origen hasta un destino."@es ;
+    sh:name "Route"@en,
+        "Trayecto"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#1d5aede172a4742f15a36b5d8c9888d1>,
+        <https://astrea.linkeddata.es/shapes#83c383de197e46b47579839c80311583>,
+        <https://astrea.linkeddata.es/shapes#a97ad5ab36433f231c0299bbc57804f6>,
+        <https://astrea.linkeddata.es/shapes#ab7bab33ac45cdfc06a6c3e635ea6483>,
+        <https://astrea.linkeddata.es/shapes#d592ab7a0ee478cb1317dce41d709f17>,
+        <https://astrea.linkeddata.es/shapes#e3408ef45e86aa64d35f8a60c1f25364> ;
+    sh:targetClass :Route .
+
+<https://astrea.linkeddata.es/shapes#f42d3c193c833f100612965928a8900c> a sh:NodeShape ;
+    rdfs:label "Dock"@en,
+        "Anclaje"@es ;
+    sh:description "Place in the station where the vehicles are secured."@en,
+        "Lugar de la estación donde se fijan las bicicletas"@es ;
+    sh:name "Dock"@en,
+        "Anclaje"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass :Dock .
+
+<https://astrea.linkeddata.es/shapes#f4b3df753bc2c96f73b6c78451bbe220> a sh:PropertyShape ;
+    rdfs:label "Relación entre una Observación y un Sensor que realiza la Observación."@en,
+        "made by sensor"@en,
+        "Relation between an Observation and the Sensor which made the Observation."@es,
+        "realizada por sensor"@es ;
+    rdfs:isDefinedBy sosa: ;
+    sh:description "Relación entre una Observación y un Sensor que realiza la Observación."@en,
+        "Relation between an Observation and the Sensor which made the Observation."@es ;
+    sh:name "made by sensor"@en,
+        "realizada por sensor"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path sosa:madeBySensor .
+
+<https://astrea.linkeddata.es/shapes#fa78cfbce37dbcb34ab378481e7243c2> a sh:NodeShape ;
+    rdfs:label "Quantity value" ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> ;
+    sh:description "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to \"http://physics.nist.gov/Pubs/SP811/sec07.html\", NIST SP 811, section 7 for more on quantity values." ;
+    sh:name "Quantity value" ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#b6f09ea14b356f677ecafa6b46a9b43c> ;
+    sh:targetClass qudt:QuantityValue .
+
+<https://astrea.linkeddata.es/shapes#ff3ffc8686e31dfe4c8c867c5077a712> a sh:NodeShape ;
+    rdfs:label "Organization"@en,
+        "Organización"@es ;
+    sh:description "Represents a collection of people organized together into a community or other social, commercial or political structure."@en,
+        "Representa un conjunto de personas organizadas en una comunidad u otra estructura social, comercial o política."@es ;
+    sh:name "Organization"@en,
+        "Organización"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass <http://schema.org/Organization> .
+
+<https://astrea.linkeddata.es/shapes#ffeaf0d3664c31215f614a64f5bb45a5> a sh:NodeShape ;
+    rdfs:label "Concept"@en,
+        "Concepto"@es ;
+    rdfs:isDefinedBy skos: ;
+    sh:name "Concept"@en,
+        "Concepto"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:not <https://astrea.linkeddata.es/shapes#f5d3515f8cfa02fe182d61cb4248572c> ;
+    sh:targetClass skos:Concept .
+
+<https://astrea.linkeddata.es/shapes#172382a059e61f60b739a6e8d904fff3> a sh:PropertyShape ;
+    rdfs:label "latitude",
+        "Latitude in WGS84"@en,
+        "Latitud en WGS84"@es ;
+    sh:datatype xsd:float ;
+    sh:description "Latitude in WGS84"@en,
+        "Latitud en WGS84"@es ;
+    sh:name "latitude" ;
+    sh:nodeKind sh:Literal ;
+    sh:path geo1:lat ;
+    sh:pattern "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#1a865f84877bc439a5b651fdc7f269ce> a sh:PropertyShape ;
+    rdfs:label ""@en,
+        "Date and time when the vehicle passed through the waypoint in a route."@en,
+        "passing date and time"@en,
+        "Fecha y hora en que el vehículo pasó por el punto en la ruta."@es,
+        "fecha y hora punto de paso"@es ;
+    sh:datatype xsd:dateTime ;
+    sh:description ""@en,
+        "Date and time when the vehicle passed through the waypoint in a route."@en,
+        "Fecha y hora en que el vehículo pasó por el punto en la ruta."@es ;
+    sh:name "passing date and time"@en,
+        "fecha y hora punto de paso"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :passingDateTime ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#1d5aede172a4742f15a36b5d8c9888d1> a sh:PropertyShape ;
+    rdfs:label "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."@en,
+        "has waypoint"@en,
+        "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."@es,
+        "tiene punto de paso"@es ;
+    sh:class :Waypoint ;
+    sh:description "Link from the route to the waypoints. Vehicles with GPS will indicate the waypoints of a certain route."@en,
+        "Enlace entre el trayecto y los puntos de paso. Los vehículos que dispongan de GPS indicarán los puntos de paso de un trayecto determinado."@es ;
+    sh:name "has waypoint"@en,
+        "tiene punto de paso"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :hasWaypoint .
+
+<https://astrea.linkeddata.es/shapes#2532894d090d3f1667f7f7b6da65df98> a sh:PropertyShape ;
+    rdfs:label "Beginning of a temporal entity"@en,
+        "Has Beginning"@en,
+        "Comienzo de una entidad temporal."@es,
+        "Tiene principio"@es ;
+    sh:class time:Instant ;
+    sh:description "Beginning of a temporal entity"@en,
+        "Comienzo de una entidad temporal."@es ;
+    sh:name "Has Beginning"@en,
+        "Tiene principio"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path time:hasBeginning .
+
+<https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642> a sh:PropertyShape ;
+    rdfs:label "A spatial representation for a given feature."@en,
+        "has geometry"@en,
+        "Una representación espacial para una característica determinada."@es,
+        "tiene geometría"@es ;
+    rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
+    sh:class geo:Geometry ;
+    sh:description "A spatial representation for a given feature."@en,
+        "Una representación espacial para una característica determinada."@es ;
+    sh:name "has geometry"@en,
+        "tiene geometría"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path geo:hasGeometry .
+
+<https://astrea.linkeddata.es/shapes#570e251d885fe83c81ffb787ce4307aa> a sh:PropertyShape ;
+    rdfs:label "This property sets the interval of time of the observation"@en,
+        "time interval"@en,
+        "Esta propiedad establece el intervalo de tiempo de la observación."@es,
+        "intervalo de tiempo"@es ;
+    sh:class time:ProperInterval ;
+    sh:description "This property sets the interval of time of the observation"@en,
+        "Esta propiedad establece el intervalo de tiempo de la observación."@es ;
+    sh:name "time interval"@en,
+        "intervalo de tiempo"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path sosa:phenomenonTime .
+
+<https://astrea.linkeddata.es/shapes#687ce1f4966a80a177bcc6cc9365fcd1> a sh:PropertyShape ;
+    rdfs:label "Date when the station ceases operation."@en,
+        "closure date"@en,
+        "Fecha en la cual la estación cesa sus operaciones."@es,
+        "fecha de baja"@es ;
+    sh:datatype xsd:date ;
+    sh:description "Date when the station ceases operation."@en,
+        "Fecha en la cual la estación cesa sus operaciones."@es ;
+    sh:name "closure date"@en,
+        "fecha de baja"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :closureDate ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#6fe7446209c7d0657bea56e0dd818d93> a sh:PropertyShape ;
+    rdfs:label "Relation between a Sensor, or Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en,
+        "is hosted by"@en ;
+    sh:class sosa:Platform ;
+    sh:description "Relation between a Sensor, or Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en ;
+    sh:name "is hosted by"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path sosa:isHostedBy .
+
+<https://astrea.linkeddata.es/shapes#83c383de197e46b47579839c80311583> a sh:PropertyShape ;
+    rdfs:label "made by vehicle"@en,
+        "realizado por vehículo"@es ;
+    sh:class :SharedVehicle ;
+    sh:name "made by vehicle"@en,
+        "realizado por vehículo"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :madeByVehicle .
+
+<https://astrea.linkeddata.es/shapes#8d26f56ec9e75266434f08dc7f5c2047> a sh:PropertyShape ;
+    rdfs:label "End of a temporal entity"@en,
+        "Has End"@en,
+        "Final de una entidad temporal."@es,
+        "Tiene final"@es ;
+    sh:class time:Instant ;
+    sh:description "End of a temporal entity"@en,
+        "Final de una entidad temporal."@es ;
+    sh:name "Has End"@en,
+        "Tiene final"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path time:hasEnd .
+
+<https://astrea.linkeddata.es/shapes#a631c84768ff3e5f04fb1d6567ba75be> a sh:PropertyShape ;
+    rdfs:label "Position of an instant, expressed using xsd:gYearMonth."@en,
+        "in XSD g-YearMonth"@en,
+        "Posición de un instante, expresado utilizando xsd:gYearMonth."@es,
+        "en año-mes gregoriano XSD"@es ;
+    sh:datatype xsd:gYearMonth ;
+    sh:description "Position of an instant, expressed using xsd:gYearMonth."@en,
+        "Posición de un instante, expresado utilizando xsd:gYearMonth."@es ;
+    sh:name "in XSD g-YearMonth"@en,
+        "en año-mes gregoriano XSD"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path time:inXSDgYearMonth ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#a97ad5ab36433f231c0299bbc57804f6> a sh:PropertyShape ;
+    rdfs:label "Parking spot from where the vehicle route starts.",
+        "origin parking spot"@en,
+        "Plaza de aparcamiento desde donde sale la ruta del vehículo."@es,
+        "plaza de aparcamiento origen"@es ;
+    sh:class edintapar:ParkingSpot ;
+    sh:description "Parking spot from where the vehicle route starts.",
+        "Plaza de aparcamiento desde donde sale la ruta del vehículo."@es ;
+    sh:name "origin parking spot"@en,
+        "plaza de aparcamiento origen"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :originSpot .
+
+<https://astrea.linkeddata.es/shapes#ab7bab33ac45cdfc06a6c3e635ea6483> a sh:PropertyShape ;
+    rdfs:label "Parking spot where a vehicle's route ends."@en,
+        "destination parking spot"@en,
+        "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."@es,
+        "plaza de aparcamiento estino"@es ;
+    sh:class edintapar:ParkingSpot ;
+    sh:description "Parking spot where a vehicle's route ends."@en,
+        "Plaza de aparcamiento en donde finaliza la ruta de un vehículo."@es ;
+    sh:name "destination parking spot"@en,
+        "plaza de aparcamiento estino"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :destinationSpot .
+
+<https://astrea.linkeddata.es/shapes#b4e33fd22afd1f37b76561e7d7b43259> a sh:PropertyShape ;
+    rdfs:label "Relationship between a shared vehicle siation and the docks that belong to it."@en,
+        "has dock"@en,
+        "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."@es,
+        "tiene anclaje"@es ;
+    sh:class :Dock ;
+    sh:description "Relationship between a shared vehicle siation and the docks that belong to it."@en,
+        "Relación entre una estación de vehículos compartidos y los anclajes que le pertenecen."@es ;
+    sh:name "has dock"@en,
+        "tiene anclaje"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :hasDock .
+
+<https://astrea.linkeddata.es/shapes#b6f09ea14b356f677ecafa6b46a9b43c> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:path qudt:hasUnit .
+
+<https://astrea.linkeddata.es/shapes#b6f7c1dfc727daec6b16a41f3f8a1127> a sh:PropertyShape ;
+    rdfs:label "Date when the station is officially tested, certified, and put into active service.",
+        "comissionning date"@en,
+        "Fecha en que la estación es certificada y puesta en servicio oficialmente."@es,
+        "fecha de alta"@es ;
+    sh:datatype xsd:date ;
+    sh:description "Date when the station is officially tested, certified, and put into active service.",
+        "Fecha en que la estación es certificada y puesta en servicio oficialmente."@es ;
+    sh:name "comissionning date"@en,
+        "fecha de alta"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :comissioningDate ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#d592ab7a0ee478cb1317dce41d709f17> a sh:PropertyShape ;
+    rdfs:label "The dock in a station where a vehicle's route ends."@en,
+        "destination dock"@en,
+        "El anclaje de una estación a donde finaliza una ruta de un vehículo."@es,
+        "tiene anclaje destino"@es ;
+    sh:class :Dock ;
+    sh:description "The dock in a station where a vehicle's route ends."@en,
+        "El anclaje de una estación a donde finaliza una ruta de un vehículo."@es ;
+    sh:name "destination dock"@en,
+        "tiene anclaje destino"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :destinationDock .
+
+<https://astrea.linkeddata.es/shapes#e3408ef45e86aa64d35f8a60c1f25364> a sh:PropertyShape ;
+    rdfs:label "The dock in a station from where the vehicle departed on a certain route."@en,
+        "origin dock"@en,
+        "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."@es,
+        "tiene anclaje origen"@es ;
+    sh:class :Dock ;
+    sh:description "The dock in a station from where the vehicle departed on a certain route."@en,
+        "El anclaje en una estación desde donde el vehículo salió a una cierta ruta."@es ;
+    sh:name "origin dock"@en,
+        "tiene anclaje origen"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :originDock .
+
+<https://astrea.linkeddata.es/shapes#e7990c6dd6a3dca6de078b32328bc4ef> a sh:PropertyShape ;
+    rdfs:label "longitude",
+        "Longitude in WGS84"@en,
+        "Longitud en WGS84"@es ;
+    sh:datatype xsd:float ;
+    sh:description "Longitude in WGS84"@en,
+        "Longitud en WGS84"@es ;
+    sh:name "longitude" ;
+    sh:nodeKind sh:Literal ;
+    sh:path geo1:long ;
+    sh:pattern "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#e8e913c9e52be9f0e4fae78887d32e8c> a sh:PropertyShape ;
+    rdfs:label "Relationship between a vehicle-sharing station and the organization that operates it."@en,
+        "operated by"@en,
+        "Relación entre una estación de vehículos compartidos y la organización que la opera."@es,
+        "operado por"@es ;
+    sh:class <http://schema.org/Organization> ;
+    sh:description "Relationship between a vehicle-sharing station and the organization that operates it."@en,
+        "Relación entre una estación de vehículos compartidos y la organización que la opera."@es ;
+    sh:name "operated by"@en,
+        "operado por"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :operatedBy .
+
+<https://astrea.linkeddata.es/shapes#f5d3515f8cfa02fe182d61cb4248572c> sh:class skos:ConceptScheme .
+
+<https://astrea.linkeddata.es/shapes#fd133c1209fe6a5fb188669b348d6fb4> a sh:PropertyShape ;
+    rdfs:label "The order number of a waypoint."@en,
+        "order"@en,
+        "El número de orden un un punto de paso."@es,
+        "orden"@es ;
+    sh:datatype xsd:integer ;
+    sh:description "The order number of a waypoint."@en,
+        "El número de orden un un punto de paso."@es ;
+    sh:name "order"@en,
+        "orden"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :order ;
+    sh:pattern "[\\-+]?[0-9]+" .
+
