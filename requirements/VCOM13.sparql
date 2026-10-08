@@ -2,7 +2,7 @@
 # VCOM13: ¿Qué anclajes son objeto de observación?
 
 PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
-PREFIX sosa: <http://w3.org/ns/sosa/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
 
 SELECT DISTINCT ?dock
 WHERE {

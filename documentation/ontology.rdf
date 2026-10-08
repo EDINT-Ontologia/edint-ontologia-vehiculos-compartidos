@@ -28,8 +28,10 @@
         <terms:creator rdf:nodeID="genid4"/>
         <terms:description xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino.</terms:description>
         <terms:description xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:title xml:lang="es">Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades</terms:title>
+        <terms:title xml:lang="en">Vocabulary for the representation of data on shared vehicle systems in cities</terms:title>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:modified>
         <terms:publisher rdf:nodeID="genid5"/>
         <terms:title xml:lang="en">EDINT Shared Vehicle Systems Ontology</terms:title>

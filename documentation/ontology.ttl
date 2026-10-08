@@ -19,8 +19,10 @@
                                                                                  _:genid4 ;
                                               <http://purl.org/dc/terms/description> "La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino."@es ,
                                                                                      "The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented."@en ;
+                                              <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                              <http://purl.org/dc/terms/title> "Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades"@es ,
+                                                                               "Vocabulary for the representation of data on shared vehicle systems in cities"@en ;
                                               <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
-                                              <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                               <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
                                               <http://purl.org/dc/terms/publisher> _:genid5 ;
                                               <http://purl.org/dc/terms/title> "EDINT Shared Vehicle Systems Ontology"@en ,

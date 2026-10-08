@@ -1291,7 +1291,7 @@
     "@value" : "2026-09-17"
   } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+    "@id" : "https://creativecommons.org/licenses/by-sa/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
