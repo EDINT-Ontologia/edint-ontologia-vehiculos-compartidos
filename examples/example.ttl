@@ -1,0 +1,328 @@
+@prefix : <https://edint.es/def/vehiculos-compartidos#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix censoveh: <https://edint.es/def/censovehiculos#> .
+
+# ===================================================================
+# Esquemas SKOS de control (referenciados por la ontología)
+# ===================================================================
+
+:VehicleStateScheme a skos:ConceptScheme ;
+    rdfs:label "vehicle state"@en , "estado del vehículo"@es .
+
+:PropulsionSystemScheme a skos:ConceptScheme ;
+    rdfs:label "propulsion system type"@en , "tipo de sistema de propulsión"@es .
+
+:VehicleTypeScheme a skos:ConceptScheme ;
+    rdfs:label "vehicle type"@en , "tipo de vehículo"@es .
+
+:DockStateScheme a skos:ConceptScheme ;
+    rdfs:label "dock state"@en , "estado del anclaje"@es .
+
+:StationStateScheme a skos:ConceptScheme ;
+    rdfs:label "station state"@en , "estado de la estación"@es .
+
+# Conceptos de estado de vehículo
+:VehicleStateActive a skos:Concept ;
+    skos:inScheme :VehicleStateScheme ;
+    skos:prefLabel "active"@en , "activo"@es .
+
+:VehicleStateUnderRepair a skos:Concept ;
+    skos:inScheme :VehicleStateScheme ;
+    skos:prefLabel "under repair"@en , "en reparación"@es .
+
+# Conceptos de tipo de propulsión
+:PropulsionElectric a skos:Concept ;
+    skos:inScheme :PropulsionSystemScheme ;
+    skos:prefLabel "electric"@en , "eléctrico"@es .
+
+:PropulsionHybrid a skos:Concept ;
+    skos:inScheme :PropulsionSystemScheme ;
+    skos:prefLabel "hybrid"@en , "híbrido"@es .
+
+# Conceptos de tipo de vehículo
+:TypeEScooter a skos:Concept ;
+    skos:inScheme :VehicleTypeScheme ;
+    skos:prefLabel "e-scooter"@en , "patinete eléctrico"@es .
+
+:TypeSharedBicycle a skos:Concept ;
+    skos:inScheme :VehicleTypeScheme ;
+    skos:prefLabel "shared bicycle"@en , "bicicleta compartida"@es .
+
+:TypeElectricCar a skos:Concept ;
+    skos:inScheme :VehicleTypeScheme ;
+    skos:prefLabel "electric car"@en , "coche eléctrico"@es .
+
+# Conceptos de estado de anclaje
+:DockStateFree a skos:Concept ;
+    skos:inScheme :DockStateScheme ;
+    skos:prefLabel "free"@en , "libre"@es .
+
+:DockStateOccupied a skos:Concept ;
+    skos:inScheme :DockStateScheme ;
+    skos:prefLabel "occupied"@en , "ocupado"@es .
+
+# Conceptos de estado de estación
+:StationStateOperational a skos:Concept ;
+    skos:inScheme :StationStateScheme ;
+    skos:prefLabel "operational"@en , "operativa"@es .
+
+# ===================================================================
+# Organizaciones (schema:Organization)
+# ===================================================================
+
+:OrgBikeShare a schema:Organization ;
+    rdfs:label "BikeShare City"@en .
+
+:OrgMobilityES a schema:Organization ;
+    rdfs:label "Movilidad Electrónica S.A."@es .
+
+# ===================================================================
+# Estaciones de vehículos compartidos
+# ===================================================================
+
+:StationPlazaMayor a :SharedVehicleStation ;
+    rdfs:label "Estación Plaza Mayor"@es ;
+    schema:manufacturer :OrgMobilityES ;
+    :operatedBy :OrgBikeShare ;
+    :stationState :StationStateOperational ;
+    :comissioningDate "2024-01-15"^^xsd:date ;
+    :hasDock :DockPlazaMayor1 , :DockPlazaMayor2 , :DockPlazaMayor3 .
+
+:StationGranVia a :SharedVehicleStation ;
+    rdfs:label "Estación Gran Vía"@es ;
+    :operatedBy :OrgMobilityES ;
+    :stationState :StationStateOperational ;
+    :comissioningDate "2024-03-01"^^xsd:date ;
+    :hasDock :DockGranVia1 , :DockGranVia2 .
+
+# ===================================================================
+# Anclajes (Docks)
+# ===================================================================
+
+:DockPlazaMayor1 a :Dock ;
+    rdfs:label "Anclaje Plaza Mayor 1"@es ;
+    :dockState :DockStateFree .
+
+:DockPlazaMayor2 a :Dock ;
+    rdfs:label "Anclaje Plaza Mayor 2"@es ;
+    :dockState :DockStateOccupied .
+
+:DockPlazaMayor3 a :Dock ;
+    rdfs:label "Anclaje Plaza Mayor 3"@es ;
+    :dockState :DockStateFree .
+
+:DockGranVia1 a :Dock ;
+    rdfs:label "Anclaje Gran Vía 1"@es ;
+    :dockState :DockStateFree .
+
+:DockGranVia2 a :Dock ;
+    rdfs:label "Anclaje Gran Vía 2"@es ;
+    :dockState :DockStateOccupied .
+
+# ===================================================================
+# Vehículos compartidos
+# ===================================================================
+
+:EcoScooter001 a :SharedVehicle ;
+    rdfs:label "Patinete eléctrico 001"@es ;
+    censoveh:vehicleType :TypeEScooter ;
+    :propulsionSystemType :PropulsionElectric ;
+    :vehicleState :VehicleStateActive ;
+    :hasWaypoint :WP001 , :WP002 , :WP003 .
+
+:BikeShare012 a :SharedVehicle ;
+    rdfs:label "Bicicleta compartida 012"@es ;
+    censoveh:vehicleType :TypeSharedBicycle ;
+    :propulsionSystemType :PropulsionElectric ;
+    :vehicleState :VehicleStateActive ;
+    :hasWaypoint :WP004 , :WP005 .
+
+:EVCar007 a :SharedVehicle ;
+    rdfs:label "Coche eléctrico 007"@es ;
+    censoveh:vehicleType :TypeElectricCar ;
+    :propulsionSystemType :PropulsionElectric ;
+    :vehicleState :VehicleStateUnderRepair ;
+    :hasWaypoint :WP006 .
+
+# ===================================================================
+# Trayectos (Routes)
+# ===================================================================
+
+:Route001 a :Route ;
+    rdfs:label "Trayecto 001: Plaza Mayor → Gran Vía (patinete)"@es ;
+    :madeByVehicle :EcoScooter001 ;
+    :originDock :DockPlazaMayor1 ;
+    :destinationSpot :ParkingSpotPuertaSol .
+
+:Route002 a :Route ;
+    rdfs:label "Trayecto 002: Puerta Sol → Plaza Mayor (patinete)"@es ;
+    :madeByVehicle :EcoScooter001 ;
+    :originSpot :ParkingSpotPuertaSol ;
+    :destinationDock :DockPlazaMayor3 ;
+    :hasWaypoint :WP001 , :WP002 .
+
+:Route003 a :Route ;
+    rdfs:label "Trayecto 003: Gran Vía → Plaza Mayor (bicicleta)"@es ;
+    :madeByVehicle :BikeShare012 ;
+    :originDock :DockGranVia1 ;
+    :destinationDock :DockPlazaMayor2 ;
+    :hasWaypoint :WP004 .
+
+:Route004 a :Route ;
+    rdfs:label "Trayecto 004: Plaza Mayor → Atocha (coche eléctrico)"@es ;
+    :madeByVehicle :EVCar007 ;
+    :originSpot :ParkingSpotPlazaMayor ;
+    :destinationSpot :ParkingSpotAtocha ;
+    :hasWaypoint :WP006 .
+
+# ===================================================================
+# Puntos de paso (Waypoints) con geometría
+# ===================================================================
+
+:WP001 a :Waypoint ;
+    rdfs:label "Punto de paso 001"@es ;
+    :order 1 ;
+    :passingDateTime "2025-06-10T08:30:00Z"^^xsd:dateTime ;
+    geosparql:hasGeometry :GeomWP001 .
+
+:WP002 a :Waypoint ;
+    rdfs:label "Punto de paso 002"@es ;
+    :order 2 ;
+    :passingDateTime "2025-06-10T08:45:00Z"^^xsd:dateTime ;
+    geosparql:hasGeometry :GeomWP002 .
+
+:WP003 a :Waypoint ;
+    rdfs:label "Punto de paso 003"@es ;
+    :order 1 ;
+    :passingDateTime "2025-06-10T09:00:00Z"^^xsd:dateTime ;
+    geosparql:hasGeometry :GeomWP003 .
+
+:WP004 a :Waypoint ;
+    rdfs:label "Punto de paso 004"@es ;
+    :order 1 ;
+    :passingDateTime "2025-06-11T10:00:00Z"^^xsd:dateTime ;
+    geosparql:hasGeometry :GeomWP004 .
+
+:WP005 a :Waypoint ;
+    rdfs:label "Punto de paso 005"@es ;
+    :order 2 ;
+    :passingDateTime "2025-06-11T10:20:00Z"^^xsd:dateTime ;
+    geosparql:hasGeometry :GeomWP005 .
+
+:WP006 a :Waypoint ;
+    rdfs:label "Punto de paso 006"@es ;
+    :order 1 ;
+    :passingDateTime "2025-06-12T14:00:00Z"^^xsd:dateTime ;
+    geosparql:hasGeometry :GeomWP006 .
+
+# Geometrías de waypoints
+:GeomWP001 a geosparql:Geometry ;
+    geo:lat 40.4154 ;
+    geo:long -3.7074 .
+
+:GeomWP002 a geosparql:Geometry ;
+    geo:lat 40.4168 ;
+    geo:long -3.7038 .
+
+:GeomWP003 a geosparql:Geometry ;
+    geo:lat 40.4158 ;
+    geo:long -3.7020 .
+
+:GeomWP004 a geosparql:Geometry ;
+    geo:lat 40.4200 ;
+    geo:long -3.7025 .
+
+:GeomWP005 a geosparql:Geometry ;
+    geo:lat 40.4195 ;
+    geo:long -3.7050 .
+
+:GeomWP006 a geosparql:Geometry ;
+    geo:lat 40.4180 ;
+    geo:long -3.6952 .
+
+# ===================================================================
+# Plazas de aparcamiento (ParkingSpot)
+# ===================================================================
+
+:ParkingSpotPuertaSol a <https://edint.es/def/aparcamiento#ParkingSpot> ;
+    rdfs:label "Plaza de aparcamiento Puerta de Sol"@es .
+
+:ParkingSpotPlazaMayor a <https://edint.es/def/aparcamiento#ParkingSpot> ;
+    rdfs:label "Plaza de aparcamiento Plaza Mayor"@es .
+
+:ParkingSpotAtocha a <https://edint.es/def/aparcamiento#ParkingSpot> ;
+    rdfs:label "Plaza de aparcamiento Atocha"@es .
+
+# ===================================================================
+# Observaciones de anclaje (DockObservation)
+# ===================================================================
+
+:ObsDockPlazaMayor1 a :DockObservation ;
+    rdfs:label "Observación anclaje Plaza Mayor 1"@es ;
+    sosa:hasFeatureOfInterest :DockPlazaMayor1 ;
+    sosa:hasResult :ResultFree1 ;
+    sosa:phenomenonTime :TimeInterval01 ;
+    sosa:madeBySensor :SensorDockPlazaMayor1 .
+
+:ObsDockPlazaMayor2 a :DockObservation ;
+    rdfs:label "Observación anclaje Plaza Mayor 2"@es ;
+    sosa:hasFeatureOfInterest :DockPlazaMayor2 ;
+    sosa:hasResult :ResultOccupied1 ;
+    sosa:phenomenonTime :TimeInterval01 ;
+    sosa:madeBySensor :SensorDockPlazaMayor2 .
+
+:ObsDockGranVia1 a :DockObservation ;
+    rdfs:label "Observación anclaje Gran Vía 1"@es ;
+    sosa:hasFeatureOfInterest :DockGranVia1 ;
+    sosa:hasResult :ResultFree2 ;
+    sosa:phenomenonTime :TimeInterval01 ;
+    sosa:madeBySensor :SensorDockGranVia1 .
+
+# ===================================================================
+# Resultados de observaciones
+# ===================================================================
+
+:ResultFree1 a sosa:Result ;
+    rdfs:label "free"@en .
+
+:ResultOccupied1 a sosa:Result ;
+    rdfs:label "occupied"@en .
+
+:ResultFree2 a sosa:Result ;
+    rdfs:label "free"@en .
+
+# ===================================================================
+# Intervalos temporales
+# ===================================================================
+
+:TimeInterval01 a time:ProperInterval ;
+    time:hasBeginning :Instant01 ;
+    time:hasEnd :Instant02 .
+
+:Instant01 a time:Instant ;
+    time:inXSDgYearMonth "2025-06"^^xsd:gYearMonth .
+
+:Instant02 a time:Instant ;
+    time:inXSDgYearMonth "2025-06"^^xsd:gYearMonth .
+
+# ===================================================================
+# Sensores de anclaje (DockSensor)
+# ===================================================================
+
+:SensorDockPlazaMayor1 a :DockSensor ;
+    rdfs:label "Sensor anclaje Plaza Mayor 1"@es .
+
+:SensorDockPlazaMayor2 a :DockSensor ;
+    rdfs:label "Sensor anclaje Plaza Mayor 2"@es .
+
+:SensorDockGranVia1 a :DockSensor ;
+    rdfs:label "Sensor anclaje Gran Vía 1"@es .

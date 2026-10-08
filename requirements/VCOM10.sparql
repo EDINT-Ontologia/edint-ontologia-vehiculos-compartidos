@@ -14,20 +14,18 @@ WHERE {
   
 }
 
-# Variante usando las observaciones
-
-PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
-PREFIX sosa: <http://www.w3.org/ns/sosa/>
-
-SELECT DISTINCT ?station
-WHERE {
-  ?station a edintvehcom:SharedVehicleStation ;
-           edintvehcom:hasDock ?dock .
-  
-  ?obs a edintvehcom:DockObservation ;
-       sosa:hasFeatureOfInterest ?dock ;
-       sosa:hasSimpleResult ?result .
-       
-  # El valor empleado para filtrar depende de cómo sea el resultado
-  FILTER (lcase(str(?result)) = "free")
-}
+# Variante usando las observaciones (comentada: hasSimpleResult no está declarada en la ontología)
+# PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
+# PREFIX sosa: <http://www.w3.org/ns/sosa/>
+#
+# SELECT DISTINCT ?station
+# WHERE {
+#   ?station a edintvehcom:SharedVehicleStation ;
+#            edintvehcom:hasDock ?dock .
+#
+#   ?obs a edintvehcom:DockObservation ;
+#        sosa:hasFeatureOfInterest ?dock ;
+#        sosa:hasSimpleResult ?result .
+#
+#   FILTER (lcase(str(?result)) = "free")
+# }
