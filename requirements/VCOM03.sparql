@@ -17,23 +17,3 @@ WHERE {
   OPTIONAL { ?route edintvehcom:destinationDock ?destinationDock . }
   OPTIONAL { ?route edintvehcom:destinationSpot ?destinationSpot . }
 }
-
-# Variante indicando el vehículo
-
-PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
-
-SELECT ?route ?vehicle
-       (COALESCE(?originDock, ?originSpot) AS ?origin)
-       (COALESCE(?destinationDock, ?destinationSpot) AS ?destination)
-WHERE {
-  ?route a edintvehcom:Route ;
-         edintvehcom:madeByVehicle ?vehicle .
-  
-  OPTIONAL { ?route edintvehcom:originDock ?originDock . }
-  OPTIONAL { ?route edintvehcom:originSpot ?originSpot . }
-  
-  OPTIONAL { ?route edintvehcom:destinationDock ?destinationDock . }
-  OPTIONAL { ?route edintvehcom:destinationSpot ?destinationSpot . }
-}
-
-ORDER BY ?vehicle ?route
