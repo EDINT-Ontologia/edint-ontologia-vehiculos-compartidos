@@ -32,7 +32,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a></li>
   <li><a href="#Route" title="https://edint.es/def/vehiculos-compartidos#Route">Trayecto</a></li>
   <li><a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit"> <span>Unit</span> </a></li>
-  <li><a href="#https://edint.es/def/censovehiculos#Vehicle" title="https://edint.es/def/censovehiculos#Vehicle">Vehículo</a></li>
+  <li><a href="#https://edint.es/def/censo-vehiculos#Vehicle" title="https://edint.es/def/censo-vehiculos#Vehicle">Vehículo</a></li>
   <li><a href="#SharedVehicle" title="https://edint.es/def/vehiculos-compartidos#SharedVehicle">Vehículo compartido</a></li>
  </ul>
  <div class="entity" id="Dock">
@@ -630,9 +630,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://edint.es/def/censovehiculos#Vehicle">
+ <div class="entity" id="https://edint.es/def/censo-vehiculos#Vehicle">
   <h3>Vehículo<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/censovehiculos#Vehicle</p>
+  <p><strong>IRI:</strong> https://edint.es/def/censo-vehiculos#Vehicle</p>
   <div class="comment">
    <span class="markdown">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</span>
   </div>
@@ -652,7 +652,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <dl class="description">
    <dt>tiene superclases</dt>
    <dd>
-    <a href="#https://edint.es/def/censovehiculos#Vehicle" title="https://edint.es/def/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#https://edint.es/def/censo-vehiculos#Vehicle" title="https://edint.es/def/censo-vehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
    </dd>
    <dt>en dominio de</dt>
    <dd>
@@ -692,7 +692,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#hasWaypoint" title="https://edint.es/def/vehiculos-compartidos#hasWaypoint">tiene punto de paso</a></li>
   <li><a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">tiene resultado</a></li>
   <li><a href="#propulsionSystemType" title="https://edint.es/def/vehiculos-compartidos#propulsionSystemType">tipo de sistema de propulsión</a></li>
-  <li><a href="#https://edint.es/def/censovehiculos#vehicleType" title="https://edint.es/def/censovehiculos#vehicleType">tipo de vehículo</a></li>
+  <li><a href="#https://edint.es/def/censo-vehiculos#vehicleType" title="https://edint.es/def/censo-vehiculos#vehicleType">tipo de vehículo</a></li>
  </ul>
  <div class="entity" id="stationState">
   <h3>estado de la estación<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
@@ -940,6 +940,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
  <div class="entity" id="madeByVehicle">
   <h3>realizado por vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/vehiculos-compartidos#madeByVehicle</p>
+  <div class="comment">
+   <span class="markdown">Relación entre un trayecto y el vehículo que lo realiza.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>dominio</dt>
@@ -1152,9 +1155,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dl>
   </div>
  </div>
- <div class="entity" id="https://edint.es/def/censovehiculos#vehicleType">
+ <div class="entity" id="https://edint.es/def/censo-vehiculos#vehicleType">
   <h3>tipo de vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/censovehiculos#vehicleType</p>
+  <p><strong>IRI:</strong> https://edint.es/def/censo-vehiculos#vehicleType</p>
   <div class="comment">
    <span class="markdown">Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de vehículos (por ejemplo, bicicleta, patinete, turismo, furgoneta, caravana, etc.).</span>
   </div>
@@ -1356,7 +1359,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   </div>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
- <h3 id="namedindividuals" class="list">Individuos</h3>
+ <h3 id="namedindividuals-headline" class="list">Individuos</h3>
  <ul class="hlist">
   <li><a href="#dockAvailability" title="https://edint.es/def/vehiculos-compartidos#dockAvailability">disponibilidad del anclaje</a></li>
   <li><a href="#https://edint.es/kos/StationState" title="https://edint.es/kos/StationState">estado de la estación</a></li>
