@@ -51,7 +51,7 @@
         <rdfs:label xml:lang="es">Vehículos Compartidos</rdfs:label>
         <rdfs:label xml:lang="en">Shared Vehicles</rdfs:label>
         <vann:preferredNamespacePrefix>edintvehcom</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/vehiculos-compartidos#"/>
+        <vann:preferredNamespaceUri>https://edint.es/def/vehiculos-compartidos#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
 Además, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino.</rdfs:comment>
         <rdfs:comment xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
@@ -635,8 +635,8 @@ In addition, data on the journeys made by these vehicles, including their origin
     <owl:ObjectProperty rdf:about="https://edint.es/def/vehiculos-compartidos#madeByVehicle">
         <rdfs:domain rdf:resource="https://edint.es/def/vehiculos-compartidos#Route"/>
         <rdfs:range rdf:resource="https://edint.es/def/vehiculos-compartidos#SharedVehicle"/>
-        <vann:preferredNamespaceUri xml:lang="es">Relación entre un trayecto y el vehículo que lo realiza.</vann:preferredNamespaceUri>
-        <vann:preferredNamespaceUri xml:lang="en">Relationship between a route and the vehicle that makes it.</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="es">Relación entre un trayecto y el vehículo que lo realiza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between a route and the vehicle that makes it.</rdfs:comment>
         <rdfs:label xml:lang="en">made by vehicle</rdfs:label>
         <rdfs:label xml:lang="es">realizado por vehículo</rdfs:label>
     </owl:ObjectProperty>

@@ -10,25 +10,25 @@
   "@id" : "_:genid10",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "OWL-Time"
+    "@value" : "OGC Simple Features"
   }, {
     "@language" : "en",
-    "@value" : "OWL-Time"
+    "@value" : "OGC Simple Features"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.w3.org/2006/time"
+    "@id" : "http://www.opengis.net/ont/sf"
   } ]
 }, {
   "@id" : "_:genid11",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "SOSA/SSN"
+    "@value" : "GeoSPARQL"
   }, {
     "@language" : "en",
-    "@value" : "SOSA/SSN"
+    "@value" : "GeoSPARQL"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.w3.org/ns/sosa"
+    "@id" : "http://www.opengis.net/ont/geosparql"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -45,26 +45,26 @@
 }, {
   "@id" : "_:genid13",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Vehicle Census (edintveh)"
-  }, {
     "@language" : "es",
-    "@value" : "Censo de Vehículos (edintveh)"
+    "@value" : "SOSA/SSN"
+  }, {
+    "@language" : "en",
+    "@value" : "SOSA/SSN"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/censovehiculos"
+    "@id" : "http://www.w3.org/ns/sosa"
   } ]
 }, {
   "@id" : "_:genid14",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Infrastructure (edintinf)"
-  }, {
     "@language" : "es",
-    "@value" : "Infraestructura (edintinf)"
+    "@value" : "QUDT"
+  }, {
+    "@language" : "en",
+    "@value" : "QUDT"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/infraestructura"
+    "@id" : "http://qudt.org/schema/qudt"
   } ]
 }, {
   "@id" : "_:genid15",
@@ -209,38 +209,38 @@
 }, {
   "@id" : "_:genid6",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "QUDT"
-  }, {
     "@language" : "en",
-    "@value" : "QUDT"
+    "@value" : "Vehicle Census (edintveh)"
+  }, {
+    "@language" : "es",
+    "@value" : "Censo de Vehículos (edintveh)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://qudt.org/schema/qudt"
+    "@id" : "https://edint.es/def/censo-vehiculos"
   } ]
 }, {
   "@id" : "_:genid7",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "GeoSPARQL"
-  }, {
     "@language" : "en",
-    "@value" : "GeoSPARQL"
+    "@value" : "Infrastructure (edintinf)"
+  }, {
+    "@language" : "es",
+    "@value" : "Infraestructura (edintinf)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql"
+    "@id" : "https://edint.es/def/infraestructura"
   } ]
 }, {
   "@id" : "_:genid8",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "OGC Simple Features"
+    "@value" : "OWL-Time"
   }, {
     "@language" : "en",
-    "@value" : "OGC Simple Features"
+    "@value" : "OWL-Time"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.opengis.net/ont/sf"
+    "@id" : "http://www.w3.org/2006/time"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -1153,7 +1153,7 @@
     "@value" : "Plaza de aparcamiento"
   } ]
 }, {
-  "@id" : "https://edint.es/def/censovehiculos#Vehicle",
+  "@id" : "https://edint.es/def/censo-vehiculos#Vehicle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1170,7 +1170,7 @@
     "@value" : "Vehículo"
   } ]
 }, {
-  "@id" : "https://edint.es/def/censovehiculos#vehicleType",
+  "@id" : "https://edint.es/def/censo-vehiculos#vehicleType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1311,7 +1311,7 @@
     "@value" : "edintvehcom"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "https://edint.es/def/vehiculos-compartidos#"
+    "@value" : "https://edint.es/def/vehiculos-compartidos#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1492,7 +1492,7 @@
     "@value" : "Vehículo compartido"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://edint.es/def/censovehiculos#Vehicle"
+    "@id" : "https://edint.es/def/censo-vehiculos#Vehicle"
   } ]
 }, {
   "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation",
@@ -1721,7 +1721,7 @@
 }, {
   "@id" : "https://edint.es/def/vehiculos-compartidos#madeByVehicle",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Relación entre un trayecto y el vehículo que lo realiza."
   }, {

@@ -1,0 +1,22 @@
+
+# VCOM03b: Variante de VCOM03 indicando el vehículo
+# ¿Cuál es el origen y destino de cada trayecto, y qué vehículo lo realiza?
+# Pueden ser anclajes o plazas de aparcamiento
+
+
+PREFIX edintvehcom: <https://edint.es/def/vehiculos-compartidos#>
+
+SELECT ?route ?vehicle
+       (COALESCE(?originDock, ?originSpot) AS ?origin)
+       (COALESCE(?destinationDock, ?destinationSpot) AS ?destination)
+WHERE {
+  ?route a edintvehcom:Route ;
+         edintvehcom:madeByVehicle ?vehicle .
+
+  OPTIONAL { ?route edintvehcom:originDock ?originDock . }
+  OPTIONAL { ?route edintvehcom:originSpot ?originSpot . }
+
+  OPTIONAL { ?route edintvehcom:destinationDock ?destinationDock . }
+  OPTIONAL { ?route edintvehcom:destinationSpot ?destinationSpot . }
+}
+ORDER BY ?vehicle ?route

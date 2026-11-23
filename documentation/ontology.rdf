@@ -28,16 +28,14 @@
         <terms:creator rdf:nodeID="genid4"/>
         <terms:description xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1) Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. Además, se representan datos de los trayectos realizados por estos vehículos incluyendo el punto de origen y de destino.</terms:description>
         <terms:description xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data. In addition, data on the journeys made by these vehicles, including their origin and destination points, are represented.</terms:description>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:title xml:lang="es">Vocabulario para la representación de datos sobre sistemas de vehiculos compartidos en las ciudades</terms:title>
-        <terms:title xml:lang="en">Vocabulary for the representation of data on shared vehicle systems in cities</terms:title>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:modified>
         <terms:publisher rdf:nodeID="genid5"/>
         <terms:title xml:lang="en">EDINT Shared Vehicle Systems Ontology</terms:title>
         <terms:title xml:lang="es">Ontología EDINT de Sistemas de Vehículos Compartidos</terms:title>
         <vann:preferredNamespacePrefix>edintvehcom</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/vehiculos-compartidos#"/>
+        <vann:preferredNamespaceUri>https://edint.es/def/vehiculos-compartidos#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="es">La ontología de Vehículos Compartidos representa los datos de sistemas de vehículos compartidos. Los modelos de sistemas representados incluyen: (1)  Basados en estaciones con sensores en sus anclajes y (2) Libres, es decir aquellos sistemas que permiten que el vehículo se encuentre en algún lugar de aparcamiento permitido y que son ubicados a través de sus datos geoespaciales. 
 Además, se representan datos de los trayectos realizados por estos vehículos incluyendo lu punto de origen y de destino.</rdfs:comment>
         <rdfs:comment xml:lang="en">The Shared Vehicles ontology represents data from shared vehicle systems. The system models represented include: (1) Station-based systems with sensors at their docking points and (2) Free-floating systems, that is, those systems that allow the vehicle to be located in a permitted parking spot and are identified through their geospatial data.
@@ -85,19 +83,19 @@ In addition, data on the journeys made by these vehicles, including their origin
         <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid6">
-        <rdfs:label xml:lang="en">QUDT</rdfs:label>
-        <rdfs:label xml:lang="es">QUDT</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
+        <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/censo-vehiculos"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid7">
-        <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
-        <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
+        <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid8">
-        <rdfs:label xml:lang="en">OGC Simple Features</rdfs:label>
-        <rdfs:label xml:lang="es">OGC Simple Features</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/sf"/>
+        <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
+        <rdfs:label xml:lang="es">OWL-Time</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://www.w3.org/2006/time"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid9">
         <rdfs:label xml:lang="en">WGS84 Geo Positioning</rdfs:label>
@@ -105,14 +103,14 @@ In addition, data on the journeys made by these vehicles, including their origin
         <vocab:vocabularyIRI rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid10">
-        <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
-        <rdfs:label xml:lang="es">OWL-Time</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://www.w3.org/2006/time"/>
+        <rdfs:label xml:lang="en">OGC Simple Features</rdfs:label>
+        <rdfs:label xml:lang="es">OGC Simple Features</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/sf"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid11">
-        <rdfs:label xml:lang="en">SOSA/SSN</rdfs:label>
-        <rdfs:label xml:lang="es">SOSA/SSN</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://www.w3.org/ns/sosa"/>
+        <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
+        <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid12">
         <rdfs:label xml:lang="es">Aparcamiento (edintapar)</rdfs:label>
@@ -120,14 +118,14 @@ In addition, data on the journeys made by these vehicles, including their origin
         <vocab:vocabularyIRI rdf:resource="https://edint.es/def/aparcamiento"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid13">
-        <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
-        <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/censovehiculos"/>
+        <rdfs:label xml:lang="en">SOSA/SSN</rdfs:label>
+        <rdfs:label xml:lang="es">SOSA/SSN</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://www.w3.org/ns/sosa"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid14">
-        <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
-        <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
+        <rdfs:label xml:lang="en">QUDT</rdfs:label>
+        <rdfs:label xml:lang="es">QUDT</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
     </rdf:Description>
     
 
@@ -679,10 +677,10 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- https://edint.es/def/censovehiculos#vehicleType -->
+    <!-- https://edint.es/def/censo-vehiculos#vehicleType -->
 
 
-    <owl:ObjectProperty rdf:about="https://edint.es/def/censovehiculos#vehicleType">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/censo-vehiculos#vehicleType">
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -788,8 +786,8 @@ In addition, data on the journeys made by these vehicles, including their origin
     <owl:ObjectProperty rdf:about="https://edint.es/def/vehiculos-compartidos#madeByVehicle">
         <rdfs:domain rdf:resource="https://edint.es/def/vehiculos-compartidos#Route"/>
         <rdfs:range rdf:resource="https://edint.es/def/vehiculos-compartidos#SharedVehicle"/>
-        <vann:preferredNamespaceUri xml:lang="es">Relación entre un trayecto y el vehículo que lo realiza.</vann:preferredNamespaceUri>
-        <vann:preferredNamespaceUri xml:lang="en">Relationship between a route and the vehicle that makes it.</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="es">Relación entre un trayecto y el vehículo que lo realiza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between a route and the vehicle that makes it.</rdfs:comment>
         <rdfs:label xml:lang="en">made by vehicle</rdfs:label>
         <rdfs:label xml:lang="es">realizado por vehículo</rdfs:label>
     </owl:ObjectProperty>
@@ -1330,10 +1328,10 @@ In addition, data on the journeys made by these vehicles, including their origin
     
 
 
-    <!-- https://edint.es/def/censovehiculos#Vehicle -->
+    <!-- https://edint.es/def/censo-vehiculos#Vehicle -->
 
 
-    <owl:Class rdf:about="https://edint.es/def/censovehiculos#Vehicle">
+    <owl:Class rdf:about="https://edint.es/def/censo-vehiculos#Vehicle">
         <rdfs:comment xml:lang="es">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:comment xml:lang="en">Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:label xml:lang="en">Vehicle</rdfs:label>
@@ -1449,7 +1447,7 @@ In addition, data on the journeys made by these vehicles, including their origin
 
 
     <owl:Class rdf:about="https://edint.es/def/vehiculos-compartidos#SharedVehicle">
-        <rdfs:subClassOf rdf:resource="https://edint.es/def/censovehiculos#Vehicle"/>
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/censo-vehiculos#Vehicle"/>
         <rdfs:comment xml:lang="es">Medio de transporte —como un coche, una bicicleta o un patinete eléctrico— que permite a varios usuarios acceder a él a corto plazo y bajo demanda.</rdfs:comment>
         <rdfs:comment xml:lang="en">Transport mode—such as a car, bike, or e-scooter—that allows multiple users to gain short-term, on-demand access.</rdfs:comment>
         <rdfs:label xml:lang="en">Shared vehicle</rdfs:label>
