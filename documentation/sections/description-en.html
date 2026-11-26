@@ -26,18 +26,18 @@ To represent the possible waypoints of the routes, expressed in terms of their l
 To represent a shared vehicle station, an instance of the class <a href="#SharedVehicleStation">edintvehcom:SharedVehicleStation</a> is created with the properties <a href="http://purl.org/dc/terms/identifier">dct:identifier</a>, <a href="https://schema.org/name">schema:name</a> (station name), <a href="https://schema.org/address">schema:address</a> (station address), and <a href="#comissioningDate">edintvehcom:comissioningDate</a> (commissioning date). The station is also linked, via the <a href="#stationState">edintvehcom:stationState</a> property, to the corresponding SKOS concept in the station state schema, which in this example is an operational station. with the organization that operates it through <a href="#operatedBy">edintvehcom:operatedBy</a>, and with its docks through <a href="#hasDock">edintvehcom:hasDock</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
-&lt;http://example.org/Organization/operador-municipal-01&gt; a schema:Organization ;
+&lt;https://example.org/Organization/operador-municipal-01&gt; a schema:Organization ;
   schema:name &quot;Operador Municipal de Movilidad Compartida&quot;@es .
 
-&lt;http://example.org/SharedVehicleStation/estacion-001&gt; a edintvehcom:SharedVehicleStation ;
+&lt;https://example.org/SharedVehicleStation/estacion-001&gt; a edintvehcom:SharedVehicleStation ;
   dct:identifier &quot;EST-001&quot; ;
   schema:name &quot;Puerta del Sol&quot;@es ;
   schema:address &quot;Puerta del Sol, 1, Madrid&quot;@es ;
   edintvehcom:comissioningDate &quot;2024-03-15&quot;^^xsd:date ;
   edintvehcom:stationState &lt;https://edint.es/kos/StationState/Operative&gt; ;
-  edintvehcom:operatedBy &lt;http://example.org/Organization/operador-municipal-01&gt; ;
-  edintvehcom:hasDock &lt;http://example.org/Dock/anclaje-001-01&gt; ,
-                        &lt;http://example.org/Dock/anclaje-001-02&gt; .
+  edintvehcom:operatedBy &lt;https://example.org/Organization/operador-municipal-01&gt; ;
+  edintvehcom:hasDock &lt;https://example.org/Dock/anclaje-001-01&gt; ,
+                        &lt;https://example.org/Dock/anclaje-001-02&gt; .
 </textarea></pre>
   <script>
       var editor_code1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
@@ -52,11 +52,11 @@ Next, two instances of <a href="#Dock">edintvehcom:Dock</a> are represented. For
 
 </span>
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
-&lt;http://example.org/Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
+&lt;https://example.org/Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-01&quot; ;
   edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
 
-&lt;http://example.org/Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
+&lt;https://example.org/Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-02&quot; ;
   edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
 </textarea></pre>
@@ -73,15 +73,15 @@ To represent a shared vehicle, an instance of the class <a href="#SharedVehicle"
 
 </span>
 <pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
-&lt;http://example.org/Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
+&lt;https://example.org/Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
   schema:name &quot;Fabricante Ejemplo S.A.&quot;@es .
 
-&lt;http://example.org/SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
+&lt;https://example.org/SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
   dct:identifier &quot;VEH-0001&quot; ;
   edintveh:vehicleType edintkosvehtype:bicicleta ;
   edintvehcom:propulsionSystemType &lt;https://edint.es/kos/PropulsionSystemType/Electric&gt; ;
   edintvehcom:vehicleState &lt;https://edint.es/kos/VehicleState/Active&gt; ;
-  schema:manufacturer &lt;http://example.org/Organization/fabricante-vehiculos-01&gt; .
+  schema:manufacturer &lt;https://example.org/Organization/fabricante-vehiculos-01&gt; .
 </textarea></pre>
   <script>
       var editor_code3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
@@ -95,30 +95,30 @@ To represent a route of a station-based system, an instance of the class <a href
 
 </span>
 <pre><textarea style="resize:none" readonly id="code4" name="code" rows="25" cols="100">
-&lt;http://example.org/Route/trayecto-20260521-001&gt; a edintvehcom:Route ;
+&lt;https://example.org/Route/trayecto-20260521-001&gt; a edintvehcom:Route ;
   dct:identifier &quot;ROUTE-20260521-001&quot; ;
   schema:startDate &quot;2026-05-21T08:30:00&quot;^^xsd:dateTime ;
   schema:endDate &quot;2026-05-21T08:48:00&quot;^^xsd:dateTime ;
-  edintvehcom:madeByVehicle &lt;http://example.org/SharedVehicle/vehiculo-0001&gt; ;
-  edintvehcom:originDock &lt;http://example.org/Dock/anclaje-001-01&gt; ;
-  edintvehcom:destinationDock &lt;http://example.org/Dock/anclaje-001-02&gt; ;
-  edintvehcom:hasWaypoint &lt;http://example.org/Waypoint/trayecto-20260521-001-01&gt; ,
-                           &lt;http://example.org/Waypoint/trayecto-20260521-001-02&gt; .
+  edintvehcom:madeByVehicle &lt;https://example.org/SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originDock &lt;https://example.org/Dock/anclaje-001-01&gt; ;
+  edintvehcom:destinationDock &lt;https://example.org/Dock/anclaje-001-02&gt; ;
+  edintvehcom:hasWaypoint &lt;https://example.org/Waypoint/trayecto-20260521-001-01&gt; ,
+                           &lt;https://example.org/Waypoint/trayecto-20260521-001-02&gt; .
 
-&lt;http://example.org/Waypoint/trayecto-20260521-001-01&gt; a edintvehcom:Waypoint ;
+&lt;https://example.org/Waypoint/trayecto-20260521-001-01&gt; a edintvehcom:Waypoint ;
   edintvehcom:order &quot;1&quot;^^xsd:integer ;
   edintvehcom:passingDateTime &quot;2026-05-21T08:35:00&quot;^^xsd:dateTime ;
-  geosparql:hasGeometry &lt;http://example.org/Geometry/trayecto-20260521-001-01&gt; .
+  geosparql:hasGeometry &lt;https://example.org/Geometry/trayecto-20260521-001-01&gt; .
 
-&lt;http://example.org/Geometry/trayecto-20260521-001-01&gt; a geosparql:Geometry ;
+&lt;https://example.org/Geometry/trayecto-20260521-001-01&gt; a geosparql:Geometry ;
   geosparql:asWKT &quot;POINT (-3.703582 40.416704)&quot;^^geosparql:wktLiteral .
 
-&lt;http://example.org/Waypoint/trayecto-20260521-001-02&gt; a edintvehcom:Waypoint ;
+&lt;https://example.org/Waypoint/trayecto-20260521-001-02&gt; a edintvehcom:Waypoint ;
   edintvehcom:order &quot;2&quot;^^xsd:integer ;
   edintvehcom:passingDateTime &quot;2026-05-21T08:42:00&quot;^^xsd:dateTime ;
-  geosparql:hasGeometry &lt;http://example.org/Geometry/trayecto-20260521-001-02&gt; .
+  geosparql:hasGeometry &lt;https://example.org/Geometry/trayecto-20260521-001-02&gt; .
 
-&lt;http://example.org/Geometry/trayecto-20260521-001-02&gt; a geosparql:Geometry ;
+&lt;https://example.org/Geometry/trayecto-20260521-001-02&gt; a geosparql:Geometry ;
   geosparql:asWKT &quot;POINT (-3.698960 40.418110)&quot;^^geosparql:wktLiteral .
 </textarea></pre>
   <script>
@@ -134,18 +134,18 @@ In the case of a free model, the route does not necessarily begin or end at a st
 
 </span>
 <pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
-&lt;http://example.org/Route/trayecto-20260521-002&gt; a edintvehcom:Route ;
+&lt;https://example.org/Route/trayecto-20260521-002&gt; a edintvehcom:Route ;
   dct:identifier &quot;ROUTE-20260521-002&quot; ;
   schema:startDate &quot;2026-05-21T09:10:00&quot;^^xsd:dateTime ;
   schema:endDate &quot;2026-05-21T09:32:00&quot;^^xsd:dateTime ;
-  edintvehcom:madeByVehicle &lt;http://example.org/SharedVehicle/vehiculo-0001&gt; ;
-  edintvehcom:originSpot &lt;http://example.org/ParkingSpot/plaza-0001&gt; ;
-  edintvehcom:destinationSpot &lt;http://example.org/ParkingSpot/plaza-0002&gt; .
+  edintvehcom:madeByVehicle &lt;https://example.org/SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originSpot &lt;https://example.org/ParkingSpot/plaza-0001&gt; ;
+  edintvehcom:destinationSpot &lt;https://example.org/ParkingSpot/plaza-0002&gt; .
 
-&lt;http://example.org/ParkingSpot/plaza-0001&gt; a edintapar:ParkingSpot ;
+&lt;https://example.org/ParkingSpot/plaza-0001&gt; a edintapar:ParkingSpot ;
   dct:identifier &quot;PARK-0001&quot; .
 
-&lt;http://example.org/ParkingSpot/plaza-0002&gt; a edintapar:ParkingSpot ;
+&lt;https://example.org/ParkingSpot/plaza-0002&gt; a edintapar:ParkingSpot ;
   dct:identifier &quot;PARK-0002&quot; .
 </textarea></pre>
   <script>
@@ -160,23 +160,23 @@ In the case of a free model, the route does not necessarily begin or end at a st
 To represent an observation about the availability of an dock, an instance of <a href="#DockSensor">edintvehcom:DockSensor</a> is created, hosted on the station by <a href="#http://www.w3.org/ns/sosa/isHostedBy">sosa:isHostedBy</a>, and which observes the property <a href="#dockAvailability">edintvehcom:dockAvailability</a>. The observation is represented with an instance of <a href="#DockObservation">edintvehcom:DockObservation</a>, indicating the observed dock using <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, the sensor performing the observation using <a href="#http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a>, the observed property using <a href="#http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a>, the observation time using <a href="#http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a>, and the result using <a href="#http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> with an instance of <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code6" name="code" rows="25" cols="100">
-&lt;http://example.org/DockSensor/sensor-anclaje-001-01&gt; a edintvehcom:DockSensor ;
+&lt;https://example.org/DockSensor/sensor-anclaje-001-01&gt; a edintvehcom:DockSensor ;
   dct:identifier &quot;SENSOR-DOCK-001-01&quot; ;
-  sosa:isHostedBy &lt;http://example.org/SharedVehicleStation/estacion-001&gt; ;
+  sosa:isHostedBy &lt;https://example.org/SharedVehicleStation/estacion-001&gt; ;
   sosa:observes edintvehcom:dockAvailability .
 
-&lt;http://example.org/DockObservation/obs-anclaje-001-01-20260521T085000&gt; a edintvehcom:DockObservation ;
-  sosa:hasFeatureOfInterest &lt;http://example.org/Dock/anclaje-001-01&gt; ;
-  sosa:madeBySensor &lt;http://example.org/DockSensor/sensor-anclaje-001-01&gt; ;
+&lt;https://example.org/DockObservation/obs-anclaje-001-01-20260521T085000&gt; a edintvehcom:DockObservation ;
+  sosa:hasFeatureOfInterest &lt;https://example.org/Dock/anclaje-001-01&gt; ;
+  sosa:madeBySensor &lt;https://example.org/DockSensor/sensor-anclaje-001-01&gt; ;
   sosa:observedProperty edintvehcom:dockAvailability ;
-  sosa:phenomenonTime &lt;http://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; ;
+  sosa:phenomenonTime &lt;https://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; ;
   sosa:hasResult [
     a qudt:QuantityValue ;
     qudt:value &quot;1&quot;^^xsd:integer ;
     qudt:hasUnit unit:NUM
   ] .
 
-&lt;http://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; a time:Instant ;
+&lt;https://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; a time:Instant ;
   time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
 </textarea></pre>
   <script>
@@ -192,17 +192,17 @@ Finally, an aggregated observation about the station is displayed to indicate th
 
 </span>
 <pre><textarea style="resize:none" readonly id="code7" name="code" rows="25" cols="100">
-&lt;http://example.org/Observation/obs-estacion-001-vacios-20260521T085000&gt; a sosa:Observation ;
-  sosa:hasFeatureOfInterest &lt;http://example.org/SharedVehicleStation/estacion-001&gt; ;
+&lt;https://example.org/Observation/obs-estacion-001-vacios-20260521T085000&gt; a sosa:Observation ;
+  sosa:hasFeatureOfInterest &lt;https://example.org/SharedVehicleStation/estacion-001&gt; ;
   sosa:observedProperty edintvehcom:numberEmptyDocks ;
-  sosa:phenomenonTime &lt;http://example.org/Instant/obs-estacion-001-20260521T085000&gt; ;
+  sosa:phenomenonTime &lt;https://example.org/Instant/obs-estacion-001-20260521T085000&gt; ;
   sosa:hasResult [
     a qudt:QuantityValue ;
     qudt:value &quot;7&quot;^^xsd:integer ;
     qudt:hasUnit unit:NUM
   ] .
 
-&lt;http://example.org/Instant/obs-estacion-001-20260521T085000&gt; a time:Instant ;
+&lt;https://example.org/Instant/obs-estacion-001-20260521T085000&gt; a time:Instant ;
   time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
 </textarea></pre>
   <script>

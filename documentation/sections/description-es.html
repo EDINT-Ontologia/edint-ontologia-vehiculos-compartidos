@@ -22,18 +22,18 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   Para representar una estación de vehículos compartidos se crea una instancia de la clase <a href="#SharedVehicleStation">edintvehcom:SharedVehicleStation</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> (identificador de la estación), <a href="https://schema.org/name">schema:name</a> (nombre de la estación), <a href="https://schema.org/address">schema:address</a> (dirección de la estación) y <a href="#comissioningDate">edintvehcom:comissioningDate</a> (fecha de alta). Asimismo, se enlaza la estación mediante la propiedad <a href="#stationState">edintvehcom:stationState</a> con el concepto SKOS correspondiente del esquema de estados de estación, que en el ejemplo es una estación operativa; con la organización que la opera mediante <a href="#operatedBy">edintvehcom:operatedBy</a>, y con sus anclajes mediante <a href="#hasDock">edintvehcom:hasDock</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
-&lt;http://example.org/Organization/operador-municipal-01&gt; a schema:Organization ;
+&lt;https://example.org/Organization/operador-municipal-01&gt; a schema:Organization ;
   schema:name &quot;Operador Municipal de Movilidad Compartida&quot;@es .
 
-&lt;http://example.org/SharedVehicleStation/estacion-001&gt; a edintvehcom:SharedVehicleStation ;
+&lt;https://example.org/SharedVehicleStation/estacion-001&gt; a edintvehcom:SharedVehicleStation ;
   dct:identifier &quot;EST-001&quot; ;
   schema:name &quot;Puerta del Sol&quot;@es ;
   schema:address &quot;Puerta del Sol, 1, Madrid&quot;@es ;
   edintvehcom:comissioningDate &quot;2024-03-15&quot;^^xsd:date ;
   edintvehcom:stationState &lt;https://edint.es/kos/StationState/Operative&gt; ;
-  edintvehcom:operatedBy &lt;http://example.org/Organization/operador-municipal-01&gt; ;
-  edintvehcom:hasDock &lt;http://example.org/Dock/anclaje-001-01&gt; ,
-                        &lt;http://example.org/Dock/anclaje-001-02&gt; .
+  edintvehcom:operatedBy &lt;https://example.org/Organization/operador-municipal-01&gt; ;
+  edintvehcom:hasDock &lt;https://example.org/Dock/anclaje-001-01&gt; ,
+                        &lt;https://example.org/Dock/anclaje-001-02&gt; .
 </textarea></pre>
   <script>
       var editor_code1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
@@ -47,11 +47,11 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   Después, se representan dos instancias de <a href="#Dock">edintvehcom:Dock</a>. Para cada anclaje se indica su identificador mediante <a href="http://purl.org/dc/terms/identifier">dct:identifier</a> y su estado mediante la propiedad <a href="#dockState">edintvehcom:dockState</a>, que enlaza con el concepto SKOS correspondiente del esquema de estados de anclaje. En el ejemplo, los anclajes se encuentran en estado activo.
 </span>
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
-&lt;http://example.org/Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
+&lt;https://example.org/Dock/anclaje-001-01&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-01&quot; ;
   edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
 
-&lt;http://example.org/Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
+&lt;https://example.org/Dock/anclaje-001-02&gt; a edintvehcom:Dock ;
   dct:identifier &quot;DOCK-001-02&quot; ;
   edintvehcom:dockState &lt;https://edint.es/kos/DockState/Active&gt; .
 </textarea></pre>
@@ -67,15 +67,15 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   Para representar un vehículo compartido se crea una instancia de la clase <a href="#SharedVehicle">edintvehcom:SharedVehicle</a>. En el ejemplo se especifica su identificador, su tipo de vehículo mediante <a href="https://edint.es/def/censovehiculos#vehicleType">edintveh:vehicleType</a>, su tipo de sistema de propulsión mediante <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a>, su estado mediante <a href="#vehicleState">edintvehcom:vehicleState</a> y su fabricante mediante <a href="https://schema.org/manufacturer">schema:manufacturer</a>. Las propiedades <a href="#propulsionSystemType">edintvehcom:propulsionSystemType</a> y <a href="#vehicleState">edintvehcom:vehicleState</a> enlazan con los conceptos SKOS correspondientes; en este caso se representa una bicicleta eléctrica en estado activo.
 </span>
 <pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
-&lt;http://example.org/Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
+&lt;https://example.org/Organization/fabricante-vehiculos-01&gt; a schema:Organization ;
   schema:name &quot;Fabricante Ejemplo S.A.&quot;@es .
 
-&lt;http://example.org/SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
+&lt;https://example.org/SharedVehicle/vehiculo-0001&gt; a edintvehcom:SharedVehicle ;
   dct:identifier &quot;VEH-0001&quot; ;
   edintveh:vehicleType edintkosvehtype:bicicleta ;
   edintvehcom:propulsionSystemType &lt;https://edint.es/kos/PropulsionSystemType/Electric&gt; ;
   edintvehcom:vehicleState &lt;https://edint.es/kos/VehicleState/Active&gt; ;
-  schema:manufacturer &lt;http://example.org/Organization/fabricante-vehiculos-01&gt; .
+  schema:manufacturer &lt;https://example.org/Organization/fabricante-vehiculos-01&gt; .
 </textarea></pre>
   <script>
       var editor_code3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
@@ -89,30 +89,30 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   Para representar un trayecto de un sistema basado en estaciones se crea una instancia de la clase <a href="#Route">edintvehcom:Route</a> con las propiedades <a href="http://purl.org/dc/terms/identifier">dct:identifier</a>, <a href="https://schema.org/startDate">schema:startDate</a> y <a href="https://schema.org/endDate">schema:endDate</a>. El trayecto se relaciona con el vehículo que lo realiza mediante <a href="#madeByVehicle">edintvehcom:madeByVehicle</a>, con el anclaje de origen mediante <a href="#originDock">edintvehcom:originDock</a>, con el anclaje de destino mediante <a href="#destinationDock">edintvehcom:destinationDock</a> y con sus puntos de paso mediante <a href="#hasWaypoint">edintvehcom:hasWaypoint</a>. Cada punto de paso se representa como una instancia de <a href="#Waypoint">edintvehcom:Waypoint</a>, con su orden, fecha y hora de paso, y geometría asociada.
 </span>
 <pre><textarea style="resize:none" readonly id="code4" name="code" rows="25" cols="100">
-&lt;http://example.org/Route/trayecto-20260521-001&gt; a edintvehcom:Route ;
+&lt;https://example.org/Route/trayecto-20260521-001&gt; a edintvehcom:Route ;
   dct:identifier &quot;ROUTE-20260521-001&quot; ;
   schema:startDate &quot;2026-05-21T08:30:00&quot;^^xsd:dateTime ;
   schema:endDate &quot;2026-05-21T08:48:00&quot;^^xsd:dateTime ;
-  edintvehcom:madeByVehicle &lt;http://example.org/SharedVehicle/vehiculo-0001&gt; ;
-  edintvehcom:originDock &lt;http://example.org/Dock/anclaje-001-01&gt; ;
-  edintvehcom:destinationDock &lt;http://example.org/Dock/anclaje-001-02&gt; ;
-  edintvehcom:hasWaypoint &lt;http://example.org/Waypoint/trayecto-20260521-001-01&gt; ,
-                           &lt;http://example.org/Waypoint/trayecto-20260521-001-02&gt; .
+  edintvehcom:madeByVehicle &lt;https://example.org/SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originDock &lt;https://example.org/Dock/anclaje-001-01&gt; ;
+  edintvehcom:destinationDock &lt;https://example.org/Dock/anclaje-001-02&gt; ;
+  edintvehcom:hasWaypoint &lt;https://example.org/Waypoint/trayecto-20260521-001-01&gt; ,
+                           &lt;https://example.org/Waypoint/trayecto-20260521-001-02&gt; .
 
-&lt;http://example.org/Waypoint/trayecto-20260521-001-01&gt; a edintvehcom:Waypoint ;
+&lt;https://example.org/Waypoint/trayecto-20260521-001-01&gt; a edintvehcom:Waypoint ;
   edintvehcom:order &quot;1&quot;^^xsd:integer ;
   edintvehcom:passingDateTime &quot;2026-05-21T08:35:00&quot;^^xsd:dateTime ;
-  geosparql:hasGeometry &lt;http://example.org/Geometry/trayecto-20260521-001-01&gt; .
+  geosparql:hasGeometry &lt;https://example.org/Geometry/trayecto-20260521-001-01&gt; .
 
-&lt;http://example.org/Geometry/trayecto-20260521-001-01&gt; a geosparql:Geometry ;
+&lt;https://example.org/Geometry/trayecto-20260521-001-01&gt; a geosparql:Geometry ;
   geosparql:asWKT &quot;POINT (-3.703582 40.416704)&quot;^^geosparql:wktLiteral .
 
-&lt;http://example.org/Waypoint/trayecto-20260521-001-02&gt; a edintvehcom:Waypoint ;
+&lt;https://example.org/Waypoint/trayecto-20260521-001-02&gt; a edintvehcom:Waypoint ;
   edintvehcom:order &quot;2&quot;^^xsd:integer ;
   edintvehcom:passingDateTime &quot;2026-05-21T08:42:00&quot;^^xsd:dateTime ;
-  geosparql:hasGeometry &lt;http://example.org/Geometry/trayecto-20260521-001-02&gt; .
+  geosparql:hasGeometry &lt;https://example.org/Geometry/trayecto-20260521-001-02&gt; .
 
-&lt;http://example.org/Geometry/trayecto-20260521-001-02&gt; a geosparql:Geometry ;
+&lt;https://example.org/Geometry/trayecto-20260521-001-02&gt; a geosparql:Geometry ;
   geosparql:asWKT &quot;POINT (-3.698960 40.418110)&quot;^^geosparql:wktLiteral .
 </textarea></pre>
   <script>
@@ -127,18 +127,18 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   En el caso de un modelo libre, el trayecto no se inicia ni finaliza necesariamente en anclajes de una estación. Por ello, la instancia de <a href="#Route">edintvehcom:Route</a> se relaciona con una plaza de aparcamiento de origen mediante <a href="#originSpot">edintvehcom:originSpot</a> y con una plaza de aparcamiento de destino mediante <a href="#destinationSpot">edintvehcom:destinationSpot</a>. Las plazas de aparcamiento se representan como instancias de <a href="#https://edint.es/def/aparcamiento#ParkingSpot">edintapar:ParkingSpot</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
-&lt;http://example.org/Route/trayecto-20260521-002&gt; a edintvehcom:Route ;
+&lt;https://example.org/Route/trayecto-20260521-002&gt; a edintvehcom:Route ;
   dct:identifier &quot;ROUTE-20260521-002&quot; ;
   schema:startDate &quot;2026-05-21T09:10:00&quot;^^xsd:dateTime ;
   schema:endDate &quot;2026-05-21T09:32:00&quot;^^xsd:dateTime ;
-  edintvehcom:madeByVehicle &lt;http://example.org/SharedVehicle/vehiculo-0001&gt; ;
-  edintvehcom:originSpot &lt;http://example.org/ParkingSpot/plaza-0001&gt; ;
-  edintvehcom:destinationSpot &lt;http://example.org/ParkingSpot/plaza-0002&gt; .
+  edintvehcom:madeByVehicle &lt;https://example.org/SharedVehicle/vehiculo-0001&gt; ;
+  edintvehcom:originSpot &lt;https://example.org/ParkingSpot/plaza-0001&gt; ;
+  edintvehcom:destinationSpot &lt;https://example.org/ParkingSpot/plaza-0002&gt; .
 
-&lt;http://example.org/ParkingSpot/plaza-0001&gt; a edintapar:ParkingSpot ;
+&lt;https://example.org/ParkingSpot/plaza-0001&gt; a edintapar:ParkingSpot ;
   dct:identifier &quot;PARK-0001&quot; .
 
-&lt;http://example.org/ParkingSpot/plaza-0002&gt; a edintapar:ParkingSpot ;
+&lt;https://example.org/ParkingSpot/plaza-0002&gt; a edintapar:ParkingSpot ;
   dct:identifier &quot;PARK-0002&quot; .
 </textarea></pre>
   <script>
@@ -153,23 +153,23 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   Para representar una observación sobre la disponibilidad de un anclaje se crea una instancia de <a href="#DockSensor">edintvehcom:DockSensor</a>, alojada en la estación mediante <a href="http://www.w3.org/ns/sosa/isHostedBy">sosa:isHostedBy</a>, y que observa la propiedad <a href="#dockAvailability">edintvehcom:dockAvailability</a>. La observación se representa con una instancia de <a href="#DockObservation">edintvehcom:DockObservation</a>, indicando el anclaje observado mediante <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, el sensor que realiza la observación mediante <a href="#http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a>, la propiedad observada mediante <a href="#http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a>, el instante de observación mediante <a href="#http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a> y el resultado mediante <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> con una instancia de <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code6" name="code" rows="25" cols="100">
-&lt;http://example.org/DockSensor/sensor-anclaje-001-01&gt; a edintvehcom:DockSensor ;
+&lt;https://example.org/DockSensor/sensor-anclaje-001-01&gt; a edintvehcom:DockSensor ;
   dct:identifier &quot;SENSOR-DOCK-001-01&quot; ;
-  sosa:isHostedBy &lt;http://example.org/SharedVehicleStation/estacion-001&gt; ;
+  sosa:isHostedBy &lt;https://example.org/SharedVehicleStation/estacion-001&gt; ;
   sosa:observes edintvehcom:dockAvailability .
 
-&lt;http://example.org/DockObservation/obs-anclaje-001-01-20260521T085000&gt; a edintvehcom:DockObservation ;
-  sosa:hasFeatureOfInterest &lt;http://example.org/Dock/anclaje-001-01&gt; ;
-  sosa:madeBySensor &lt;http://example.org/DockSensor/sensor-anclaje-001-01&gt; ;
+&lt;https://example.org/DockObservation/obs-anclaje-001-01-20260521T085000&gt; a edintvehcom:DockObservation ;
+  sosa:hasFeatureOfInterest &lt;https://example.org/Dock/anclaje-001-01&gt; ;
+  sosa:madeBySensor &lt;https://example.org/DockSensor/sensor-anclaje-001-01&gt; ;
   sosa:observedProperty edintvehcom:dockAvailability ;
-  sosa:phenomenonTime &lt;http://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; ;
+  sosa:phenomenonTime &lt;https://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; ;
   sosa:hasResult [
     a qudt:QuantityValue ;
     qudt:value &quot;1&quot;^^xsd:integer ;
     qudt:hasUnit unit:NUM
   ] .
 
-&lt;http://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; a time:Instant ;
+&lt;https://example.org/Instant/obs-anclaje-001-01-20260521T085000&gt; a time:Instant ;
   time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
 </textarea></pre>
   <script>
@@ -184,17 +184,17 @@ Un trayecto puede tener una serie de <a href="#Waypoint">puntos de paso</a>.Adic
   Finalmente, se representa una observación agregada sobre la estación para indicar el número de anclajes vacíos. En este caso, la característica de interés es la propia estación de vehículos compartidos y la propiedad observada es <a href="#numberEmptyDocks">edintvehcom:numberEmptyDocks</a>. El resultado se expresa igualmente mediante <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> y <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>.
 </span>
 <pre><textarea style="resize:none" readonly id="code7" name="code" rows="25" cols="100">
-&lt;http://example.org/Observation/obs-estacion-001-vacios-20260521T085000&gt; a sosa:Observation ;
-  sosa:hasFeatureOfInterest &lt;http://example.org/SharedVehicleStation/estacion-001&gt; ;
+&lt;https://example.org/Observation/obs-estacion-001-vacios-20260521T085000&gt; a sosa:Observation ;
+  sosa:hasFeatureOfInterest &lt;https://example.org/SharedVehicleStation/estacion-001&gt; ;
   sosa:observedProperty edintvehcom:numberEmptyDocks ;
-  sosa:phenomenonTime &lt;http://example.org/Instant/obs-estacion-001-20260521T085000&gt; ;
+  sosa:phenomenonTime &lt;https://example.org/Instant/obs-estacion-001-20260521T085000&gt; ;
   sosa:hasResult [
     a qudt:QuantityValue ;
     qudt:value &quot;7&quot;^^xsd:integer ;
     qudt:hasUnit unit:NUM
   ] .
 
-&lt;http://example.org/Instant/obs-estacion-001-20260521T085000&gt; a time:Instant ;
+&lt;https://example.org/Instant/obs-estacion-001-20260521T085000&gt; a time:Instant ;
   time:inXSDDateTimeStamp &quot;2026-05-21T08:50:00Z&quot;^^xsd:dateTimeStamp .
 </textarea></pre>
   <script>
